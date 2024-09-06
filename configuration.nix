@@ -67,6 +67,7 @@
     packages = with pkgs; [
       firefox
       tree
+      git
     ];
   };
 
