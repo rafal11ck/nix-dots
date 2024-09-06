@@ -7,14 +7,14 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.hostName = "nixos-test"; # Define your hostname.
+  networking.hostName = "nixos-test"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -60,14 +60,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  #Define a user account. Don't forget to set a password with `passwd`.
+  #Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rafal = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable `sudo` for the user.
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       firefox
       tree
-      git
     ];
   };
 
@@ -76,6 +75,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -90,7 +90,6 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
