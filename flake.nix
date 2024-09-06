@@ -15,6 +15,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
+        /etc/nixos/hardware-configuration.nix
          inputs.home-manager.nixosModules.default
       ];
     };
