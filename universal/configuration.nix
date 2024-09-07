@@ -5,6 +5,9 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ./nixOSpkgs.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -25,12 +28,12 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
+  #};
   i18n.defaultLocale = "en_US.UTF-8";
   #console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "pl";
   #   useXkbConfig = true; # use xkb.options in tty.
-  #};
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
