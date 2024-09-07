@@ -11,9 +11,7 @@
 
 {
   imports = [
-    ./nixOSpkgs.nix
-    ./boot.nix
-    ./system.nix
+    ./default.nix
   ];
 
   nix.settings.experimental-features = [
@@ -28,4 +26,6 @@
     wget
     git
   ];
+
+  system.stateVersion = "24.05";
 }
