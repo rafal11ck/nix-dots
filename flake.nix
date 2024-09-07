@@ -10,14 +10,18 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./universal/configuration.nix
-        /etc/nixos/hardware-configuration.nix
-        inputs.home-manager.nixosModules.default
-      ];
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./universal/configuration.nix
+          /etc/nixos/hardware-configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
-  };
 }
