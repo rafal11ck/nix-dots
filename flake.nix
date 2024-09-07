@@ -18,7 +18,7 @@
           inherit inputs;
         };
         modules = [
-          ./universal/configuration.nix
+          ./modules/configuration.nix
           /etc/nixos/hardware-configuration.nix
           inputs.home-manager.nixosModules.default
         ];
