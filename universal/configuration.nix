@@ -12,6 +12,7 @@
 {
   imports = [
     ./nixOSpkgs.nix
+    ./boot.nix
   ];
 
   networking.hostName = "nixos-test"; # Define your hostname.
