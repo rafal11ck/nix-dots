@@ -7,14 +7,15 @@
   # but nixos won't error of duplicate.
   # This config is for home not system so it has lower piriorty.
 
-  home.username = "${config.values.mainUser}";
-  home.homeDirectory = lib.mkDefault "/home/${config.values.mainUser}";
+  home = {
+    username = "${config.values.mainUser}";
+    homeDirectory = lib.mkDefault "/home/${username}";
 
-  home.stateVersion = "24.05"; # Please read the comment before changing.
+    stateVersion = lib.mkDefault "24.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     pkgs.hello
@@ -24,6 +25,7 @@
     pkgs.tree
     pkgs.cowsay
   ];
+         }
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
