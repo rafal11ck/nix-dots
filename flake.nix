@@ -29,7 +29,6 @@
         default = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
-            config = inputs.config;
           };
           modules = [
             ./modules/shared
