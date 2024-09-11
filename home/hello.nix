@@ -1,5 +1,3 @@
 {
-  programs.hello = {
-    enable = true;
-  };
+  programs.hello.enable = true;
 }
