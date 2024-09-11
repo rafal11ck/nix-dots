@@ -15,6 +15,7 @@
       self,
       nixpkgs,
       home-manager,
+      config,
       ...
     }@inputs:
     let
@@ -35,7 +36,9 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.rafal = import [ ./home/home.nix ./modules/shared/values.nix ];
+            home-manager.users.rafal = import ./home/home.nix;
+
+            home-manager.extraSpecialArgs = { inherit config; };
           }
         ];
       };
