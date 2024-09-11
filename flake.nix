@@ -43,7 +43,7 @@
         };
       };
 
-      # For home-manager standalone install. NixOS-less home manager.  
+      # For home-manager standalone install. NixOS-less home manager.
       homeConfigurations."rafal" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
