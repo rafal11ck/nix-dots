@@ -11,7 +11,8 @@ in
 
   imports = [
     (modulePath + /shared/values.nix)
-    ./hello.nix
+    # ./hello.nix
+    ./bat.nix
   ];
 
   home =
