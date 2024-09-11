@@ -8,7 +8,7 @@
   # This config is for home not system so it has lower piriorty.
 
   home.username = "${config.values.mainUser}";
-  home.homeDirectory = lib.mkDefault "/home/{config.values.mainUser}";
+  home.homeDirectory = lib.mkDefault "/home/${config.values.mainUser}";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
