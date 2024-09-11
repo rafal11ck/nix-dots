@@ -9,7 +9,7 @@
 
   home = let {
     username = "${config.values.mainUser}"
-  } {
+  } in {
     inherit username;
     homeDirectory = lib.mkDefault "/home/${username}";
 
