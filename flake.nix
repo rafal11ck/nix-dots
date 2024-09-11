@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
   outputs =
@@ -15,7 +16,6 @@
       self,
       nixpkgs,
       home-manager,
-      config,
       ...
     }@inputs:
     let
@@ -38,7 +38,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.rafal = import ./home/home.nix;
 
-            home-manager.extraSpecialArgs = { inherit config; };
+            home-manager.extraSpecialArgs = { config = /modules/shared/values.nix; };
           }
         ];
       };
