@@ -7,8 +7,10 @@
   # but nixos won't error of duplicate.
   # This config is for home not system so it has lower piriorty.
 
-  home = {
-    username = "${config.values.mainUser}";
+  home = let {
+    username = "${config.values.mainUser}"
+  } {
+    inherit username;
     homeDirectory = lib.mkDefault "/home/${username}";
 
     stateVersion = lib.mkDefault "24.05"; # Please read the comment before changing.
@@ -25,7 +27,7 @@
     pkgs.tree
     pkgs.cowsay
   ];
-         }
+         };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
