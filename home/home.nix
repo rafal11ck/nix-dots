@@ -6,8 +6,9 @@
   # Those are made with mkDefault so that if this home manager works standalone 
   # but nixos won't error of duplicate.
   # This config is for home not system so it has lower piriorty.
-  home.username = lib.mkDefault "rafal";
-  home.homeDirectory = lib.mkDefault "/home/rafal";
+
+  home.username = "${config.values.mainUser}";
+  home.homeDirectory = lib.mkDefault "/home/{config.values.mainUser}";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
