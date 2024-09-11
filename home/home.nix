@@ -16,7 +16,7 @@ in
 
   home =
     let
-      username = "${values.mainUser}";
+      username = "${values.mainUser}" ? conifg.mainUser;
     in
     {
       inherit username;
