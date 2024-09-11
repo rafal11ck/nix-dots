@@ -1,5 +1,7 @@
 { config, pkgs, lib, ... }:
-
+let
+  inherit (config) values;
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -8,7 +10,7 @@
   # This config is for home not system so it has lower piriorty.
 
   home = let
-    username = "${config.values.mainUser}";
+    username = "${values.mainUser}";
    in {
     inherit username;
     homeDirectory = lib.mkDefault "/home/${username}";
