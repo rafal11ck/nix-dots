@@ -6,11 +6,11 @@
 }:
 let
   inherit (config) values;
-  modules = ../modules;
+  modulePath = ../modules;
 in
 {
 
-  imports = [ modules/shared/values.nix ];
+  imports = [ (modulePath + /shared/values.nix) ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   # Those are made with mkDefault so that if this home manager works standalone 
