@@ -10,7 +10,7 @@ in
 {
 
   imports = [
-    (modulePath + /shared/values)
+    (modulePath + /shared/values.nix)
     ./hello
   ];
 
