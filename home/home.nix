@@ -7,9 +7,9 @@
   # but nixos won't error of duplicate.
   # This config is for home not system so it has lower piriorty.
 
-  home = let {
-    username = "${config.values.mainUser}"
-  } in {
+  home = let
+    username = "${config.values.mainUser}";
+   in {
     inherit username;
     homeDirectory = lib.mkDefault "/home/${username}";
 
