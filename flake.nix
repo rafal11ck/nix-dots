@@ -29,6 +29,7 @@
         default = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
+            config = inputs.config;
           };
           modules = [
             ./modules/shared
@@ -42,6 +43,7 @@
           ];
         };
       };
+
       # For home-manager standalone install. NixOS-less home manager.  
       homeConfigurations."rafal" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
