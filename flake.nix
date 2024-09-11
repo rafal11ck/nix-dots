@@ -35,7 +35,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${config.values.mainUser} = import ./home/home.nix;
+            home-manager.users.rafal = import ./home/home.nix;
           }
         ];
       };
