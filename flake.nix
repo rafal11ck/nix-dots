@@ -25,22 +25,22 @@
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
+      nixosConfigurations = {
+        default = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [
+            ./modules/shared
+            /etc/nixos/hardware-configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.rafal = import ./home/home.nix;
+            }
+          ];
         };
-        modules = [
-          ./modules/shared/default.nix
-          /etc/nixos/hardware-configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.rafal = import ./home/home.nix;
-
-            home-manager.extraSpecialArgs = { config = /modules/shared/values.nix; };
-          }
-        ];
       };
       # For home-manager standalone install. NixOS-less home manager.  
       homeConfigurations."rafal" = home-manager.lib.homeManagerConfiguration {
