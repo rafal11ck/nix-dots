@@ -1,6 +1,6 @@
-{ config, lib, pkgs, dotfiles , ... }:
+{ config, lib, pkgs, ... }:
 let
-  conffile = dotfiles + /foot/.config/foot/foot.ini;
+  conffile = ../dotfiles/foot/.config/foot/foot.ini;
 in
 {
    programs.foot =
