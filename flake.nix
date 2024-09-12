@@ -27,7 +27,7 @@
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
-      nixosConfigurations = import ./hosts;
+      nixosConfigurations = import ./hosts { nixpkgs = nixpkgs; };
 
 
       # For home-manager standalone install. NixOS-less home manager.
