@@ -7,6 +7,7 @@
 let
   modulePath = ../modules;
   values = import (modulePath + /shared/values.nix) { lib = lib; };
+  username = values.mainUser;
 in
 {
 
@@ -18,7 +19,7 @@ in
 
   home =
     let
-      username = "${values.mainUser}";
+      #username = "${values.mainUser}";
     in
     {
 
