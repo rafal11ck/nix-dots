@@ -6,13 +6,12 @@
 }:
 let
   username = "${config.values.mainUser}";
-  dotfiles = "../dotfiles/";
 in
 {
   imports = [
     # ./hello.nix
     ./bat.nix
-    ./foot.nix { dotfiles = dotfiles; }
+    ./foot.nix
     ./git.nix
     ./gitui.nix
     ./neovim.nix
