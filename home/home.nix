@@ -6,7 +6,7 @@
 }:
 let
   modulePath = ../modules;
-  values = import (modulePath + /shared/values.nix) {};
+  values = import (modulePath + /shared/values.nix) { lib = lib; };
 in
 {
 
