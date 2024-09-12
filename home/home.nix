@@ -9,11 +9,10 @@ let
   dotfiles = "../dotfiles/";
 in
 {
-
   imports = [
     # ./hello.nix
     ./bat.nix
-    ./foot.nix
+    ./foot.nix { dotfiles = dotfiles; }
     ./git.nix
     ./gitui.nix
     ./neovim.nix

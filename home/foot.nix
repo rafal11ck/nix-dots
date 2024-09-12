@@ -1,4 +1,4 @@
-{ config, lib, pkgs, dotfiles, ... }:
+{ config, lib, pkgs, dotfiles , ... }:
 let
   conffile = dotfiles + /foot/.config/foot/foot.ini;
 in
