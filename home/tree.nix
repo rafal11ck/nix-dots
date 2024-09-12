@@ -3,5 +3,5 @@
   ...
 }:
 {
-  home.pkgs = [ pkgs.tree ];
+  home.packages = [ pkgs.tree ];
 }
