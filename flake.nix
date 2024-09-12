@@ -37,7 +37,10 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.rafal = ./home/home.nix;
+              home-manager.users.rafal.imports = [
+                ./home/home.nix
+                ./modules/shared/values.nix
+              ];
             }
           ];
         };
