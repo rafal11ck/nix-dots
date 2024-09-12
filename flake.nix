@@ -27,9 +27,7 @@
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
-      nixosConfigurations = {
-        modules = [ ./hosts ];
-      };
+      nixosConfigurations = import ./hosts { };
 
       # For home-manager standalone install. NixOS-less home manager.
       homeConfigurations."rafal" = home-manager.lib.homeManagerConfiguration {

@@ -1,4 +1,4 @@
-{ nixpkgs, ... }:
+{ nixpkgs, inputs, ... }:
 let
   modulePath = ../modules;
 
@@ -9,7 +9,7 @@ in
 
   local-hardware-config = nixpkgs.lib.nixosSystem {
     specialArgs = {
-      #inherit inputs;
+      inherit inputs;
     };
 
     modules = [
