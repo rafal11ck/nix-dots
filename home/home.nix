@@ -13,17 +13,13 @@ in
   imports = [
     # ./hello.nix
     ./bat.nix
-    ./neovim.nix
     ./git.nix
+    ./gitui.nix
+    ./neovim.nix
+    ./tree.nix
   ];
 
   home = {
-
-    packages = [
-      pkgs.gitui
-      pkgs.tree
-      pkgs.cowsay
-    ];
 
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
