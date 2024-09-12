@@ -22,6 +22,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       modulesPath = ./modules;
+      workstation = modulesPath + "workstation";
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
@@ -34,17 +35,7 @@
           modules = [
             /etc/nixos/hardware-configuration.nix
             ./modules/shared
-
-            #home :D
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.rafal.imports = [
-                ./home/home.nix
-                (modulesPath + /shared/values.nix)
-              ];
-            }
+            workstation
           ];
         };
       };

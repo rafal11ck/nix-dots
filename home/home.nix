@@ -13,17 +13,13 @@ in
   imports = [
     # ./hello.nix
     ./bat.nix
+    ./neovim.nix
+    ./git.nix
   ];
 
   home = {
 
-    # The home.packages option allows you to install Nix packages into your
-    # environment.
     packages = [
-      # # Adds the 'hello' command to your environment. It prints a friendly
-      # # "Hello, world!" when run.
-      pkgs.git
-      pkgs.neovim
       pkgs.gitui
       pkgs.tree
       pkgs.cowsay
