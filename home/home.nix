@@ -13,6 +13,7 @@ in
   imports = [
     # ./hello.nix
     ./bat.nix
+    ./foot.nix
     ./git.nix
     ./gitui.nix
     ./neovim.nix
