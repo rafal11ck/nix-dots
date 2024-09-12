@@ -1,16 +1,14 @@
-{ nixpkgs, ... }@inputs:
-let
+
+{lib'}: let
+  inherit (lib') mkNixosSystem;
+
   modulePath = ../modules;
 
   shared = modulePath + /shared;
   workstation = modulePath + /workstation;
-in
-{
-
-  local-hardware-config = nixpkgs.lib.nixosSystem {
-    specialArgs = {
-      inherit inputs;
-    };
+in {
+  local-hardware-config = mkNixosSystem {
+    system = "x86_64-linux";
 
     modules = [
       /etc/nixos/hardware-configuration.nix
@@ -18,5 +16,4 @@ in
       workstation
     ];
   };
-
 }
