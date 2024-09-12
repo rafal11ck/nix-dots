@@ -1,0 +1,90 @@
+
+(deflisten workspace "scripts/workspace")
+
+(defwidget workspaces []
+        (literal
+        :content workspace)
+  )
+
+
+
+(defpoll clock_time :interval "5s" "date '+\%I:\%M \%p'")
+(defpoll clock_date :interval "1h" "date '+%b %d, %Y'")
+(defpoll calendar_day :interval "2h" "date '+%d'")
+(defpoll calendar_year :interval "2h" "date '+%Y'")
+
+(defwidget clock_module []
+  (eventbox
+    :onhover "${EWW_CMD} update time_rev=true"
+    :onhoverlost "${EWW_CMD} update time_rev=false"
+    (box
+      :class "module"
+      :space-evenly "false"
+      :orientation "h"
+      :spacing "0"
+      (label
+        :text clock_time
+       :class "clock_time_class")
+      (button
+        :class "clock_time_class"
+       :onclick "${EWW_CMD} open --toggle calendar" clock_date))))
+
+(defwindow calendar
+  :monitor 1
+  :exclusive false
+  :geometry (geometry
+             :height "20%"
+             :width "20%"
+             :anchor "top right")
+
+  :stacking "fg"
+  :windowtype "normal"
+ (cal))
+
+(defpoll date :interval "5s"
+         `date +'{"hour":"%I","min":"%M","am_pm":"%p","day":"%d","month":"%m","year":"%Y"}'`)
+
+(defwidget cal []
+           (calendar :class "calendar"
+                     :date "${date.year}-${date.month}-${date.day}"
+                     :format "%a %d %b"))
+
+
+
+
+(defwidget left []
+        (box :orientation "h" :space-evenly false
+        (workspaces)
+        )
+        )
+
+
+(defwidget center []
+        (box :orientation "h" :space-evenly false ))
+
+
+(defwidget right []
+        (box :orientation "h" :space-evenly false :halign "end"
+             (clock_module)
+             )
+        )
+
+(defwidget bar []
+  (centerbox :orientation "h"
+    (left)
+    (center)
+    (right)
+  ))
+
+(defwindow bar
+  :monitor 1
+  :exclusive true
+  :geometry (geometry
+             :height "3%"
+             :width "100%"
+             :anchor "top center")
+  :stacking "fg"
+  :windowtype "dock"
+  (bar))
+
+

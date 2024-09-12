@@ -1,0 +1,169 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family:
+        FontAwesome,
+        Material Design Icons;
+    /* sans-serif;
+        // Roboto,
+        // Helvetica,
+        // Arial;
+        */
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: #181825;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
+}
+
+#workspaces {
+    background-color: transparent;
+}
+
+#workspaces button {
+    all: initial; /* Remove GTK theme values (waybar #1351) */
+    min-width: 0; /* Fix weird spacing in materia (waybar #450) */
+    box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
+    border-radius: 13px;
+    margin: 6px 4px;
+    padding: 8px 12px;
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #1e1e2e;
+    background-color: #cdd6f4;
+}
+
+#workspaces button.urgent {
+    background-color: #f38ba8;
+}
+
+#cpu,
+#memory,
+#custom-power,
+#custom-nightmode,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#clock,
+#mpd,
+#mpris,
+#idle_inhibitor,
+#tray,
+#custom-notification,
+tooltip {
+    border-radius: 13px;
+    margin: 6px 4px;
+    padding: 8px 12px;
+    min-width: 20px;
+    min-height: 20px;
+    color: black;
+}
+
+#workspaces button.active,
+#custom-nightmode.activated,
+#idle_inhibitor.activated {
+    background-color: white;
+    color: black;
+}
+
+tooltip {
+    padding: 15px;
+    background-color: #131822;
+}
+
+#custom-notification,
+#tray {
+    background-color: black;
+    color: white;
+}
+
+#custom-nightmode {
+    background-color: #412983;
+    color: #ffffff;
+}
+
+#battery {
+    background-color: #f38ba8;
+}
+
+@keyframes blink {
+    to {
+        background-color: #f38ba8;
+        color: #181825;
+    }
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+    background-color: #ff0048;
+    color: #181825;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charging {
+    background-color: #a6e3a1;
+}
+
+#mpris {
+    background-color: #303030;
+    color: #cacaca;
+    min-height: 30px;
+    border-radius: 13px;
+    margin: 6px 6px;
+    padding: 8px 8px;
+}
+
+#backlight {
+    background-color: #fab387;
+}
+
+#pulseaudio {
+    background-color: #f9e2af;
+}
+
+#network {
+    background-color: #94e2d5;
+}
+
+#clock {
+    background-color: #cba6f7;
+}
+
+#custom-power {
+    background-color: #f2cdcd;
+}
+
+tooltip label {
+    padding: 5px;
+    background-color: #131822;
+}
+
+#cpu {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+#idle_inhibitor {
+    background-color: #2d3446;
+    color: white;
+}
