@@ -1,0 +1,16 @@
+#size
+width = 75%
+height = 85%
+
+font-size = 20
+
+outline-width = 2
+
+border-width = 6
+border-color = #F92672
+
+background-color = #1B1D1EB0
+
+fuzzy-match = true
+multi-instance = false
+
