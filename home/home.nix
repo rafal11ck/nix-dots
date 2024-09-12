@@ -6,6 +6,7 @@
 }:
 let
   username = "${config.values.mainUser}";
+  dotfiles = "../dotfiles/";
 in
 {
 
