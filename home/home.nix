@@ -5,7 +5,6 @@
   ...
 }:
 let
-  modulePath = ../modules;
   username = "${config.values.mainUser}";
 in
 {
