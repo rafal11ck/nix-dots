@@ -6,6 +6,19 @@
 }:
 let
   username = "${config.values.mainUser}";
+
+  # Function taking module list where it puts config
+  configImport =
+    dirs:
+    builtins.listToAttrs (
+      map (dir: {
+        name = dir;
+        value = {
+          source = ../dotfiles/${dir}/.config/${dir};
+          recursive = true;
+        };
+      }) dirs
+    );
 in
 {
   imports = [
@@ -18,8 +31,9 @@ in
     ./tree.nix
   ];
 
-  home = {
+  xdg.configFile = configImport [ "foot" ];
 
+  home = {
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
     # Those are made with mkDefault so that if this home manager works standalone
