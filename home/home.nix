@@ -6,6 +6,7 @@
 }:
 let
   modulePath = ../modules;
+  values = import (modulePath + /shared/values.nix) { };
 in
 {
 
@@ -17,7 +18,7 @@ in
 
   home =
     let
-      username = "${config.values.mainUser}";
+      username = "${values.mainUser}";
     in
     {
 
