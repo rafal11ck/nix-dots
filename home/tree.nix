@@ -1,5 +1,6 @@
 {
-  programs.tree = {
-    enable = true;
-  };
+  pkgs,
+}:
+{
+  home.pkgs = [ pkgs.tree ];
 }
