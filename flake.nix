@@ -21,6 +21,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      modulesPath = ./modules;
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
@@ -31,15 +32,17 @@
             inherit inputs;
           };
           modules = [
-            ./modules/shared
             /etc/nixos/hardware-configuration.nix
+            ./modules/shared
+
+            #home :D
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.rafal.imports = [
                 ./home/home.nix
-                ./modules/shared/values.nix
+                (modulesPath + /shared/values.nix)
               ];
             }
           ];
@@ -53,7 +56,8 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [
-          ./modules/shared/values.nix # for user name
+          # for user name
+          (modulesPath + /shared/values.nix)
           ./home/home.nix
         ];
 
