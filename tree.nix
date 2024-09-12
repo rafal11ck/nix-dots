@@ -1,0 +1,5 @@
+{
+  programs.tree = {
+    enable = true;
+  };
+}
