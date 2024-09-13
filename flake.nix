@@ -24,13 +24,12 @@
       modulesPath = ./modules;
       workstation = modulesPath + "/workstation";
 
-      lib' = import ./lib {inherit inputs lib';};
+      lib' = import ./lib { inherit inputs lib'; };
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
-      nixosConfigurations = import ./hosts {inherit lib';};
-
+      nixosConfigurations = import ./hosts { inherit lib'; };
 
       # For home-manager standalone install. NixOS-less home manager.
       homeConfigurations."rafal" = home-manager.lib.homeManagerConfiguration {
