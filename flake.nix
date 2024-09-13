@@ -9,6 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs =
@@ -16,6 +17,7 @@
       self,
       nixpkgs,
       home-manager,
+      hyprland,
       ...
     }@inputs:
     let
@@ -40,6 +42,7 @@
         modules = [
           # for user name
           (modulesPath + /shared/values.nix)
+          hyprland.homeManagerModules.default
           ./home/home.nix
         ];
 
