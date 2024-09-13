@@ -1,12 +1,13 @@
-
-{lib'}: let
+{ lib' }:
+let
   inherit (lib') mkNixosSystem;
 
   modulePath = ../modules;
 
   shared = modulePath + /shared;
   workstation = modulePath + /workstation;
-in {
+in
+{
   local-hardware-config = mkNixosSystem {
     system = "x86_64-linux";
 
