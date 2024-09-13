@@ -29,9 +29,10 @@ in
     ./gitui.nix
     ./neovim.nix
     ./tree.nix
+    ./hyprland
   ];
 
-  xdg.configFile = configImport [ "foot" ];
+  xdg.configFile = configImport [ "foot" "hypr" ];
 
   home = {
     # Home Manager needs a bit of information about you and the paths it should
