@@ -1,7 +1,4 @@
 {
-  config
-}:
-{
   programs.foot = {
     enable = true;
     server = {
