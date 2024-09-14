@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  configImport,
   ...
 }:
 
@@ -18,5 +19,5 @@
     ./tree.nix
   ];
 
-  #xdg.configFile = configImport [ "foot" ];
+  xdg.configFile = configImport [ "foot" ];
 }

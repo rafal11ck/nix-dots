@@ -4,9 +4,6 @@
   pkgs,
   ...
 }:
-let
-  conffile = ../dotfiles/foot/.config/foot/foot.ini;
-in
 {
   programs.foot = {
     enable = true;
@@ -15,5 +12,4 @@ in
     };
   };
 
-  xdg.configFile."foot/foot.ini".source = conffile;
 }

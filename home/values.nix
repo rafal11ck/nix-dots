@@ -6,8 +6,21 @@
 }:
 let
   username = "${config.values.mainUser}";
+
+  configImport =
+    dirs:
+    builtins.listToAttrs (
+      map (dir: {
+        name = dir;
+        value = {
+          source = ../dotfiles/${dir}/.config/${dir};
+          recursive = true;
+        };
+      }) dirs
+    );
 in
 {
+
   home = {
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
