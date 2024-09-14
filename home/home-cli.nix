@@ -8,6 +8,7 @@
 {
   imports = [
     ./values.nix
+    ./shared.nix
 
     ./bat.nix
     ./foot.nix
