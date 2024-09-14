@@ -23,18 +23,13 @@ in
 {
   imports = [
     # ./hello.nix
-    ./bat.nix
-    ./foot.nix
-    ./git.nix
-    ./gitui.nix
-    ./neovim.nix
-    ./tree.nix
+    ./home-cli.nix
     ./hyprland
   ];
 
   xdg.configFile = configImport [
     "foot"
-    "hypr"
+    #   "hypr"
   ];
 
   home = {
@@ -48,7 +43,6 @@ in
     homeDirectory = lib.mkDefault "/home/${username}";
 
     stateVersion = lib.mkDefault "24.05"; # Please read the comment before changing.
-
   };
 
   # Let Home Manager install and manage itself.
