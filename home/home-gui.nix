@@ -6,4 +6,8 @@
 }:
 
 {
+  imports = [
+    ./values.nix
+    ./shared.nix
+  ];
 }
