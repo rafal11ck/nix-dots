@@ -11,7 +11,7 @@ in
   options.values = {
     dotfilesPath = mkOption {
       description = "Path to dotfiles directory from home directory of configuration";
-      type = types.str;
+      type = types.path;
       default = "../dotfiles/";
     };
   };
