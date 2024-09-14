@@ -14,6 +14,6 @@
 
   xdg.configFile."foot" = {
     recursive = true;
-    source = "${config.values.dotfielsPath}" + "/foot";
+    source = "${config.values.dotfilesPath " + "/foot";
   };
 }
