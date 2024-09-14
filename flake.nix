@@ -9,6 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
+    nixgl.url = "github:nix-community/nixGL";
+
   };
 
   outputs =
@@ -16,11 +20,16 @@
       self,
       nixpkgs,
       home-manager,
+      hyprland,
+      nixgl,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ nixgl.overlay ];
+      };
       modulesPath = ./modules;
       workstation = modulesPath + "/workstation";
 
@@ -40,6 +49,7 @@
         modules = [
           # for user name
           (modulesPath + /shared/values.nix)
+          hyprland.homeManagerModules.default
           ./home/home.nix
         ];
 
@@ -48,4 +58,18 @@
       };
 
     };
+
+  nixConfig = {
+    extra-substituters = [
+      "https://hyprland.cachix.org"
+      "https://guibou.cachix.org/"
+    ];
+
+    extra-trusted-public-keys = [
+      #hyprland
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      #nixgl
+      "guibou.cachix.org-1:GcGQvWEyTx8t0KfQac05E1mrlPNHqs5fGMExiN9/pbM="
+    ];
+  };
 }

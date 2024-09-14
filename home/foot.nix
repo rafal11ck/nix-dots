@@ -1,12 +1,7 @@
 {
   config,
-  lib,
-  pkgs,
   ...
 }:
-let
-  conffile = ../dotfiles/foot/.config/foot/foot.ini;
-in
 {
   programs.foot = {
     enable = true;
@@ -15,5 +10,8 @@ in
     };
   };
 
-  xdg.configFile."foot/foot.ini".source = conffile;
+  xdg.configFile."foot" = {
+    recursive = true;
+    source = "${config.values.dotfilesPath}" + "/foot/.config/foot/";
+  };
 }
