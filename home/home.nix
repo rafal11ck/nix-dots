@@ -28,7 +28,7 @@ in
   ];
 
   xdg.configFile = configImport [
-    "foot"
+    #  "foot"
     #   "hypr"
   ];
 
