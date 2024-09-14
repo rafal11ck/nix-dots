@@ -4,10 +4,20 @@
   pkgs,
   ...
 }:
-
+let
+  inherit (lib) mkOption types;
+in
 {
+  options.values = {
+    dotfilesPath = mkOption {
+      description = "Path to dotfiles directory from home directory of configuration";
+      type = types.str;
+      default = "../dotfiles/";
+    };
+  };
+
   imports = [
-    ./values.nix
+ #   ./values.nix
     ./shared.nix
 
     ./bat.nix
