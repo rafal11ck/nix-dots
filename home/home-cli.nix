@@ -7,6 +7,9 @@
 
 {
   imports = [
+    #values
+    ./values.nix
+
     ./bat.nix
     ./foot.nix
     ./git.nix
