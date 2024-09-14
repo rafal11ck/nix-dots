@@ -12,7 +12,7 @@ in
     dotfilesPath = mkOption {
       description = "Path to dotfiles directory from home directory of configuration";
       type = types.path;
-      default = "../dotfiles/";
+      default = ../dotfiles;
     };
   };
 }
