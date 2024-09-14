@@ -2,7 +2,7 @@
   config,
   lib,
   pkgs,
-  configImport
+  configImport,
 }:
 
 {
@@ -12,6 +12,5 @@
 
     ./hyprland
   ];
-
 
 }

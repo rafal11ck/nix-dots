@@ -7,19 +7,17 @@
 let
   username = "${config.values.mainUser}";
 
-  configImport =
-    dirs:
-    builtins.listToAttrs (
-      map (dir: {
-        name = dir;
-        value = {
-          source = ../dotfiles/${dir}/.config/${dir};
-          recursive = true;
-        };
-      }) dirs
-    );
+  inherit (lib) mkOption types;
 in
 {
+
+  options.values = {
+    dotfilesPath = mkOption {
+      description = "Path to dotfiles directory from home directory of configuration";
+      type = types.str;
+      default = "../dotfiles/";
+    };
+  };
 
   home = {
     # Home Manager needs a bit of information about you and the paths it should

@@ -7,7 +7,6 @@
 
 {
   imports = [
-    #values
     ./values.nix
 
     ./bat.nix
@@ -18,5 +17,4 @@
     ./tree.nix
   ];
 
-  xdg.configFile = configImport [ "foot" ];
 }
