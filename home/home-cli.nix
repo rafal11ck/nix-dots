@@ -9,6 +9,7 @@
     ./values.nix
     ./shared.nix
 
+    ./aria2.nix
     ./bat.nix
     ./foot.nix
     ./git.nix
