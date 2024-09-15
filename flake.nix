@@ -50,7 +50,7 @@
           # for user name
           (modulesPath + /shared/values.nix)
           hyprland.homeManagerModules.default
-          ./home/home.nix
+          ./home/home-cli.nix
         ];
 
         # Optionally use extraSpecialArgs

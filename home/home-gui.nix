@@ -9,5 +9,7 @@
   imports = [
     ./values.nix
     ./shared.nix
+
+    ./hyprland
   ];
 }

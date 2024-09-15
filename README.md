@@ -1,14 +1,21 @@
 # nixdots
 
-This is nixos config repo
+This is nix config repo
 
 ## Usage 
 
-It it's impure because default is supposed to be universal and not copuled to hardware, It uses assumes that `hardware-config.nix` file is present at `/etc/nixos/hardware-config.nix` like one generated during nixOS installation process.
+Enable flakes and nix command.
+``` sh
+mkdir -p ~/.config/nix
+echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
+```
 
 ### NixOS
+
+It it's impure because default is supposed to be universal and not coupled to hardware, It uses assumes that `hardware-config.nix` file is present at `/etc/nixos/hardware-config.nix` like one generated during nixOS installation process.
+
 ```sh
-sudo nixos-rebuild switch --flake './#default' --impure
+sudo nixos-rebuild switch --flake './#local-hardware-config' --impure
 ```
 #### Why not "fix" impure?
 
@@ -16,7 +23,7 @@ Because coupling system config that is supposed to be "reproducible" with hardwa
 
 ### Nix home manager
 
-Spin home-manager config using nix
+Spin home-manager config using nix it provides cli part of config only.
 
 ``` sh
 nix run home-manager/master -- switch --flake .

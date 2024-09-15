@@ -7,6 +7,6 @@
 
   xdg.configFile."aria2" = {
     recursive = true;
-    source = "${config.values.dotfilesPath}" + "/aria2/.config/aria2/";
+    source = "${config.values.dotfilesPath}" + "/aria2/.config/aria2";
   };
 }
