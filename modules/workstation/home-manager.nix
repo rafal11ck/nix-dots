@@ -1,8 +1,6 @@
 {
   inputs,
   config,
-  lib,
-  pkgs,
   ...
 }:
 let
@@ -14,7 +12,7 @@ in
   config.home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.rafal.imports = [
+    users.${config.values.mainUser}.imports = [
       ../../home/home.nix
       (modulesPath + /shared/values.nix)
     ];

@@ -12,8 +12,4 @@
   #};
   i18n.defaultLocale = "en_US.UTF-8";
 
-  users.users.${config.values.mainUser} = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-  };
 }

@@ -11,5 +11,8 @@
     ./shared.nix
 
     ./hyprland
+    ./waybar.nix
+    ./hyprpaper.nix
+    ./swaync.nix
   ];
 }
