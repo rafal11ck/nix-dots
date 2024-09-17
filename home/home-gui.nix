@@ -10,9 +10,11 @@
     ./values.nix
     ./shared.nix
 
+    ./firefox.nix
     ./hyprland
-    ./waybar.nix
     ./hyprpaper.nix
+    ./pavucontrol.nix
     ./swaync.nix
+    ./waybar.nix
   ];
 }
