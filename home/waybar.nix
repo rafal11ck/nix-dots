@@ -14,8 +14,9 @@
   };
 
   home.packages = with pkgs; [
-    dejavu_fonts
+    iosevka-bin
     font-awesome
+    material-design-icons
   ];
 
   xdg.configFile."waybar" = {

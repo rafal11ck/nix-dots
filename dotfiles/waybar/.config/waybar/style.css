@@ -4,12 +4,8 @@
     min-height: 0;
     font-family:
         FontAwesome,
-        Material Design Icons;
-    /* sans-serif;
-        // Roboto,
-        // Helvetica,
-        // Arial;
-        */
+        Material Design Icons,
+        Iosevka Sans Serif;
     font-size: 14px;
 }
 

@@ -31,7 +31,7 @@
           (extension "floccus" "floccus@handmadeideas.org")
           (extension "keepassxc-browser" "keepassxc-browser@keepassxc.org")
           (extension "darkreader" "jid1-KKzOGWgsW3Ao4Q@jetpack")
-          (extension "i-dont-care-about-cookies" "jid1-KKzOGWgsW3Ao4Q@jetpack")
+          (extension "i-still-dont-care-about-cookies" "idcac-pub@guus.ninja")
           (extension "polish-spellchecker-dictionary" "pl@dictionaries.addons.mozilla.org")
         ];
       # To add additional extensions:

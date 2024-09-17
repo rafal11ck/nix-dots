@@ -18,8 +18,10 @@
     ./git.nix
     ./gitui.nix
     ./neovim.nix
+    ./nh.nix
     ./starship.nix
     ./tree.nix
+    ./zellij.nix
   ];
 
 }
