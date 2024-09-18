@@ -22,6 +22,7 @@
     ./nautilus.nix
     ./obs-studio.nix
     ./pavucontrol.nix
+    ./svp.nix
     ./swaync.nix
     ./tofi.nix
     ./waybar.nix

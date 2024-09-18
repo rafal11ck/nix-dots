@@ -51,6 +51,17 @@
       };
 
       "Preferences" = {
+
+        # preview
+        "browser.tabs.hoverPreview.enabled" = {
+          Value = true;
+        };
+
+        #
+        "browser.quitShortcut.disabled" = {
+          Value = true;
+        };
+
         # Disable ads in new tab
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = {
           "Value" = false;

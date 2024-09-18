@@ -1,6 +1,12 @@
-{ config, ... }:
+{ config, pkgs, ... }:
+
 {
+  home.packages = with pkgs; [
+    emojify
+  ];
+
   programs.emacs.enable = true;
+  services.emacs.enable = true;
 
   # Doom emacs has to be installed manualy
   #
