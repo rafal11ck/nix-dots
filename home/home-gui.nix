@@ -10,12 +10,17 @@
     ./values.nix
     ./shared.nix
 
+    ./style
+
     ./discord.nix
     ./firefox.nix
     ./hyprland
     ./hyprpaper.nix
     ./jellyfin-media-player.nix
     ./jellyfin-mpv-shim.nix
+    ./keepassxc.nix
+    ./nautilus.nix
+    ./obs-studio.nix
     ./pavucontrol.nix
     ./swaync.nix
     ./tofi.nix

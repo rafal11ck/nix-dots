@@ -76,6 +76,9 @@
           Value = "";
         };
 
+        "media.ffmpeg.vaapi.enabled" = {
+          Value = true;
+        };
       };
     };
 
