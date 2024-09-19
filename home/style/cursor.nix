@@ -7,6 +7,7 @@
 
 let
   curTheme = "phinger-cursors-light";
+  values = config.values;
 in
 {
   home.pointerCursor = {
@@ -21,5 +22,4 @@ in
       cursor-theme = "${curTheme}";
     };
   };
-
 }

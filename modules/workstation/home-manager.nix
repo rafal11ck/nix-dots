@@ -15,6 +15,7 @@ in
     users.${config.values.mainUser}.imports = [
       ../../home/home.nix
       (modulesPath + /shared/values.nix)
+      inputs.catppuccin.homeManagerModules.catppuccin
     ];
 
   };

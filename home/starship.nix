@@ -9,6 +9,8 @@
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
+
+    catppuccin.enable = lib.mkDefault false;
   };
 
   xdg.configFile."starship.toml" = {

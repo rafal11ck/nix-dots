@@ -2,7 +2,7 @@
   description = "NixOS config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    catppuccin.url = "github:catppuccin/nix";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,6 +12,8 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     nixgl.url = "github:nix-community/nixGL";
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs =
@@ -21,6 +23,7 @@
       home-manager,
       hyprland,
       nixgl,
+      catppuccin,
       ...
     }@inputs:
     let
@@ -49,6 +52,7 @@
           # for user name
           (modulesPath + /shared/values.nix)
           hyprland.homeManagerModules.default
+          catppuccin.homeManagerModules.catppuccin
           ./home/home-cli.nix
         ];
 

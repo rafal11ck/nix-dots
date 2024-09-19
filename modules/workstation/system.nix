@@ -6,7 +6,6 @@
 }:
 
 {
-
   users.users.${config.values.mainUser} = {
     isNormalUser = true;
     extraGroups = [

@@ -9,6 +9,8 @@
     ./values.nix
     ./shared.nix
 
+    ./style
+
     ./aria2.nix
     ./bash.nix
     ./bat.nix
