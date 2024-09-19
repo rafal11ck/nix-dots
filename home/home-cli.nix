@@ -17,8 +17,10 @@
     ./btop.nix
     ./emacs.nix
     ./foot.nix
+    ./fzf.nix
     ./git.nix
     ./gitui.nix
+    ./mpv.nix
     ./neovim.nix
     ./nh.nix
     ./starship.nix

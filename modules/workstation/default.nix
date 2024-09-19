@@ -10,8 +10,9 @@
     ./hyprland.nix
     ./catppuccin.nix
     ./pipewire.nix
+    ./plymouth.nix
     ./services.nix
-    #./style.nix
+    ./style
     ./system.nix
   ];
 
