@@ -8,14 +8,16 @@
 {
   services.greetd = {
     enable = true;
-    settings = rec {
-      initial_session = {
-        command = "${lib.getExe pkgs.hyprland}";
+
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
         user = "${config.values.mainUser}";
       };
-      default_session = initial_session;
+
     };
 
+    package = pkgs.greetd.tuigreet;
   };
 
 }
