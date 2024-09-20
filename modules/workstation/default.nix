@@ -6,9 +6,10 @@
 }:
 {
   imports = [
+    ./boot
+    ./display-manager
     ./home-manager.nix
     ./hyprland.nix
-    ./catppuccin.nix
     ./pipewire.nix
     ./plymouth.nix
     ./services.nix

@@ -2,14 +2,12 @@
   config,
   lib,
   pkgs,
-  inputs,
   ...
 }:
 
 {
   imports = [
-    ./catppuccin.nix
     ./plymouth.nix
+    ./grub.nix
   ];
-
 }
