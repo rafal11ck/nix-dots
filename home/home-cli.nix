@@ -27,6 +27,7 @@
     ./mpv.nix
     ./neovim.nix
     ./nh.nix
+    ./nil.nix
     ./ripgrep.nix
     ./shellcheck.nix
     ./shfmt.nix
