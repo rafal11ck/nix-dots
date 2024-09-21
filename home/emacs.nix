@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     emojify
-    nerdfonts # NOTE: idk if it will solve fonts.
+    # nerdfonts # NOTE: idk if it will solve fonts.
   ];
 
   programs.emacs.enable = true;
