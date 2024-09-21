@@ -19,6 +19,7 @@
     ./jellyfin-media-player.nix
     ./jellyfin-mpv-shim.nix
     ./keepassxc.nix
+    ./mpv.nix
     ./nautilus.nix
     ./obs-studio.nix
     ./pavucontrol.nix
