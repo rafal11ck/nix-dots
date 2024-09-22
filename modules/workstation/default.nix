@@ -11,6 +11,7 @@
     ./display-manager
     ./home-manager.nix
     ./hyprland.nix
+    ./nvidia.nix
     ./pipewire.nix
     ./plymouth.nix
     ./services.nix
