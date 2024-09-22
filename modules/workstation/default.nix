@@ -6,6 +6,7 @@
 }:
 {
   imports = [
+    ./amd.nix
     ./boot
     ./display-manager
     ./home-manager.nix
