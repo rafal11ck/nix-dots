@@ -11,6 +11,7 @@
     ./shared.nix
 
     ./style
+    ./scripts
 
     ./discord.nix
     ./firefox.nix
