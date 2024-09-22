@@ -21,6 +21,7 @@
     ./keepassxc.nix
     ./mpv.nix
     ./nautilus.nix
+    ./nvtop.nix
     ./obs-studio.nix
     ./pavucontrol.nix
     ./svp.nix
