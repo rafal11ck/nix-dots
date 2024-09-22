@@ -33,7 +33,6 @@
         overlays = [ nixgl.overlay ];
       };
       modulesPath = ./modules;
-      workstation = modulesPath + "/workstation";
 
       lib' = import ./lib { inherit inputs lib'; };
     in
