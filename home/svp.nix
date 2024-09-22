@@ -6,5 +6,7 @@
 }:
 
 {
-  home.packages = with pkgs; [ svp ];
+  home.packages = with pkgs; [
+    svp
+  ];
 }
