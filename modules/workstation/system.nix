@@ -12,6 +12,7 @@
       "wheel"
       "input"
       "audio"
+      "i2c"
     ];
   };
 
