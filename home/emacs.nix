@@ -3,6 +3,9 @@
 {
   home.packages = with pkgs; [
     emojify
+
+    nixfmt-rfc-style # for nix mode in emacs
+
     # nerdfonts # NOTE: idk if it will solve fonts.
   ];
 
