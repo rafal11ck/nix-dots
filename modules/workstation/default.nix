@@ -8,6 +8,7 @@
   imports = [
     ./amd.nix
     ./boot
+    ./dictd.nix
     ./display-manager
     ./home-manager.nix
     ./hyprland.nix
