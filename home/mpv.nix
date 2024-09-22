@@ -8,7 +8,7 @@
 {
   programs.mpv = {
     enable = true;
-    package = pkgs.svp.mpv;
+    #package = pkgs.svp.mpv; # replaced with overlay
   };
 
   xdg.configFile."mpv" = {
