@@ -19,4 +19,7 @@
       "gtk"
     ];
   };
+
+  # Swaylock unlock ability
+  security.pam.services.swaylock = {};
 }

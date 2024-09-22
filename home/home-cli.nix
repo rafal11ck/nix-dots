@@ -16,6 +16,7 @@
     ./bat.nix
     ./btop.nix
     ./clang.nix
+    ./dict.nix
     ./dockfmt.nix
     ./emacs.nix
     ./fd.nix
