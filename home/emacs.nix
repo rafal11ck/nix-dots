@@ -5,6 +5,7 @@
     emojify
 
     nixfmt-rfc-style # for nix mode in emacs
+    bash-language-server # for sh mode lsp
 
     # nerdfonts # NOTE: idk if it will solve fonts.
   ];
