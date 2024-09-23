@@ -4,7 +4,7 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  networking.hostName = "pc01"
+  networking.hostName = "pc01";
 
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
