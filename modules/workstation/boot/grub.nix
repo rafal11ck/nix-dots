@@ -11,8 +11,9 @@
   boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
 
   boot.loader.grub = {
-    copyKernels = true;
+    #copyKernels = true;
     devices = [ "nodev" ];
+    configurationLimit = 4;
     efiInstallAsRemovable = true;
     efiSupport = true;
     enable = true;
