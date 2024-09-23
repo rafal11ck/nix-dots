@@ -11,12 +11,12 @@
   hardware = {
     amdgpu.initrd.enable = lib.mkDefault true;
 
-    opengl = {
-      driSupport32Bit = true; # Turn on vulcan for 32bit apps.
-
+    graphics = {
       extraPackages = with pkgs; [
         rocmPackages.clr.icd
       ];
+      enable32Bit = true;
+      enable = true;
     };
   };
 
