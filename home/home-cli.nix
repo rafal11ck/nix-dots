@@ -26,6 +26,7 @@
     ./gitui.nix
     ./hunspell.nix
     ./mpv.nix
+    ./ncdu.nix
     ./neovim.nix
     ./nh.nix
     ./nil.nix
