@@ -11,8 +11,6 @@
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
-    nixgl.url = "github:nix-community/nixGL";
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
@@ -22,7 +20,6 @@
       nixpkgs,
       home-manager,
       hyprland,
-      nixgl,
       catppuccin,
       ...
     }@inputs:
@@ -30,7 +27,6 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ nixgl.overlay ];
       };
       modulesPath = ./modules;
 
@@ -70,7 +66,6 @@
     extra-trusted-public-keys = [
       #hyprland
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      #nixgl
       "guibou.cachix.org-1:GcGQvWEyTx8t0KfQac05E1mrlPNHqs5fGMExiN9/pbM="
     ];
   };
