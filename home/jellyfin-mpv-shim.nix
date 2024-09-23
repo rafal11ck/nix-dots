@@ -14,7 +14,6 @@
   };
 
   xdg.configFile."jellyfin-mpv-shim/conf.json" = {
-    source = "${config.values.dotfilesPath}" + "/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/conf.conf";
+    source = "${config.values.dotfilesPath}" + "/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/conf.json";
   };
-
 }
