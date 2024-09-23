@@ -17,4 +17,15 @@ in
       workstation
     ];
   };
+
+  pc01 = mkNixosSystem {
+    system = "x86_64-linux";
+
+    modules = [
+      ./pc01
+      shared
+      workstation
+    ];
+  };
+
 }
