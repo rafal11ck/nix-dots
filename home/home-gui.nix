@@ -15,6 +15,7 @@
 
     ./discord.nix
     ./firefox.nix
+    ./ffmpeg.nix
     ./hyprland
     ./hyprpaper.nix
     ./jellyfin-media-player.nix
