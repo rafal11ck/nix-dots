@@ -4,6 +4,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+  hardware.amdgpu.opencl.enable= true;
+
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];

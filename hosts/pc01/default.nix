@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
@@ -6,8 +11,10 @@
     ./hardware.nix
   ];
 
+  programs.steam.enable = true;
+
   nixpkgs.config = {
-    rocmSupport = true;
+   rocmSupport = true;
   };
 
   networking.hostName = "pc01";
@@ -16,6 +23,10 @@
     ollama = {
       enable = true;
       loadModels = [ "codestral" ];
+      # disable accleration: https://github.com/NixOS/nixpkgs/issues/344182
+      acceleration = false;
     };
   };
+
+
 }

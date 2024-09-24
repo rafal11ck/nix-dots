@@ -6,18 +6,13 @@
 }:
 {
   imports = [
-    ./amd.nix
     ./boot
-    ./dictd.nix
+    ./desktop
     ./display-manager
-    ./home-manager.nix
-    ./hyprland.nix
-    ./i2c.nix
-    ./nvidia.nix
-    ./pipewire.nix
-    ./plymouth.nix
-    ./services.nix
+    ./driver
+    ./services
     ./style
+    ./home-manager.nix
     ./system.nix
   ];
 

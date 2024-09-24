@@ -12,9 +12,6 @@
     amdgpu.initrd.enable = lib.mkDefault true;
 
     graphics = {
-      extraPackages = with pkgs; [
-        rocmPackages.clr.icd
-      ];
       enable32Bit = true;
       enable = true;
     };

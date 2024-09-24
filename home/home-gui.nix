@@ -14,8 +14,8 @@
     ./scripts
 
     ./discord.nix
-    ./firefox.nix
     ./ffmpeg.nix
+    ./firefox.nix
     ./hyprland
     ./hyprpaper.nix
     ./jellyfin-media-player.nix
@@ -29,6 +29,7 @@
     ./svp.nix
     ./swaync.nix
     ./tofi.nix
+    ./virt-manager.nix
     ./waybar.nix
     ./wl-clipboard.nix
   ];

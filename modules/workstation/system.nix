@@ -6,6 +6,10 @@
 }:
 
 {
+  environment.systemPackages = with pkgs; [
+    davfs2
+  ];
+
   users.users.${config.values.mainUser} = {
     isNormalUser = true;
     extraGroups = [
@@ -16,10 +20,4 @@
     ];
   };
 
-
-  # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
 }
