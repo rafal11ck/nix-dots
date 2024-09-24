@@ -34,7 +34,6 @@
     ];
   };
 
-
   hardware = {
     nvidia = {
       powerManagement.finegrained = false;
@@ -50,6 +49,19 @@
       enable32Bit = true;
       enable = true;
     };
+
+    opengl.extraPackages = with pkgs; [
+      rocmPackages.clr.icd # following for GPU AI acceleration
+      rocmPackages.rocm-smi
+      rocmPackages.clr
+      rocmPackages.hipblas
+      rocmPackages.rocblas
+      rocmPackages.rocsolver
+      rocmPackages.rocm-comgr
+      rocmPackages.rocm-runtime
+      rocmPackages.rocsparse
+    ];
+
   };
 
 }
