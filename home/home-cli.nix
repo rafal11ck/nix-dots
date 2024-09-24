@@ -25,6 +25,7 @@
     ./git.nix
     ./gitui.nix
     ./hunspell.nix
+    ./megatools
     ./mpv.nix
     ./ncdu.nix
     ./neovim.nix
