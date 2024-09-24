@@ -9,7 +9,7 @@
   programs.mpv = {
     enable = true;
 
-    package = pkgs.svp.mpv;
+    #package = pkgs.svp.mpv;
   };
 
   xdg.configFile."mpv" = {
