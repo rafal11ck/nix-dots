@@ -30,6 +30,7 @@
     ./neovim.nix
     ./nh.nix
     ./nil.nix
+    ./nmap.nix
     ./ripgrep.nix
     ./shellcheck.nix
     ./shfmt.nix
