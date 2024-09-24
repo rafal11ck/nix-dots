@@ -57,4 +57,4 @@ By default [home.nix](./home/home.nix) should be used which imports both.
 
 [./modules](./modules) Modules which could be called workflows.
 
-[./pkgs] Custom pkgs.
+[./pkgs](./pkgs) Custom pkgs.
