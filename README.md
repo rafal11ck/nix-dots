@@ -2,6 +2,17 @@
 
 This is nix config repo
 
+
+## Random links
+
+https://search.nixos.org/packages?channel=unstable
+
+https://search.nixos.org/options?channel=unstable
+
+https://home-manager-options.extranix.com/
+
+https://noogle.dev/
+
 ## Usage 
 
 Enable flakes and nix command.
@@ -11,8 +22,6 @@ echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
 ```
 
 ### NixOS
-
-It it's impure because default is supposed to be universal and not coupled to hardware, It uses assumes that `hardware-config.nix` file is present at `/etc/nixos/hardware-config.nix` like one generated during nixOS installation process.
 
 ```sh
 sudo nixos-rebuild switch --flake './#local-hardware-config' --impure
@@ -25,16 +34,27 @@ Because coupling system config that is supposed to be "reproducible" with hardwa
 
 Spin home-manager config using nix it provides cli part of config only.
 
-``` sh
+```sh
 nix run home-manager/master -- switch --flake .
 ```
 
-## Random links
 
-https://search.nixos.org/packages?channel=unstable
 
-https://search.nixos.org/options?channel=unstable
+# Structure
+    
+[./dotfiles](./dotfiles) regular stow-able dot files
 
-https://home-manager-options.extranix.com/
+[./home](./home) nix home-manager home configuration.
+It is split into two main files [home-cli](./home/home-cli.nix) and [home-gui](./home/home-gui.nix).
+Which are responsible for command-line-interface and graphical user interface respectively.
 
-https://noogle.dev/
+
+By default [home.nix](./home/home.nix) should be used which imports both.
+
+[/hosts](./hosts) Contains host specific configurations.
+
+[./lib](./lib) Has some stuff that I don't understand, but use to define nixOS systems outside of main [flake](./flake.nix) module.
+
+[./modules](./modules) Modules which could be called workflows.
+
+[./pkgs] Custom pkgs.
