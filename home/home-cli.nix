@@ -25,13 +25,14 @@
     ./git.nix
     ./gitui.nix
     ./hunspell.nix
-    ./megatools
+    ./megatools.nix
     ./mpv.nix
     ./ncdu.nix
     ./neovim.nix
     ./nh.nix
     ./nil.nix
     ./nmap.nix
+    ./pandoc.nix
     ./ripgrep.nix
     ./shellcheck.nix
     ./shfmt.nix
