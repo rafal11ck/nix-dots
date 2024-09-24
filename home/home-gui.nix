@@ -29,6 +29,7 @@
     ./pavucontrol.nix
     ./svp.nix
     ./swaync.nix
+    ./thunderbird.nix
     ./tofi.nix
     ./virt-manager.nix
     ./waybar.nix
