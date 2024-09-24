@@ -19,20 +19,21 @@
     rocmSupport = true;
   };
 
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
   services = {
     ollama = {
       enable = true;
       loadModels = [ "codestral" ];
       acceleration = "rocm";
     };
+
+    xserver.videoDrivers = [
+      "amdgpu"
+      "nvidia"
+    ];
   };
 
-  services.xserver.videoDrivers = [
-    "amdgpu"
-    "nvidia"
-  ];
-
-  boot.initrd.kernelModules = [ "amdgpu" ];
 
   hardware = {
     nvidia = {
