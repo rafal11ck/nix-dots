@@ -9,7 +9,7 @@ https://search.nixos.org/packages?channel=unstable
 
 https://search.nixos.org/options?channel=unstable
 
-https://home-manager-options.extranix.com/
+https://home-manager-options.extranix.com/?query=&release=master
 
 https://noogle.dev/
 
