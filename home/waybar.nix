@@ -30,6 +30,4 @@
   xdg.configFile."scripts/nightmode.sh" = {
     source = "${config.values.dotfilesPath}" + "/scripts/.config/scripts/" + "nightmode.sh";
   };
-
-  home.sessionPath = [ (config.xdg.configHome + "/scripts") ];
 }
