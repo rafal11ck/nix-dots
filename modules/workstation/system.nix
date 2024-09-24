@@ -13,10 +13,11 @@
   users.users.${config.values.mainUser} = {
     isNormalUser = true;
     extraGroups = [
-      "wheel"
-      "input"
       "audio"
       "i2c"
+      "input"
+      "wheel"
+      "storage"
     ];
   };
 
