@@ -6,5 +6,7 @@
 }:
 
 {
-  home.packages = with pkgs; [ notfiy-send ];
+  home.packages = with pkgs; [
+    libnotify #provides notify-send
+  ];
 }
