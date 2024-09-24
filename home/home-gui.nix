@@ -27,6 +27,7 @@
     ./nvtop.nix
     ./obs-studio.nix
     ./pavucontrol.nix
+    ./scrcpy.nix
     ./svp.nix
     ./swaync.nix
     ./thunderbird.nix
