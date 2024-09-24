@@ -39,6 +39,7 @@
     ./starship.nix
     ./tree.nix
     ./zellij.nix
+    ./zoxide.nix
   ];
 
 }
