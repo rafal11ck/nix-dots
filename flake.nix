@@ -11,7 +11,13 @@
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs = {
+      #url = "github:nixos/nixpkgs/nixos-unstable";
+      type = "github";
+      owner = "NixOS";
+      repo = "nixpkgs";
+      ref = "0c0ef784a353fa8661c71833b1182654839f2934";
+    };
   };
 
   outputs =

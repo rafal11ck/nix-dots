@@ -11,20 +11,21 @@
     ./hardware.nix
   ];
 
+  networking.hostName = "pc01";
+
+
   programs.steam.enable = true;
 
   nixpkgs.config = {
    rocmSupport = true;
   };
 
-  networking.hostName = "pc01";
 
   services = {
     ollama = {
       enable = true;
       loadModels = [ "codestral" ];
-      # disable accleration: https://github.com/NixOS/nixpkgs/issues/344182
-      acceleration = false;
+      acceleration = "rocm";
     };
   };
 
