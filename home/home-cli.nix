@@ -33,6 +33,7 @@
     ./nil.nix
     ./nmap.nix
     ./pandoc.nix
+    ./playerctl.nix
     ./ripgrep.nix
     ./shellcheck.nix
     ./shfmt.nix
