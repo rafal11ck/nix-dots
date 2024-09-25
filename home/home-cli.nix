@@ -34,6 +34,7 @@
     ./nmap.nix
     ./pandoc.nix
     ./playerctl.nix
+    ./pulsemixer.nix
     ./ripgrep.nix
     ./shellcheck.nix
     ./shfmt.nix
