@@ -30,7 +30,7 @@
           (extension "ublock-origin" "uBlock0@raymondhill.net")
           (extension "floccus" "floccus@handmadeideas.org")
           (extension "keepassxc-browser" "keepassxc-browser@keepassxc.org")
-          (extension "darkreader" "jid1-KKzOGWgsW3Ao4Q@jetpack")
+          (extension "darkreader" "addon@darkreader.org")
           (extension "istilldontcareaboutcookies" "idcac-pub@guus.ninja")
           (extension "polish-spellchecker-dictionary" "pl@dictionaries.addons.mozilla.org")
         ];
