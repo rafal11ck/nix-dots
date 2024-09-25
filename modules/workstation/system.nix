@@ -6,10 +6,6 @@
 }:
 
 {
-  environment.systemPackages = with pkgs; [
-    davfs2
-  ];
-
   users.users.${config.values.mainUser} = {
     isNormalUser = true;
     extraGroups = [
@@ -18,6 +14,7 @@
       "input"
       "wheel"
       "storage"
+      "davfs2"
     ];
   };
 

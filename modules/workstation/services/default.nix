@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./davfs2.nix
     ./dictd.nix
     ./gvfs.nix
     ./qemu.nix
