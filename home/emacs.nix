@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     emojify
 
+    python3
     nixfmt-rfc-style # for nix mode in emacs
     bash-language-server # for sh mode lsp
     nodePackages_latest.vscode-json-languageserver # lsp server for json
