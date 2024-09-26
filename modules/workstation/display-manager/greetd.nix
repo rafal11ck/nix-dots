@@ -14,7 +14,10 @@
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
         user = "${config.values.mainUser}";
       };
-
+      initial_session = {
+        command = "Hyprland";
+        user = "${config.values.mainUser}";
+      };
     };
 
     package = pkgs.greetd.tuigreet;
