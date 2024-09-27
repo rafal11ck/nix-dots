@@ -7,7 +7,7 @@
 
 {
   home.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["NerdFontsSymbolsOnly"];})
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
     font-awesome
   ];
 }

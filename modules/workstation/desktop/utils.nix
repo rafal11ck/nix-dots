@@ -21,5 +21,5 @@
   };
 
   # Swaylock unlock ability
-  security.pam.services.swaylock = {};
+  security.pam.services.swaylock = { };
 }
