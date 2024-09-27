@@ -11,7 +11,10 @@
     ./hardware.nix
   ];
 
-  networking.hostName = "pc01";
+  networking = {
+    hostName = "pc01";
+    firewall.allowedTCPPorts = [ 5900 ];
+  };
 
   programs.steam.enable = true;
 
