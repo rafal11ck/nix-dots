@@ -5,10 +5,6 @@
   ...
 }:
 {
-  nixpkgs.overlays = self: super: {
-    mpv = super.mpv.override { vapoursynthSupport = true; };
-  };
-
   imports = [
     # ./hello.nix
     ./home-cli.nix
