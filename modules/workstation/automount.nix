@@ -4,31 +4,25 @@
   pkgs,
   ...
 }:
-
+let
+  values = config.values;
+in
 {
-  # NOTE requires credentials to be provided (man mount.davfs)
-  systemd =
-    let
-      davpath = "/media/safe";
-    in
-    {
-      mounts = [
-        {
-          what = "https://cloud.cursedman.xyz/remote.php/dav/files/rafal/safe";
-          where = davpath;
-          type = "davfs";
-          options = "uid=${config.values.mainUser},noauto,user,_netdev";
-        }
-      ];
 
-      automounts = [
-        {
-          description = "Automount safe";
-          where = davpath;
-          automountConfig = {
-            TimeoutIdleSec = 60;
-          };
-        }
+  fileSystems = {
+
+    # NOTE requires credentials to be provided (man mount.davfs)
+    "/media/safe" = {
+      device = "https://cloud.cursedman.xyz/remote.php/dav/files/rafal/safe";
+      fsType = "davfs";
+      options = [
+        "x-systemd.automount"
+        "x-systemd.idle-timeout=60"
+        "user"
+        "uid=${values.mainUser}"
+        "noauto"
+        "_netdev"
       ];
     };
+  };
 }
