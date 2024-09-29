@@ -90,6 +90,10 @@
         "media.ffmpeg.vaapi.enabled" = {
           Value = true;
         };
+
+        "browser.download.useDownloadDir" = {
+          Value = false;
+        };
       };
     };
 
