@@ -10,7 +10,7 @@
     ./davfs2.nix
     ./dictd.nix
     ./gvfs.nix
-    ./qemu.nix
+    ./libvirtd.nix
     ./udisks2.nix
   ];
 }

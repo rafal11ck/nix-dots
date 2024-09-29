@@ -15,6 +15,7 @@
       "wheel"
       "storage"
       "davfs2"
+      "libvirtd"
     ];
   };
 
