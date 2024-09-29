@@ -6,6 +6,7 @@
 }:
 {
   imports = [
+    ./automount.nix
     ./boot
     ./desktop
     ./display-manager
