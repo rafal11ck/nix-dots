@@ -7,8 +7,9 @@
 
 {
   imports = [
-    ./utils.nix
     ./hyprland.nix
     ./pipewire.nix
+    ./utils.nix
+    ./wine.nix
   ];
 }
