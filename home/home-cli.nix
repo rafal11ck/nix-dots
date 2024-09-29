@@ -35,6 +35,7 @@
     ./pandoc.nix
     ./playerctl.nix
     ./pulsemixer.nix
+    ./ranger.nix
     ./ripgrep.nix
     ./shellcheck.nix
     ./shfmt.nix
