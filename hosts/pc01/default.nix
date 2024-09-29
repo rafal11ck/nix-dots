@@ -16,7 +16,10 @@
     firewall.allowedTCPPorts = [ 5900 ];
   };
 
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
+  };
 
   nixpkgs.config = {
     rocmSupport = true;
