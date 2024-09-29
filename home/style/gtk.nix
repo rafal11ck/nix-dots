@@ -27,7 +27,11 @@
 
     iconTheme = {
       name = "ePapirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      package = (
+        pkgs.epapirus-icon-theme.override {
+          color = (lib.strings.toLower config.values.catppuccinAccent);
+        }
+      );
     };
 
   };
