@@ -32,6 +32,7 @@
     ./nh.nix
     ./nil.nix
     ./nmap.nix
+    ./p7zip.nix
     ./pandoc.nix
     ./playerctl.nix
     ./pulsemixer.nix
