@@ -25,13 +25,14 @@ in
       ];
     };
 
-
     # NOTE requires credentials to be provided (man mount.cifs)
     "/media/ext" = {
       device = "//openmediavault/ext";
       fsType = "cifs";
       options = [
         "_netdev"
+        "credentials=/etc/samba/credentials"
+        "exec"
         "noauto"
         "nobrl"
         "uid=${values.mainUser}"
@@ -39,7 +40,6 @@ in
         "vers=3.0"
         "x-systemd.automount"
         "x-systemd.idle-timeout=300"
-        "credentials=/etc/samba/credentials"
       ];
     };
 
