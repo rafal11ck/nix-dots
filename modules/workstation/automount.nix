@@ -31,12 +31,13 @@ in
       fsType = "cifs";
       options = [
         "_netdev"
+        "rw"
         "credentials=/etc/samba/credentials"
         "exec"
+        "noatime"
         "noauto"
         "nobrl"
         "uid=${values.mainUser}"
-        "user"
         "vers=3.0"
         "x-systemd.automount"
         "x-systemd.idle-timeout=300"
