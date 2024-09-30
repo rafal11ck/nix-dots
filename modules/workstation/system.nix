@@ -16,6 +16,7 @@
       "storage"
       "davfs2"
       "libvirtd"
+      "docker"
     ];
   };
 
