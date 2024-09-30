@@ -12,8 +12,7 @@
     grim
     slurp
 
-    #lockscreen
-    swaylock
+    killall
   ];
 
   wayland.windowManager.hyprland = {

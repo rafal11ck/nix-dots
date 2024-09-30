@@ -30,6 +30,7 @@
     ./pavucontrol.nix
     ./scrcpy.nix
     ./svp.nix
+    ./swaylock.nix
     ./swaync.nix
     ./thunderbird.nix
     ./tofi.nix
