@@ -6,6 +6,7 @@ let
 
   shared = modulePath + /shared;
   workstation = modulePath + /workstation;
+  gaming = modulePath + /gaming;
 in
 {
   local-hardware-config = mkNixosSystem {
@@ -23,6 +24,7 @@ in
 
     modules = [
       ./pc01
+      gaming
       shared
       workstation
     ];
