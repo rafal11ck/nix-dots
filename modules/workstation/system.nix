@@ -10,13 +10,14 @@
     isNormalUser = true;
     extraGroups = [
       "audio"
+      "davfs2"
+      "docker"
       "i2c"
       "input"
-      "wheel"
-      "storage"
-      "davfs2"
       "libvirtd"
-      "docker"
+      "networkmanager"
+      "storage"
+      "wheel"
     ];
   };
 
