@@ -13,6 +13,8 @@
     ./style
     ./scripts
 
+    ./blueman-applet.nix
+
     ./discord.nix
     ./ffmpeg.nix
     ./firefox.nix

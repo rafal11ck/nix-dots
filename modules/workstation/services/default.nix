@@ -7,6 +7,7 @@
 
 {
   imports = [
+    ./blueman.nix
     ./davfs2.nix
     ./dictd.nix
     ./docker.nix

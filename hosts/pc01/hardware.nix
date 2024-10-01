@@ -10,7 +10,13 @@
 }:
 
 {
-  hardware.amdgpu.opencl.enable = true;
+  hardware = {
+    amdgpu.opencl.enable = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+  };
 
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
