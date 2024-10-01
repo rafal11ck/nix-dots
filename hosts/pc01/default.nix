@@ -14,11 +14,6 @@
   networking = {
     hostName = "pc01";
     firewall.allowedTCPPorts = [ 5900 ];
-
-    networkmanager = {
-      enable = true;
-      wifi.backend = "iwd";
-    };
   };
 
   nixpkgs.config = {

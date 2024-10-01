@@ -13,6 +13,7 @@
     ./docker.nix
     ./gvfs.nix
     ./libvirtd.nix
+    ./network-manager.nix
     ./udisks2.nix
   ];
 }
