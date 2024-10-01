@@ -37,6 +37,9 @@
       enable = true;
       loadModels = [ "codestral" ];
       acceleration = "rocm";
+      environmentVariables = {
+        HSA_OVERRIDE_GFX_VERSION = "11.0.0";
+      };
     };
 
     xserver.videoDrivers = [
@@ -59,20 +62,24 @@
     graphics = {
       enable32Bit = true;
       enable = true;
+
+      extraPackages = with pkgs; [
+        rocmPackages.rocm-runtime
+        rocmPackages.clr.icd # following for GPU AI acceleration
+        rocmPackages.rocm-smi
+        rocmPackages.clr
+        rocmPackages.hipblas
+        rocmPackages.rocblas
+        rocmPackages.rocsolver
+        rocmPackages.rocm-comgr
+        rocmPackages.rocsparse
+        rocm-opencl-icd
+        rocm-opencl-runtime
+        libva
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
     };
 
-    opengl.extraPackages = with pkgs; [
-      rocmPackages.clr.icd # following for GPU AI acceleration
-      rocmPackages.rocm-smi
-      rocmPackages.clr
-      rocmPackages.hipblas
-      rocmPackages.rocblas
-      rocmPackages.rocsolver
-      rocmPackages.rocm-comgr
-      rocmPackages.rocm-runtime
-      rocmPackages.rocsparse
-    ];
-
   };
-
 }
