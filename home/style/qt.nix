@@ -18,8 +18,7 @@ in
       catppuccin = {
         enable = true;
         flavor = lib.toLower "${values.catppuccinFlavor}";
-        # NOTE it's not applied by default as some apps look like trash or can't do fonts
-        apply = false;
+        apply = true;
       };
 
     };
