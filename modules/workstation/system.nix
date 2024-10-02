@@ -16,7 +16,9 @@
       "input"
       "libvirtd"
       "networkmanager"
+      "power"
       "storage"
+      "video"
       "wheel"
     ];
   };

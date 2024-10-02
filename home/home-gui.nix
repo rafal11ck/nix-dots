@@ -16,6 +16,7 @@
     ./blueman-applet.nix
 
     ./discord.nix
+    ./brightnessctl.nix
     ./ffmpeg.nix
     ./firefox.nix
     ./hypridle.nix

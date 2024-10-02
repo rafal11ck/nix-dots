@@ -30,4 +30,14 @@ in
     ];
   };
 
+  gram17rg = mkNixosSystem {
+    system = "x86_64-linux";
+
+    modules = [
+      ./gram17rg
+      shared
+      workstation
+    ];
+  };
+
 }
