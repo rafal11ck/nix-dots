@@ -31,6 +31,7 @@ in
       "nix.serverPath" = "nil";
       "terminal.integrated.fontFamily" = "Fira Code Nerd Mono";
 
+      "telemetry.telemetryLevel" = "off";
       "nix.serverSettings" = {
         nil = {
           formatting = {
