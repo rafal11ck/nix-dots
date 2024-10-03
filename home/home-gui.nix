@@ -15,8 +15,8 @@
 
     ./blueman-applet.nix
 
-    ./discord.nix
     ./brightnessctl.nix
+    ./discord.nix
     ./ffmpeg.nix
     ./firefox.nix
     ./hypridle.nix
@@ -38,6 +38,7 @@
     ./thunderbird.nix
     ./tofi.nix
     ./virt-manager.nix
+    ./vscode.nix
     ./waybar.nix
     ./wl-clipboard.nix
   ];
