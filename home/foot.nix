@@ -13,8 +13,8 @@
     settings = {
 
       main = {
-        font = "FiraCode Nerd Font Mono:size=14";
-        dpi-aware = "yes";
+        font = "FiraCode Nerd Font Mono:size=12";
+        #dpi-aware = "yes";
       };
 
       colors = {
