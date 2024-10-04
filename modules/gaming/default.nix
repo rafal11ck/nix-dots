@@ -12,6 +12,6 @@
   };
 
   environment.systemPackages = [
-    pkgs.steam-run-free
+    pkgs.steam-run
   ];
 }
