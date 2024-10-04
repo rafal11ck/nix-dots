@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   imports = [
     ./values.nix
     ./shared.nix
@@ -42,5 +35,6 @@
     ./vscode.nix
     ./waybar.nix
     ./wl-clipboard.nix
+    ./zathura.nix
   ];
 }
