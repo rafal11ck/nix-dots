@@ -18,8 +18,9 @@ in
       vscode-extensions.vscodevim.vim
       vscode-extensions.dbaeumer.vscode-eslint
       vscode-extensions.esbenp.prettier-vscode
+      vscode-extensions.jnoortheen.nix-ide
     ];
-    mutableExtensionsDir = true;
+ #   mutableExtensionsDir = true;
     userSettings = {
       "[javascriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
