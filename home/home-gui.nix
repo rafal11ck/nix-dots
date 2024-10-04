@@ -35,6 +35,7 @@
     ./svp.nix
     ./swaylock.nix
     ./swaync.nix
+    ./texlive.nix
     ./thunderbird.nix
     ./tofi.nix
     ./virt-manager.nix
