@@ -19,6 +19,7 @@ in
       vscode-extensions.dbaeumer.vscode-eslint
       vscode-extensions.esbenp.prettier-vscode
       vscode-extensions.jnoortheen.nix-ide
+      vscode-extensions.jebbs.plantuml
     ];
  #   mutableExtensionsDir = true;
     userSettings = {
