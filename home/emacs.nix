@@ -10,6 +10,11 @@
     nodePackages_latest.vscode-json-languageserver # lsp server for json
 
     # nerdfonts # NOTE: idk if it will solve fonts.
+    #
+
+
+    # latex export
+    python312Packages.pygments
   ];
 
   programs.emacs.enable = true;

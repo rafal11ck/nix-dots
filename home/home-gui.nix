@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   imports = [
     ./values.nix
     ./shared.nix
@@ -25,6 +18,7 @@
     ./jellyfin-media-player.nix
     ./jellyfin-mpv-shim.nix
     ./keepassxc.nix
+    ./libreoffice.nix
     ./mpv.nix
     ./nautilus.nix
     ./notify-send.nix
@@ -42,5 +36,6 @@
     ./vscode.nix
     ./waybar.nix
     ./wl-clipboard.nix
+    ./zathura.nix
   ];
 }
