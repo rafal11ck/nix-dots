@@ -18,6 +18,7 @@
     ./jellyfin-media-player.nix
     ./jellyfin-mpv-shim.nix
     ./keepassxc.nix
+    ./libreoffice.nix
     ./mpv.nix
     ./nautilus.nix
     ./notify-send.nix
