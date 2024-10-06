@@ -50,6 +50,10 @@
         "Value" = true;
       };
 
+      "PasswordManagerEnabled" = {
+        Value = false;
+      };
+
       "Preferences" = {
 
         # preview
