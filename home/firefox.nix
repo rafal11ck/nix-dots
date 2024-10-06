@@ -87,6 +87,11 @@
           Value = "";
         };
 
+        # Do not nag
+        browser.translations.automaticallyPopup = {
+          Value = false;
+        };
+
         "media.ffmpeg.vaapi.enabled" = {
           Value = true;
         };
