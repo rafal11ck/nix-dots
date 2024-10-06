@@ -11,6 +11,7 @@
 
     ./style
 
+    ./ansible.nix
     ./aria2.nix
     ./bash.nix
     ./bat.nix

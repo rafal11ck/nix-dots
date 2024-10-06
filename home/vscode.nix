@@ -20,8 +20,9 @@ in
       vscode-extensions.esbenp.prettier-vscode
       vscode-extensions.jnoortheen.nix-ide
       vscode-extensions.jebbs.plantuml
+      vscode-extensions.redhat.ansible
     ];
- #   mutableExtensionsDir = true;
+    #   mutableExtensionsDir = true;
     userSettings = {
       "[javascriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
@@ -51,6 +52,8 @@ in
       "vim.handleKeys" = {
         "<C-p>" = false;
       };
+
+      "vim.useSystemClipboard" = true;
 
     };
   };
