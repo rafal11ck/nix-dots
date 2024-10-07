@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -48,4 +46,7 @@
     ./zoxide.nix
   ];
 
+  home.packages = [
+    pkgs.nix-output-monitor
+  ];
 }
