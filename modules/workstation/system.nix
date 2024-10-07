@@ -9,6 +9,7 @@
   users.users.${config.values.mainUser} = {
     isNormalUser = true;
     extraGroups = [
+      "adbusers"
       "audio"
       "davfs2"
       "docker"
@@ -26,4 +27,6 @@
   programs.nix-ld = {
     enable = true;
   };
+
+  networking.firewall.allowedTCPPorts = [ 8081 ];
 }
