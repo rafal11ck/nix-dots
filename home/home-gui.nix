@@ -38,4 +38,8 @@
     ./wl-clipboard.nix
     ./zathura.nix
   ];
+
+  home.sessionVariables = {
+    EDITOR = "code";
+  };
 }
