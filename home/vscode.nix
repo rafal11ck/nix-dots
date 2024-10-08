@@ -25,6 +25,8 @@ in
     #   mutableExtensionsDir = true;
     userSettings = {
       "[javascriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
       "files.refactoring.autoSave" = true;
 
