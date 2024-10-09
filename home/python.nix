@@ -8,7 +8,7 @@
       # select Python packages here
       python-pkgs.numpy
       python-pkgs.pygments
+      python-pkgs.isort
     ]))
-
   ];
 }
