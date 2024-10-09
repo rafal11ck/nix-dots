@@ -35,6 +35,7 @@
     ./pandoc.nix
     ./playerctl.nix
     ./pulsemixer.nix
+    ./python.nix
     ./ranger.nix
     ./ripgrep.nix
     ./shellcheck.nix
@@ -49,6 +50,6 @@
   home.packages = with pkgs; [
     nix-output-monitor
     qpdf
-    octave
+    octaveFull
   ];
 }
