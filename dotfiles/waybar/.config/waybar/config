@@ -151,7 +151,7 @@
         ""
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pwvucontrol"
   },
   "custom/notification": {
     "tooltip": false,

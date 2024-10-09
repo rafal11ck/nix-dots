@@ -1,6 +1,6 @@
 {
-    pkgs,
-    ...
+  pkgs,
+  ...
 }:
 {
   imports = [
@@ -27,7 +27,6 @@
     ./notify-send.nix
     ./nvtop.nix
     ./obs-studio.nix
-    ./pavucontrol.nix
     ./scrcpy.nix
     ./svp.nix
     ./swaylock.nix
@@ -48,5 +47,6 @@
 
   home.packages = with pkgs; [
     vesktop
+    pwvucontrol
   ];
 }
