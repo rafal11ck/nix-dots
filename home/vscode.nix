@@ -24,6 +24,7 @@ in
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
+      "extensions.autoUpdate" = false;
       "[javascriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
       "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
 

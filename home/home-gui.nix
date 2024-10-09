@@ -1,4 +1,8 @@
 {
+    pkgs,
+    ...
+}:
+{
   imports = [
     ./values.nix
     ./shared.nix
