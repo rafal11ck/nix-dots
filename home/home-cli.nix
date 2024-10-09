@@ -50,5 +50,6 @@
   home.packages = [
     pkgs.nix-output-monitor
     pkgs.qpdf
+    pkgs.octaveFull
   ];
 }
