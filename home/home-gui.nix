@@ -46,7 +46,8 @@
   };
 
   home.packages = with pkgs; [
-    vesktop
+    nsxiv
     pwvucontrol
+    vesktop
   ];
 }
