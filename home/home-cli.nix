@@ -46,8 +46,9 @@
     ./zoxide.nix
   ];
 
-  home.packages = [
-    pkgs.nix-output-monitor
-    pkgs.qpdf
+  home.packages = with pkgs; [
+    nix-output-monitor
+    qpdf
+    octave
   ];
 }

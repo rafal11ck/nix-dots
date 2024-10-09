@@ -9,7 +9,6 @@
     ./blueman-applet.nix
 
     ./brightnessctl.nix
-    ./discord.nix
     ./ffmpeg.nix
     ./firefox.nix
     ./hypridle.nix
@@ -42,4 +41,8 @@
   home.sessionVariables = {
     EDITOR = "code";
   };
+
+  home.packages = with pkgs; [
+    vesktop
+  ];
 }
