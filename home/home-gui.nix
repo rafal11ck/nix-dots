@@ -49,5 +49,6 @@
     nsxiv
     pwvucontrol
     vesktop
+    gimp
   ];
 }
