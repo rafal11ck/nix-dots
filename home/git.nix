@@ -13,7 +13,7 @@ in
 
     extraConfig = {
       pull = {
-        rebase = false;
+        rebase = true;
       };
     };
   };

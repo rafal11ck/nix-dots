@@ -57,7 +57,7 @@ in
       };
 
       "vim.useSystemClipboard" = true;
-
+      "files.autoSave" = "afterDelay";
     };
   };
 }
