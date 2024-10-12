@@ -7,6 +7,6 @@
 
 {
   environment.systemPackages = [
-    pkgs.wineWowPackages.waylandFull
+    pkgs.wineWowPackages.stable
   ];
 }

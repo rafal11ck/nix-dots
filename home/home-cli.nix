@@ -52,5 +52,6 @@
     qpdf
     octaveFull
     zip
+    jq
   ];
 }
