@@ -51,6 +51,7 @@
     nix-output-monitor
     qpdf
     octaveFull
+    zip
     jq
   ];
 }
