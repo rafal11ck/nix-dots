@@ -17,7 +17,7 @@
   };
 
   home.packages = with pkgs; [
-    iosevka-bin
+    iosevka
     font-awesome
     material-design-icons
 
