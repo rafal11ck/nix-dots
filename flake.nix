@@ -51,7 +51,7 @@
           (modulesPath + /shared/values.nix)
           hyprland.homeManagerModules.default
           catppuccin.homeManagerModules.catppuccin
-          ./home/home-cli.nix
+          ./home/home.nix
         ];
 
         # Optionally use extraSpecialArgs

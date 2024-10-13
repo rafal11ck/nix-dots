@@ -6,8 +6,18 @@
 }:
 
 {
+
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
     font-awesome
+    noto-fonts
+    (nerdfonts.override {
+      fonts = [
+        "Iosevka"
+        "FiraCode"
+        "NerdFontsSymbolsOnly"
+      ];
+    })
   ];
 }
