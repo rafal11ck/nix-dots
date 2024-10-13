@@ -22,6 +22,19 @@
     };
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+    ];
+    config.common.default = [
+      "hyprland"
+      "gtk"
+    ];
+  };
+
   xdg.configFile."hypr/appsworkspaces.conf".source =
     "${config.values.dotfilesPath}" + "/hypr/.config/hypr/appsworkspaces.conf";
   xdg.configFile."hypr/hyprland.conf".source =

@@ -6,6 +6,9 @@
 }:
 
 {
+
+  home.packages = [ pkgs.pop-gtk-theme ];
+
   gtk = {
     enable = true;
     theme = {
@@ -33,7 +36,6 @@
         }
       );
     };
-
   };
 
   dconf.settings = {

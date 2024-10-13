@@ -6,6 +6,7 @@
 }:
 
 {
+  # Note that PAM must be configured to enable swaylock to perform authentication
   programs.swaylock.enable = true;
 
   programs.swaylock.catppuccin.enable = true;

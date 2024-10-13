@@ -52,6 +52,9 @@
           hyprland.homeManagerModules.default
           catppuccin.homeManagerModules.catppuccin
           ./home/home.nix
+          {
+            targets.genericLinux.enable = true;
+          }
         ];
 
         # Optionally use extraSpecialArgs
