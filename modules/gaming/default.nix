@@ -9,7 +9,8 @@
     extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
 
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
     pkgs.steam-run
+    heroic
   ];
 }
