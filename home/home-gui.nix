@@ -42,7 +42,8 @@
   ];
 
   home.sessionVariables = {
-    EDITOR = "code";
+    GIT_EDITOR = "nvim";
+    "VISUAL" = "code";
   };
 
   home.packages = with pkgs; [
