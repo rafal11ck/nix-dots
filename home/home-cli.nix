@@ -53,5 +53,6 @@
     octaveFull
     zip
     jq
+    nodejs_20
   ];
 }
