@@ -23,6 +23,6 @@ in
       type = types.str;
       default = "rafal";
     };
-  };
 
+  };
 }

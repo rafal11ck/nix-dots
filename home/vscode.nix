@@ -60,6 +60,8 @@ in
 
       "vim.useSystemClipboard" = true;
       "files.autoSave" = "afterDelay";
+      "plantuml.render" = "PlantUMLServer";
+      "plantuml.server" = "http://127.0.0.1:9123/plantuml"; # NOTE this relyies on local plantuml server (set in workstation module)
     };
   };
 }
