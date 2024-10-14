@@ -54,5 +54,6 @@
     zip
     less
     jq
+    nodejs_20
   ];
 }
