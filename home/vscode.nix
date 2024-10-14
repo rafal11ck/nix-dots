@@ -2,25 +2,27 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
 let
   values = config.values;
+  vs-extensions = inputs.nix-vscode-extensions.extensions.${pkgs.system};
 in
 {
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs; [
-      vscode-extensions.catppuccin.catppuccin-vsc
-      vscode-extensions.catppuccin.catppuccin-vsc-icons
-      vscode-extensions.vscodevim.vim
-      vscode-extensions.dbaeumer.vscode-eslint
-      vscode-extensions.esbenp.prettier-vscode
-      vscode-extensions.jnoortheen.nix-ide
-      vscode-extensions.jebbs.plantuml
-      vscode-extensions.redhat.ansible
+    # To look for extension names: https://github.com/nix-community/nix-vscode-extensions?tab=readme-ov-file#explore
+    extensions = with vs-extensions.vscode-marketplace; [
+      pkgs.vscode-extensions.jnoortheen.nix-ide
+      catppuccin.catppuccin-vsc-icons
+      vscodevim.vim
+      dbaeumer.vscode-eslint
+      esbenp.prettier-vscode
+      jebbs.plantuml
+      redhat.ansible
     ];
     #   mutableExtensionsDir = true;
     userSettings = {

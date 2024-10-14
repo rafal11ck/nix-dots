@@ -12,6 +12,9 @@ in
   config.home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    extraSpecialArgs = {
+      inherit inputs;
+    };
     users.${config.values.mainUser}.imports = [
       ../../home/home.nix
       (modulesPath + /shared/values.nix)
