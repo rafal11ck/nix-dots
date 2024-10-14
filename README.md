@@ -2,7 +2,6 @@
 
 This is nix config repo
 
-
 ## Random links
 
 https://search.nixos.org/packages?channel=unstable
@@ -13,10 +12,11 @@ https://home-manager-options.extranix.com/?query=&release=master
 
 https://noogle.dev/
 
-## Usage 
+## Usage
 
 Enable flakes and nix command.
-``` sh
+
+```sh
 mkdir -p ~/.config/nix
 echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
 ```
@@ -26,6 +26,7 @@ echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
 ```sh
 sudo nixos-rebuild switch --flake './#local-hardware-config' --impure
 ```
+
 #### Why not "fix" impure?
 
 Because coupling system config that is supposed to be "reproducible" with hardware turns it into firmware as it will work only with that system. I want config that is not coupled to any hardware.
@@ -38,16 +39,34 @@ Spin home-manager config using nix it provides cli part of config only.
 nix run home-manager/master -- switch --flake .
 ```
 
+#### Required manual install for GUI
 
+##### Arch
+
+Stuff that desktop needs.
+
+```sh
+USER="$(id -nu)" # Get current user
+yay -Sy xdg-desktop-portal-wlr xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+yay -Sy pipewire pipewire-pulse wireplumber
+sudo usermod -aG audio "$USER"
+sudo usermod -aG video "$USER"
+systemctl enable --now --user pipewire
+
+# DCC/CI
+yay -Sy ddcutil
+sudo groupadd -f i2c
+sudo sh -c 'echo "i2c_dev" > /etc/modules-load.d/i2c-dev.conf'
+sudo usermod -aG i2c "$USER"
+```
 
 # Structure
-    
+
 [./dotfiles](./dotfiles) regular stow-able dot files
 
 [./home](./home) nix home-manager home configuration.
 It is split into two main files [home-cli](./home/home-cli.nix) and [home-gui](./home/home-gui.nix).
 Which are responsible for command-line-interface and graphical user interface respectively.
-
 
 By default [home.nix](./home/home.nix) should be used which imports both.
 

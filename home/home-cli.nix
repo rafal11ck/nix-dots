@@ -52,6 +52,7 @@
     qpdf
     octaveFull
     zip
+    less
     jq
     nodejs_20
   ];
