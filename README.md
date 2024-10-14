@@ -39,27 +39,6 @@ Spin home-manager config using nix it provides cli part of config only.
 nix run home-manager/master -- switch --flake .
 ```
 
-#### Required manual install for GUI
-
-##### Arch
-
-Stuff that desktop needs.
-
-```sh
-USER="$(id -nu)" # Get current user
-yay -Sy xdg-desktop-portal-wlr xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
-yay -Sy pipewire pipewire-pulse wireplumber
-sudo usermod -aG audio "$USER"
-sudo usermod -aG video "$USER"
-systemctl enable --now --user pipewire
-
-# DCC/CI
-yay -Sy ddcutil
-sudo groupadd -f i2c
-sudo sh -c 'echo "i2c_dev" > /etc/modules-load.d/i2c-dev.conf'
-sudo usermod -aG i2c "$USER"
-```
-
 # Structure
 
 [./dotfiles](./dotfiles) regular stow-able dot files

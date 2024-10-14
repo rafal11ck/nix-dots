@@ -51,10 +51,7 @@
           (modulesPath + /shared/values.nix)
           hyprland.homeManagerModules.default
           catppuccin.homeManagerModules.catppuccin
-          ./home/home.nix
-          {
-            targets.genericLinux.enable = true;
-          }
+          ./home/home-cli.nix # Do not use for standalone GUI it requres labor to work
         ];
 
         # Optionally use extraSpecialArgs
