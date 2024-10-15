@@ -23,6 +23,11 @@ in
       esbenp.prettier-vscode
       jebbs.plantuml
       redhat.ansible
+      redhat.vscode-yaml
+      ms-python.debugpy
+      ms-python.isort
+      ms-python.pylint
+      ms-python.python
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
@@ -37,7 +42,7 @@ in
 
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
-      "terminal.integrated.fontFamily" = "Fira Code Nerd Mono";
+      "terminal.integrated.fontFamily" = "FiraCode Nerd Font Mono";
 
       "telemetry.telemetryLevel" = "off";
       "nix.serverSettings" = {
