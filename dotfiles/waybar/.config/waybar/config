@@ -28,7 +28,7 @@
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
-    "format": "{name} {icon}",
+    "format": "{name} {icon} ",
     "format-icons": {
       "locked": "",
       "unlocked": ""
@@ -124,7 +124,7 @@
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-ethernet": "{ifname} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
