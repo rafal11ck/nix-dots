@@ -16,18 +16,20 @@ in
     enable = true;
     # To look for extension names: https://github.com/nix-community/nix-vscode-extensions?tab=readme-ov-file#explore
     extensions = with vs-extensions.vscode-marketplace; [
-      pkgs.vscode-extensions.jnoortheen.nix-ide
+      bierner.markdown-mermaid
+      bpruitt-goddard.mermaid-markdown-syntax-highlighting
       catppuccin.catppuccin-vsc-icons
-      vscodevim.vim
       dbaeumer.vscode-eslint
       esbenp.prettier-vscode
       jebbs.plantuml
-      redhat.ansible
-      redhat.vscode-yaml
       ms-python.debugpy
       ms-python.isort
       ms-python.pylint
       ms-python.python
+      pkgs.vscode-extensions.jnoortheen.nix-ide
+      redhat.ansible
+      redhat.vscode-yaml
+      vscodevim.vim
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
