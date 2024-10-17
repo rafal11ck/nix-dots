@@ -55,5 +55,6 @@
     less
     jq
     nodejs_20
+    android-tools
   ];
 }
