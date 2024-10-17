@@ -133,6 +133,7 @@ tooltip {
 
 #backlight {
     background-color: #fab387;
+    color: black;
 }
 
 #pulseaudio {
