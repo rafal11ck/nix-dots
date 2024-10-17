@@ -51,5 +51,6 @@
     pwvucontrol
     vesktop
     gimp
+    wev
   ];
 }
