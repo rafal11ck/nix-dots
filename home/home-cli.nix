@@ -48,15 +48,16 @@
   ];
 
   home.packages = with pkgs; [
-    nix-output-monitor
-    qpdf
-    octaveFull
-    zip
-    less
-    jq
-    nodejs_20
     android-tools
     dig
+    gunplot
+    jq
+    less
+    nix-output-monitor
+    nodejs_20
+    octaveFull
+    qpdf
     unzip
+    zip
   ];
 }
