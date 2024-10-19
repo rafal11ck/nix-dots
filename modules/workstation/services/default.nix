@@ -6,19 +6,24 @@
 }:
 
 {
-  services.plantuml-server = {
-    enable = true;
-    listenPort = 9123; 
+  services = {
+    blueman.enable = true;
+    plantuml-server = {
+      enable = true;
+      listenPort = 9123;
+    };
+    udev.packages = [
+      pkgs.android-udev-rules
+    ];
+    udisks2.enable = true;
+    dictd.enable = true;
+    davfs2.enable = true;
+    gvfs.enable = true;
   };
 
   imports = [
-    ./blueman.nix
-    ./davfs2.nix
-    ./dictd.nix
     ./docker.nix
-    ./gvfs.nix
     ./libvirtd.nix
     ./network-manager.nix
-    ./udisks2.nix
   ];
 }
