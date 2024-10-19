@@ -69,6 +69,7 @@ in
             "<C-b>"
             "<C-f>"
             "<C-p>"
+            "<C-k>"
           ];
         in
         builtins.listToAttrs (
