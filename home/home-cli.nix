@@ -56,5 +56,7 @@
     jq
     nodejs_20
     android-tools
+    dig
+    unzip
   ];
 }
