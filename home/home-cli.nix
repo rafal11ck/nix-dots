@@ -50,7 +50,7 @@
   home.packages = with pkgs; [
     android-tools
     dig
-    gunplot
+    gnuplot
     jq
     less
     nix-output-monitor
