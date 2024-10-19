@@ -62,9 +62,21 @@ in
       "workbench.colorTheme" = "Catppuccin ${values.catppuccinFlavor}";
       "workbench.iconTheme" = "catppuccin-${lib.toLower values.catppuccinFlavor}";
 
-      "vim.handleKeys" = {
-        "<C-p>" = false;
-      };
+      "vim.handleKeys" =
+        let
+          binds = [
+            "<C-a>"
+            "<C-b>"
+            "<C-f>"
+            "<C-p>"
+          ];
+        in
+        builtins.listToAttrs (
+          map (key: {
+            name = key;
+            value = false;
+          }) binds
+        );
 
       "vim.useSystemClipboard" = true;
       "files.autoSave" = "afterDelay";
