@@ -52,5 +52,6 @@
     vesktop
     gimp
     wev
+    (flameshot.override { enableWlrSupport = true; })
   ];
 }
