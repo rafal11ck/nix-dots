@@ -43,6 +43,7 @@
 
   home.sessionVariables = {
     GIT_EDITOR = "nvim";
+    "EDITOR" = "nvim";
     "VISUAL" = "code";
   };
 
