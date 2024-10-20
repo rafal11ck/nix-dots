@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   ...
 }:
@@ -55,4 +56,10 @@
     wev
     (flameshot.override { enableWlrSupport = true; })
   ];
+
+  xdg.configFile."MangoHud" = {
+    enable = true;
+    recursive = true;
+    source = "${config.values.dotfilesPath}" + "/mangohud/.config/MangoHud";
+  };
 }
