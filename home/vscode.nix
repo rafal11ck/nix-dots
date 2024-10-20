@@ -30,6 +30,7 @@ in
       redhat.ansible
       redhat.vscode-yaml
       vscodevim.vim
+      dsznajder.es7-react-js-snippets
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
