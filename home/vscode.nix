@@ -60,6 +60,8 @@ in
       "editor.lineNumbers" = "relative";
 
       "prettier.singleQuote" = true;
+      "prettier.tabWidth" = 4;
+
       "workbench.colorTheme" = "Catppuccin ${values.catppuccinFlavor}";
       "workbench.iconTheme" = "catppuccin-${lib.toLower values.catppuccinFlavor}";
 
