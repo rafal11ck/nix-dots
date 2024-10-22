@@ -38,6 +38,7 @@ in
       "extensions.autoUpdate" = false;
       "[javascriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
       "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "[typescript]"."editor.defaultFormatter"= "esbenp.prettier-vscode";
       "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
 
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
