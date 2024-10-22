@@ -31,6 +31,7 @@ in
       redhat.vscode-yaml
       vscodevim.vim
       dsznajder.es7-react-js-snippets
+      usernamehw.errorlens
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
