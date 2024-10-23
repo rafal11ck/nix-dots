@@ -47,12 +47,13 @@
   };
 
   home.packages = with pkgs; [
+    (flameshot.override { enableWlrSupport = true; })
+    gimp
+    networkmanagerapplet
     nsxiv
     pwvucontrol
     vesktop
-    gimp
     wev
-    (flameshot.override { enableWlrSupport = true; })
   ];
 
   xdg.configFile."MangoHud" = {
