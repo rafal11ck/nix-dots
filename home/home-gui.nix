@@ -11,8 +11,6 @@
     ./style
     ./scripts
 
-    ./blueman-applet.nix
-
     ./brightnessctl.nix
     ./ffmpeg.nix
     ./firefox.nix
