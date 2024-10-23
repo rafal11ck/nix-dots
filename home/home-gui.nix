@@ -56,6 +56,10 @@
     wev
   ];
 
+  services = {
+    blueman-applet.enable = true;
+  };
+
   xdg.configFile."MangoHud" = {
     enable = true;
     recursive = true;
