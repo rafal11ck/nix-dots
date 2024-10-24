@@ -4,12 +4,16 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
 
 {
+
+  hardware.bluetooth = {
+    enable = true;
+  };
+
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
