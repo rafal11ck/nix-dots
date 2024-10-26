@@ -143,4 +143,13 @@
 
 (require 'ox-man)
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((typescript . t)
+   ))
+
+(require 'ob-typescript)
+
+(setq org-babel-command:typescript "npx -p typescript -- tsc")
+
 (setq +latex-viewers '(zathura))

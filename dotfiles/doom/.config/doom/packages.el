@@ -52,4 +52,6 @@
 (package! yuck-mode)
 (package! mermaid-mode)
 
+
+(package! ob-typescript)
 (package! doom-snippets :ignore t)
