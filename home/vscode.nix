@@ -32,6 +32,7 @@ in
       vscodevim.vim
       dsznajder.es7-react-js-snippets
       usernamehw.errorlens
+      tomoki1207.pdf
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
