@@ -7,6 +7,8 @@
 
 {
   services = {
+    logind.lidSwitchExternalPower = "ignore";
+
     blueman.enable = true;
     plantuml-server = {
       enable = true;
