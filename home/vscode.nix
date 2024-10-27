@@ -33,6 +33,7 @@ in
       dsznajder.es7-react-js-snippets
       usernamehw.errorlens
       tomoki1207.pdf
+      ms-kubernetes-tools.vscode-kubernetes-tools
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
