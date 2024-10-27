@@ -10,7 +10,7 @@
     zlib # fix https://github.com/nix-community/home-manager/issues/703 in standalone hm
     font-awesome
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-lgc-plus
     (nerdfonts.override {
       fonts = [
