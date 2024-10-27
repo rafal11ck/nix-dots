@@ -60,5 +60,6 @@
     qpdf
     unzip
     zip
+    wireguard-tools
   ];
 }

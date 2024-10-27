@@ -21,11 +21,13 @@
     dictd.enable = true;
     davfs2.enable = true;
     gvfs.enable = true;
+
+    resolved.enable = true;
   };
 
   imports = [
     ./docker.nix
     ./libvirtd.nix
-    ./network-manager.nix
+    ./networking.nix
   ];
 }
