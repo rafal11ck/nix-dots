@@ -34,6 +34,7 @@ in
       usernamehw.errorlens
       tomoki1207.pdf
       ms-kubernetes-tools.vscode-kubernetes-tools
+      mechatroner.rainbow-csv
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
