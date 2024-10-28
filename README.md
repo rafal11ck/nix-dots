@@ -8,11 +8,9 @@ In [NixOs Live CD](https://nixos.org/download/)
 1. `nixos-generate-config --root /mnt`
 1. `nix-shell -p git`
 1. `git clone <THIS_REPO_URL>` replace `<THIS_REPO_URL>` with URL to this repository
-1.  `cd` into repository directory cloned in previous step
-1. `sudo nixos-rebuild switch --flake './#local-hardware-config' --impure`
+1. `cd` into repository directory cloned in previous step
+1. `sudo nixos-install --flake './#local-hardware-config' --impure`
 1. reboot
-
-
 
 ## Resources Links
 
@@ -32,6 +30,7 @@ Nix command and flakes support has to be enabled.
 mkdir -p ~/.config/nix
 echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
 ```
+
 Nix home-manager config provides cli part of config only. As gui has host system dependenceis and workarounds. For GUI configuration use stow-able dotfiles.
 
 ```sh
