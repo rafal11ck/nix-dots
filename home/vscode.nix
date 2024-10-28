@@ -44,6 +44,7 @@ in
       "typescript.updateImportsOnFileMove.enabled" = "always";
       "[typescript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
       "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "[yaml]"."editor.defaultFormatter" = "redhat.vscode-yaml";
       "[json]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
 
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
