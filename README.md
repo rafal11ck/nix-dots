@@ -6,6 +6,7 @@ In [NixOs Live CD](https://nixos.org/download/)
 
 1. Mount partitions at `/mnt`
 1. `nixos-generate-config --root /mnt`
+1. `cp /mnt/etc/nixos/hardware-configuration.nix /etc/nixos/`
 1. `nix-shell -p git`
 1. `git clone <THIS_REPO_URL>` replace `<THIS_REPO_URL>` with URL to this repository
 1. `cd` into repository directory cloned in previous step
