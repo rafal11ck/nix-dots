@@ -50,6 +50,7 @@
   home.packages = with pkgs; [
     android-tools
     kubectl
+    kubectx
     dig
     gnuplot
     jq
