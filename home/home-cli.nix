@@ -62,5 +62,6 @@
     unzip
     zip
     wireguard-tools
+    gcc
   ];
 }
