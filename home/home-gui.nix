@@ -56,6 +56,7 @@
     vesktop
     wev
     (flameshot.override { enableWlrSupport = true; })
+    virt-viewer
   ];
 
   services = {
