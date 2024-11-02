@@ -63,5 +63,6 @@
     zip
     wireguard-tools
     gcc
+    stow
   ];
 }

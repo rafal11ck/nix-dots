@@ -38,6 +38,10 @@ Nix home-manager config provides cli part of config only. As gui has host system
 nix run home-manager/master -- switch --flake .
 ```
 
+## Standalone stow-able dotfiles
+
+In `dotfiles` directory run `stow -t ~ -v *` which means: Stow to `~` verbose so that you can see what happens `*` glob to everything in current directory
+
 # Structure
 
 [./dotfiles](./dotfiles) regular stow-able dot files
