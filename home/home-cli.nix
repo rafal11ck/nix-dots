@@ -64,5 +64,6 @@
     wireguard-tools
     gcc
     stow
+    payload-dumper-go
   ];
 }
