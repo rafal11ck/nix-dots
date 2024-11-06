@@ -1,6 +1,5 @@
 {
   config,
-  pkgs,
   ...
 }:
 
@@ -23,8 +22,14 @@
     ];
   };
 
-  programs.nix-ld = {
-    enable = true;
+  programs = {
+    nix-ld = {
+      enable = true;
+    };
+    nh = {
+      enable = true;
+      flake = "/home/${config.values.mainUser}/nix-dots";
+    };
   };
 
   networking.firewall.allowedTCPPorts = [ 8081 ];

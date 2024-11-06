@@ -28,7 +28,6 @@
     ./mpv.nix
     ./ncdu.nix
     ./neovim.nix
-    ./nh.nix
     ./nil.nix
     ./nmap.nix
     ./p7zip.nix
@@ -65,5 +64,6 @@
     gcc
     stow
     payload-dumper-go
+    revanced-cli
   ];
 }
