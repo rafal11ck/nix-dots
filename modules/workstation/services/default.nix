@@ -23,6 +23,7 @@
     gvfs.enable = true;
 
     resolved.enable = true;
+    avahi.enable = true;
   };
 
   imports = [
