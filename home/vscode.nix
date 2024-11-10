@@ -48,6 +48,7 @@ in
       "[yaml]"."editor.defaultFormatter" = "redhat.vscode-yaml";
       "[json]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
       "[html]"."editor.defaultFormatter" = "vscode.html-language-features";
+      "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
 
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
       "files.refactoring.autoSave" = true;
