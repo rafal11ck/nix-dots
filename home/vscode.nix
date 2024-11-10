@@ -35,6 +35,7 @@ in
       tomoki1207.pdf
       ms-kubernetes-tools.vscode-kubernetes-tools
       mechatroner.rainbow-csv
+      naumovs.color-highlight
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
