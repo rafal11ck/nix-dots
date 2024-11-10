@@ -57,6 +57,7 @@
     wev
     (flameshot.override { enableWlrSupport = true; })
     virt-viewer
+    syncplay
   ];
 
   services = {
