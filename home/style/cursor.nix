@@ -5,12 +5,13 @@
   catppuccin.pointerCursor.enable = true;
 
   home.pointerCursor = {
-    size = 32;
+    size = 24;
     gtk.enable = true;
   };
 
   dconf.settings = {
-    "org.gnome.desktop.interface" = {
-    };
+    "org.gnome.desktop.interface" =
+      {
+      };
   };
 }
