@@ -64,6 +64,6 @@
     gcc
     stow
     payload-dumper-go
-    revanced-cli
+    plantuml
   ];
 }
