@@ -65,5 +65,6 @@
     stow
     payload-dumper-go
     plantuml
+    iperf
   ];
 }
