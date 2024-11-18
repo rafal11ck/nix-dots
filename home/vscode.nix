@@ -36,6 +36,7 @@ in
       ms-kubernetes-tools.vscode-kubernetes-tools
       mechatroner.rainbow-csv
       naumovs.color-highlight
+      ms-vscode-remote.remote-containers
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
