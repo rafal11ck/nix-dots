@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   ...
 }:
 
@@ -31,8 +32,6 @@
       flake = "/home/${config.values.mainUser}/nix-dots";
     };
   };
-
-  networking.firewall.allowedTCPPorts = [ 8081 ];
 
   # Make hosts mutable but cleaned on switch
   # https://discourse.nixos.org/t/a-fast-way-for-modifying-etc-hosts-using-networking-extrahosts/4190
