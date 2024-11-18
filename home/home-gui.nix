@@ -22,7 +22,6 @@
     ./keepassxc.nix
     ./libreoffice.nix
     ./mpv.nix
-    ./nautilus.nix
     ./notify-send.nix
     ./nvtop.nix
     ./obs-studio.nix
