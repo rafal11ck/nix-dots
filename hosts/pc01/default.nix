@@ -26,12 +26,15 @@
       enable = true;
       loadModels = [
         "codestral"
-        "llava:34b"
+        "llama3.2-vision"
+        "qwen2.5-coder"
       ];
       acceleration = "rocm";
       environmentVariables = {
         HSA_OVERRIDE_GFX_VERSION = "11.0.0";
       };
+      host = "0.0.0.0";
+      openFirewall = true;
     };
 
     xserver.videoDrivers = [
