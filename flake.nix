@@ -12,8 +12,7 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     nixpkgs = {
-      #Workaround till following PR gets cached in nixos branch https://github.com/NixOS/nixpkgs/pull/353833
-      url = "github:nixos/nixpkgs/f475d7505046141a6a59d1522de2a7a12489faf9";
+      url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
