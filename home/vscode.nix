@@ -37,6 +37,7 @@ in
       mechatroner.rainbow-csv
       naumovs.color-highlight
       ms-vscode-remote.remote-containers
+      jock.svg
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
@@ -50,6 +51,8 @@ in
       "[json]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
       "[html]"."editor.defaultFormatter" = "vscode.html-language-features";
       "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+
+      "svg.preview.background" = true;
 
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
       "files.refactoring.autoSave" = true;
