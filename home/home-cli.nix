@@ -65,5 +65,8 @@
     stow
     payload-dumper-go
     plantuml
+    smartmontools
+    inkscape
+    kubernetes-helm
   ];
 }
