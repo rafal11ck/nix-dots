@@ -4,5 +4,6 @@
     iperf
     nautilus
     ffmpegthumbnailer
+    wayvnc
   ];
 }
