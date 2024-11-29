@@ -68,5 +68,6 @@
     smartmontools
     inkscape
     kubernetes-helm
+    yt-dlp
   ];
 }
