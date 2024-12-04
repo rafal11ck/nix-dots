@@ -5,5 +5,6 @@
     nautilus
     ffmpegthumbnailer
     wayvnc
+    jetbrains.idea-ultimate
   ];
 }
