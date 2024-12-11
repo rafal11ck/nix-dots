@@ -69,5 +69,6 @@
     inkscape
     kubernetes-helm
     yt-dlp
+    talosctl
   ];
 }
