@@ -61,6 +61,7 @@
 
   services = {
     blueman-applet.enable = true;
+    kdeconnect.enable = true;
   };
 
   xdg.configFile."MangoHud" = {

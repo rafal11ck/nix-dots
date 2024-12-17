@@ -1,11 +1,10 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
 
 {
+
   services = {
     logind.lidSwitchExternalPower = "ignore";
 
