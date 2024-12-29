@@ -15,13 +15,13 @@ In [NixOs Live CD](https://nixos.org/download/)
 
 ## Resources Links
 
-https://search.nixos.org/packages?channel=unstable
+<https://search.nixos.org/packages?channel=unstable>
 
-https://search.nixos.org/options?channel=unstable
+<https://search.nixos.org/options?channel=unstable>
 
-https://home-manager-options.extranix.com/?query=&release=master
+<https://home-manager-options.extranix.com/?query=&release=master>
 
-https://noogle.dev/
+<https://noogle.dev/>
 
 ## Standalone Nix home manager
 

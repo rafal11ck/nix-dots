@@ -2,8 +2,7 @@
     border: none;
     border-radius: 0;
     min-height: 0;
-    font-family:
-        Iosevka Nerd Font;
+    font-family: Iosevka Nerd Font;
     font-size: 14px;
 }
 
@@ -60,6 +59,7 @@ window#waybar.hidden {
 #idle_inhibitor,
 #tray,
 #custom-notification,
+#custom-ddcutil,
 tooltip {
     border-radius: 13px;
     margin: 6px 4px;

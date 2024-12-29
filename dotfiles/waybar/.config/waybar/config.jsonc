@@ -10,7 +10,7 @@
     "custom/media"
   ],
   "modules-center": [
-    "custom/notification",
+    "custom/notification"
   ],
   "modules-right": [
     "custom/nightmode",
@@ -18,10 +18,11 @@
     "pulseaudio",
     "cpu",
     "backlight",
+    // "custom/ddcutil",
     "battery",
     "battery#bat2",
     "clock",
-    "tray",
+    "tray"
   ],
   "keyboard-state": {
     "numlock": true,
@@ -178,4 +179,11 @@
     "return-type": "json",
     "signal": 9
   },
+  "custom/ddcutil": {
+    "format": "AAA",
+    "exec": "env >/tmp/debug.log ; printf 'aaa\ntip\nclass\n100\n'",
+    "on-click": "env > /tmp/debug2.log && diff /tmp/debug.log /tmp/debug2.log ",
+    "on-scroll-up": "env > /tmp/debug2.log && diff /tmp/debug.log /tmp/debug2.log ",
+    "on-scroll-down": "env > /tmp/debug2.log && diff /tmp/debug.log /tmp/debug2.log "
+  }
 }
