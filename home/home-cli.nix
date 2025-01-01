@@ -70,5 +70,6 @@
     kubernetes-helm
     yt-dlp
     talosctl
+    mise
   ];
 }
