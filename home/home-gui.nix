@@ -57,6 +57,7 @@
     (flameshot.override { enableWlrSupport = true; })
     virt-viewer
     syncplay
+    mermaid-cli
   ];
 
   services = {
