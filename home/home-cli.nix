@@ -71,5 +71,6 @@
     yt-dlp
     talosctl
     mise
+    go-task
   ];
 }
