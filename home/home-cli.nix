@@ -73,4 +73,11 @@
     mise
     go-task
   ];
+
+  programs = {
+    lsd = {
+      enable = true;
+      enableAliases = true;
+    };
+  };
 }
