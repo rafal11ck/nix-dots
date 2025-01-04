@@ -35,7 +35,6 @@
     ./vscode.nix
     ./waybar.nix
     ./wl-clipboard.nix
-    ./zathura.nix
   ];
 
   home.sessionVariables = {
