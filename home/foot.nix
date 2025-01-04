@@ -1,6 +1,5 @@
 {
   config,
-  pkgs,
   ...
 }:
 {
@@ -16,8 +15,4 @@
     recursive = true;
     source = "${config.values.dotfilesPath}" + "/foot/.config/foot";
   };
-
-  home.packages = with pkgs; [
-    fira-code-nerdfont
-  ];
 }

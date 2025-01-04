@@ -27,7 +27,6 @@
     ./obs-studio.nix
     ./scrcpy.nix
     ./svp.nix
-    ./swaylock.nix
     ./swaync.nix
     ./texlive.nix
     ./thunderbird.nix
@@ -63,6 +62,11 @@
   services = {
     blueman-applet.enable = true;
     kdeconnect.enable = true;
+  };
+
+  programs = {
+    swaylock.enable = true;
+    zathura.enable = true;
   };
 
   xdg.configFile."MangoHud" = {

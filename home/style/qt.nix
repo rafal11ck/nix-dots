@@ -15,12 +15,6 @@ in
     platformTheme.name = "kvantum";
     style = {
       name = "kvantum";
-      catppuccin = {
-        enable = true;
-        flavor = lib.toLower "${values.catppuccinFlavor}";
-        apply = true;
-      };
-
     };
 
   };
