@@ -15,7 +15,9 @@ in
   programs.vscode = {
     enable = true;
     # To look for extension names: https://github.com/nix-community/nix-vscode-extensions?tab=readme-ov-file#explore
+    # extensions names should be lowercase
     extensions = with vs-extensions.vscode-marketplace; [
+      james-yu.latex-workshop
       bierner.markdown-mermaid
       bpruitt-goddard.mermaid-markdown-syntax-highlighting
       catppuccin.catppuccin-vsc-icons
@@ -102,6 +104,10 @@ in
       "plantuml.render" = "PlantUMLServer";
       "plantuml.server" = "http://127.0.0.1:9123/plantuml"; # NOTE this relyies on local plantuml server (set in workstation module)
       "explorer.confirmDelete" = false;
+      "latex-workshop.formatting.latex" = "latexindent";
+      "latex-workshop.intellisense.update.aggressive.enabled" = true;
+      "latex-workshop.check.duplicatedLabels.enabled" = true;
+
     };
   };
 }
