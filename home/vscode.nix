@@ -54,8 +54,6 @@ in
       "[html]"."editor.defaultFormatter" = "vscode.html-language-features";
       "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
 
-      "svg.preview.background" = true;
-
       "alt-catppuccin.accentColor" = lib.toLower values.catppuccinAccent;
       "files.refactoring.autoSave" = true;
 
@@ -107,6 +105,7 @@ in
       "latex-workshop.formatting.latex" = "latexindent";
       "latex-workshop.intellisense.update.aggressive.enabled" = true;
       "latex-workshop.check.duplicatedLabels.enabled" = true;
+      "latex-workshop.latex.autoClean.run" = "onBuilt";
 
     };
   };
