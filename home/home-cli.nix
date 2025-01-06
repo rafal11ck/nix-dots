@@ -72,6 +72,7 @@
     talosctl
     mise
     go-task
+    yazi
   ];
 
   programs = {
