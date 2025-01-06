@@ -103,9 +103,10 @@ in
       "plantuml.server" = "http://127.0.0.1:9123/plantuml"; # NOTE this relyies on local plantuml server (set in workstation module)
       "explorer.confirmDelete" = false;
       "latex-workshop.formatting.latex" = "latexindent";
-      "latex-workshop.intellisense.update.aggressive.enabled" = true;
+      # "latex-workshop.intellisense.update.aggressive.enabled" = false;
       "latex-workshop.check.duplicatedLabels.enabled" = true;
-      "latex-workshop.latex.autoClean.run" = "onBuilt";
+      "latex-workshop.latex.autoClean.run" = "onFailed";
+      "vim.disableExtension" = "true";
 
     };
   };
