@@ -20,7 +20,7 @@
   };
 
   boot.initrd.kernelModules = [ "amdgpu" ];
-  services.services = {
+  services = {
     ollama = {
       enable = true;
       loadModels = [
