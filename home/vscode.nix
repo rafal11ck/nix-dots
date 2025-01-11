@@ -40,6 +40,7 @@ in
       naumovs.color-highlight
       ms-vscode-remote.remote-containers
       jock.svg
+      mkhl.direnv
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
