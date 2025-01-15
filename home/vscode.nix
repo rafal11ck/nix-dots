@@ -41,6 +41,7 @@ in
       ms-vscode-remote.remote-containers
       jock.svg
       mkhl.direnv
+      waderyan.gitblame
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
