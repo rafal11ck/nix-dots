@@ -29,7 +29,6 @@ in
       ms-python.pylint
       ms-python.python
       pkgs.vscode-extensions.jnoortheen.nix-ide
-      redhat.ansible
       redhat.vscode-yaml
       vscodevim.vim
       dsznajder.es7-react-js-snippets
