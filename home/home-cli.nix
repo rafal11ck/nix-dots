@@ -84,4 +84,8 @@
     };
   };
 
+  nix = {
+    gc.automatic = true;
+  };
+
 }

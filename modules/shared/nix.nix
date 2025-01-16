@@ -6,6 +6,7 @@
     ];
     settings = {
       build-dir = "/var/tmp";
+      auto-optimise-store = true;
     };
   };
 }
