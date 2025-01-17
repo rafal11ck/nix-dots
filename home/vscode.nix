@@ -108,7 +108,11 @@ in
       "latex-workshop.check.duplicatedLabels.enabled" = true;
       "latex-workshop.latex.autoClean.run" = "onFailed";
       "vim.disableExtension" = "true";
-
+      "cmake.pinnedCommands" = [
+        "workbench.action.tasks.configureTaskRunner"
+        "workbench.action.tasks.runTask"
+      ];
+      "cmake.showOptionsMovedNotification" = false;
     };
   };
 }
