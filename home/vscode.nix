@@ -16,32 +16,43 @@ in
     enable = true;
     # To look for extension names: https://github.com/nix-community/nix-vscode-extensions?tab=readme-ov-file#explore
     # extensions names should be lowercase
-    extensions = with vs-extensions.vscode-marketplace; [
-      james-yu.latex-workshop
-      bierner.markdown-mermaid
-      bpruitt-goddard.mermaid-markdown-syntax-highlighting
-      catppuccin.catppuccin-vsc-icons
-      dbaeumer.vscode-eslint
-      esbenp.prettier-vscode
-      jebbs.plantuml
-      ms-python.debugpy
-      ms-python.isort
-      ms-python.pylint
-      ms-python.python
-      pkgs.vscode-extensions.jnoortheen.nix-ide
-      redhat.vscode-yaml
-      vscodevim.vim
-      dsznajder.es7-react-js-snippets
-      usernamehw.errorlens
-      tomoki1207.pdf
-      ms-kubernetes-tools.vscode-kubernetes-tools
-      mechatroner.rainbow-csv
-      naumovs.color-highlight
-      ms-vscode-remote.remote-containers
-      jock.svg
-      mkhl.direnv
-      waderyan.gitblame
-    ];
+    #
+    # Extensions that are in nixpkgs should be taken from nixpkgs
+    #
+    # Following with takes extensions from nixpkgs and if it isn't there it
+    # fallbacks to https://github.com/nix-community/nix-vscode-extensions
+    extensions =
+      with vs-extensions.vscode-marketplace;
+      with pkgs.vscode-extensions;
+      [
+        james-yu.latex-workshop
+        bierner.markdown-mermaid
+        bpruitt-goddard.mermaid-markdown-syntax-highlighting
+        catppuccin.catppuccin-vsc
+        catppuccin.catppuccin-vsc-icons
+        dbaeumer.vscode-eslint
+        esbenp.prettier-vscode
+        jebbs.plantuml
+        ms-python.debugpy
+        ms-python.isort
+        ms-python.pylint
+        ms-python.python
+        jnoortheen.nix-ide
+        redhat.vscode-yaml
+        vscodevim.vim
+        dsznajder.es7-react-js-snippets
+        usernamehw.errorlens
+        tomoki1207.pdf
+        ms-kubernetes-tools.vscode-kubernetes-tools
+        mechatroner.rainbow-csv
+        naumovs.color-highlight
+        ms-vscode-remote.remote-containers
+        jock.svg
+        mkhl.direnv
+        waderyan.gitblame
+        ms-vscode.cpptools
+        ms-vscode.cmake-tools
+      ];
     #   mutableExtensionsDir = true;
     userSettings = {
       "extensions.autoUpdate" = false;
@@ -107,7 +118,7 @@ in
       # "latex-workshop.intellisense.update.aggressive.enabled" = false;
       "latex-workshop.check.duplicatedLabels.enabled" = true;
       "latex-workshop.latex.autoClean.run" = "onFailed";
-      "vim.disableExtension" = "true";
+      "vim.disableExtension" = true;
       "cmake.pinnedCommands" = [
         "workbench.action.tasks.configureTaskRunner"
         "workbench.action.tasks.runTask"
