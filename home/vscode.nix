@@ -47,7 +47,12 @@ in
       waderyan.gitblame
       pkgs.vscode-extensions.ms-vscode.cpptools
       ms-vscode.cmake-tools
-
+      gruntfuggly.todo-tree
+      albert.tabout
+      britesnow.vscode-toggle-quotes
+      mitchdenny.ecdc
+      fcrespo82.markdown-table-formatter
+      signageos.signageos-vscode-sops
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
