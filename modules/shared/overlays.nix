@@ -14,6 +14,13 @@ in
           vapoursynthSupport = true;
           sixelSupport = true;
         };
+        extraMakeWrapperArgs = [
+          # Add paths to required libraries
+          "--prefix"
+          "LD_LIBRARY_PATH"
+          ":"
+          "/run/opengl-driver/lib:${lib.makeLibraryPath [ self.ocl-icd ]}"
+        ];
       };
 
       nix-output-monitor =
