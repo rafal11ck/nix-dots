@@ -14,6 +14,10 @@ in
           vapoursynthSupport = true;
           sixelSupport = true;
         };
+        scripts = with super.mpvScripts; [
+          mpris
+        ];
+
         extraMakeWrapperArgs = [
           # Add paths to required libraries
           "--prefix"
