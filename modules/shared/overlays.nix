@@ -9,8 +9,8 @@ in
 
   nixpkgs.overlays = [
     (self: super: {
-      mpv = self.mpv-unwrapped.wrapper {
-        mpv = self.mpv-unwrapped.override {
+      mpv = super.mpv-unwrapped.wrapper {
+        mpv = super.mpv-unwrapped.override {
           vapoursynthSupport = true;
           sixelSupport = true;
         };
@@ -19,7 +19,7 @@ in
           "--prefix"
           "LD_LIBRARY_PATH"
           ":"
-          "/run/opengl-driver/lib:${lib.makeLibraryPath [ self.ocl-icd ]}"
+          "/run/opengl-driver/lib:${lib.makeLibraryPath [ super.ocl-icd ]}"
         ];
       };
 
