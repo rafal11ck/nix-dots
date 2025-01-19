@@ -72,6 +72,7 @@
     mise
     go-task
     yazi
+    httpie
   ];
 
   programs = {
