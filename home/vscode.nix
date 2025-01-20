@@ -37,7 +37,6 @@ in
       vscodevim.vim
       dsznajder.es7-react-js-snippets
       usernamehw.errorlens
-      tomoki1207.pdf
       ms-kubernetes-tools.vscode-kubernetes-tools
       mechatroner.rainbow-csv
       naumovs.color-highlight
@@ -53,6 +52,8 @@ in
       mitchdenny.ecdc
       fcrespo82.markdown-table-formatter
       signageos.signageos-vscode-sops
+      streetsidesoftware.code-spell-checker
+      ms-ceintl.vscode-language-pack-pl
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
@@ -125,6 +126,17 @@ in
         "workbench.action.tasks.runTask"
       ];
       "cmake.showOptionsMovedNotification" = false;
+      "cSpell.ignorePaths" = [
+        "package-lock.json"
+        "node_modules"
+        "vscode-extension"
+        ".git/{info,lfs,logs,refs,objects}/**"
+        ".git/{index,*refs,*HEAD}"
+        ".vscode"
+        ".vscode-insiders"
+        "**.nix"
+      ];
+
     };
   };
 }
