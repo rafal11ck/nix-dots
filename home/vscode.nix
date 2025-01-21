@@ -136,7 +136,7 @@ in
         ".vscode-insiders"
         "**.nix"
       ];
-
+      "cSpell.diagnosticLevel" = "Information";
     };
   };
 }
