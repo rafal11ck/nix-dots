@@ -73,6 +73,7 @@
     go-task
     yazi
     httpie
+    k9s 
   ];
 
   programs = {
