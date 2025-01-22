@@ -54,6 +54,7 @@ in
       signageos.signageos-vscode-sops
       streetsidesoftware.code-spell-checker
       ms-ceintl.vscode-language-pack-pl
+      editorconfig.editorconfig
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
@@ -137,6 +138,7 @@ in
         "**.nix"
       ];
       "cSpell.diagnosticLevel" = "Hint";
+      "update.mode" = "none";
     };
   };
 }
