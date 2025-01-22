@@ -27,7 +27,7 @@ in
 
     # NOTE requires credentials to be provided (man mount.cifs)
     "/media/ext" = {
-      device = "//openmediavault/ext";
+      device = "//192.168.0.203/ext";
       fsType = "cifs";
       options = [
         "_netdev"
