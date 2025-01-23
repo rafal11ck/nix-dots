@@ -32,7 +32,7 @@ mkdir -p ~/.config/nix
 echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
 ```
 
-Nix home-manager config provides cli part of config only. As gui has host system dependenceis and workarounds. For GUI configuration use stow-able dotfiles.
+Nix home-manager config provides cli part of config only. As gui has host system dependencies and workarounds. For GUI configuration use stow-able dotfiles.
 
 ```sh
 nix run home-manager/master -- switch --flake .

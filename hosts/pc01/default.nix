@@ -25,8 +25,8 @@
       enable = true;
       loadModels = [
         "codestral"
-        "llama3.2-vision"
-        "qwen2.5-coder"
+        "deepseek-r1:14b"
+        "deepseek-r1:32b"
       ];
       acceleration = "rocm";
       environmentVariables = {
