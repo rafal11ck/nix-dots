@@ -73,4 +73,5 @@
     recursive = true;
     source = "${config.values.dotfilesPath}" + "/mangohud/.config/MangoHud";
   };
+
 }

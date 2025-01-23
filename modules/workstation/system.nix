@@ -30,6 +30,7 @@
       enable = true;
       flake = "/home/${config.values.mainUser}/nix-dots";
     };
+    kdeconnect.enable = true;
   };
 
   # Make hosts mutable but cleaned on switch

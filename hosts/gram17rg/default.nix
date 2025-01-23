@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   imports = [
     ./hardware.nix
   ];
@@ -14,4 +7,5 @@
     hostName = "gram17rg";
   };
 
+  services.fprintd.enable = true;
 }
