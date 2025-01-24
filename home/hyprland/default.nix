@@ -1,6 +1,5 @@
 {
   pkgs,
-  hyprland,
   config,
   ...
 }:
@@ -18,7 +17,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd = {
-      enable = true;
+      # false as it conflucts with uwsm
+      enable = false;
     };
   };
 
@@ -35,6 +35,5 @@
     ];
   };
 
-  xdg.configFile."hypr/".source =
-    "${config.values.dotfilesPath}" + "/hypr/.config/hypr/";
+  xdg.configFile."hypr/".source = "${config.values.dotfilesPath}" + "/hypr/.config/hypr/";
 }
