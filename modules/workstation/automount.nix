@@ -25,24 +25,5 @@ in
       ];
     };
 
-    # NOTE requires credentials to be provided (man mount.cifs)
-    "/media/ext" = {
-      device = "//192.168.0.203/ext";
-      fsType = "cifs";
-      options = [
-        "_netdev"
-        "rw"
-        "credentials=/etc/samba/credentials"
-        "exec"
-        "noatime"
-        "noauto"
-        "nobrl"
-        "uid=${values.mainUser}"
-        "vers=3.0"
-        "x-systemd.automount"
-        "x-systemd.idle-timeout=300"
-      ];
-    };
-
   };
 }
