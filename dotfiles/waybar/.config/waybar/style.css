@@ -70,6 +70,10 @@ tooltip {
     background-color: black;
 }
 
+#tray {
+    min-height: 24px;
+}
+
 #workspaces button.active,
 #custom-nightmode.activated,
 #idle_inhibitor.activated {
