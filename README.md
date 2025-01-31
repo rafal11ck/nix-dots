@@ -23,6 +23,8 @@ In [NixOs Live CD](https://nixos.org/download/)
 
 <https://noogle.dev/>
 
+<https://nixpk.gs/pr-tracker.html>
+
 ## Standalone Nix home manager
 
 Nix command and flakes support has to be enabled.
