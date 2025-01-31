@@ -1,6 +1,6 @@
 ![workstation screenshot](./.assets/desktop.png)
 
-# To quick install without adding host config to repo
+# Install without adding host config to repo
 
 In [NixOs Live CD](https://nixos.org/download/)
 
