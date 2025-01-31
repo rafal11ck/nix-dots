@@ -16,5 +16,6 @@
     pkgs.steam-run
     heroic
     mangohud
+    nix-alien
   ];
 }

@@ -1,13 +1,12 @@
 {
   lib,
+  inputs,
   ...
 }:
-let
-  pkgsPath = ../../pkgs;
-in
 {
 
   nixpkgs.overlays = [
+    inputs.nix-alien.overlays.default
     (self: super: {
       mpv = super.mpv-unwrapped.wrapper {
         mpv = super.mpv-unwrapped.override {
@@ -47,7 +46,6 @@ in
               ${lib.concatLines (lib.mapAttrsToList (old: new: "--replace-fail '${old}' '\\x${new}' \\") icons)}
           '';
         };
-
     })
   ];
 }

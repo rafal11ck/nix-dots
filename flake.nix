@@ -16,6 +16,8 @@
     };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
   outputs =
