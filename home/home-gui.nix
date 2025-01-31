@@ -44,7 +44,6 @@
   };
 
   home.packages = with pkgs; [
-    android-studio
     (flameshot.override { enableWlrSupport = true; })
     gimp
     networkmanagerapplet
@@ -52,7 +51,6 @@
     pwvucontrol
     vesktop
     wev
-    (flameshot.override { enableWlrSupport = true; })
     virt-viewer
     syncplay
     mermaid-cli
