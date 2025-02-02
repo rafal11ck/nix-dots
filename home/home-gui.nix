@@ -54,6 +54,7 @@
     virt-viewer
     syncplay
     mermaid-cli
+    wlogout
   ];
 
   services = {
