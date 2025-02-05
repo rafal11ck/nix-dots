@@ -6,5 +6,6 @@
     ffmpegthumbnailer
     wayvnc
     jetbrains.idea-ultimate
+    borgbackup
   ];
 }
