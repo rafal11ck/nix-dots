@@ -54,8 +54,6 @@
     jq
     less
     nix-output-monitor
-    nodejs_20
-    octaveFull
     qpdf
     unzip
     zip
@@ -73,7 +71,6 @@
     go-task
     yazi
     httpie
-    k9s 
   ];
 
   programs = {
@@ -82,6 +79,9 @@
       enableAliases = true;
     };
     direnv = {
+      enable = true;
+    };
+    k9s = {
       enable = true;
     };
   };
