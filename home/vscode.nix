@@ -55,6 +55,7 @@ in
       streetsidesoftware.code-spell-checker
       ms-ceintl.vscode-language-pack-pl
       editorconfig.editorconfig
+      csstools.postcss
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
