@@ -10,12 +10,13 @@
 
 /* whole bar size */
 window > box.horizontal {
-    /* min-height: 2rem; */
+    /* background-color: @blue; */
+    padding: 0rem 0.5rem;
+    min-height: 2rem;
 }
 
 /* whole bar  */
 #window#waybar {
-    background-color: transparent;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
@@ -35,7 +36,7 @@ box.horizontal widget label {
 box.horizontal > box.horizontal,
 tooltip {
     background-color: @base;
-    margin: 0.1rem 0.5rem;
+    padding: 0rem 0.25rem;
 }
 
 tooltip {
@@ -48,7 +49,6 @@ box.horizontal widget > label,
 #tray,
 tooltip label {
     color: @text;
-    padding: 0px 0.5rem;
     min-width: 1.5rem;
     padding: 0px 0.5rem;
 }
