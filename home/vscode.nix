@@ -140,6 +140,8 @@ in
       ];
       "cSpell.diagnosticLevel" = "Hint";
       "update.mode" = "none";
+      "editor.fontFamily" = "'FiraCode Nerd Font'";
     };
   };
+
 }
