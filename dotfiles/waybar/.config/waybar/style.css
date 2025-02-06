@@ -1,176 +1,53 @@
+@import 'mocha.css';
+
 * {
-    border: none;
-    border-radius: 0;
-    min-height: 0;
+    all: initial;
+    min-width: 0;
+    border-radius: 2rem;
     font-family: Iosevka Nerd Font;
-    font-size: 14px;
+    font-size: 1rem;
+    color: @text;
 }
 
-window#waybar {
+#window#waybar,
+#workspaces {
     background-color: transparent;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
 
-window#waybar.hidden {
-    opacity: 0.5;
+button {
+    border: 2px dashed @surface1;
+    min-width: 2rem;
+    min-height: 2rem;
+    margin: 0px 2.5px;
 }
 
-#workspaces {
-    background-color: transparent;
+#workspaces button.active {
+    background-color: @pink;
+}
+#workspaces button.active label {
+    color: @base;
 }
 
-#workspaces button {
-    all: initial; /* Remove GTK theme values (waybar #1351) */
-    min-width: 0; /* Fix weird spacing in materia (waybar #450) */
-    box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
-    border-radius: 13px;
-    margin: 6px 4px;
-    padding: 8px 12px;
-    min-width: 20px;
-    min-height: 20px;
-    background-color: black;
-    color: white;
+#tray {
+    padding: 0px 0.5rem;
 }
 
-#workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
-    color: #1e1e2e;
-    background-color: #cdd6f4;
-}
-
-#workspaces button.urgent {
-    background-color: #f38ba8;
-}
-
-#keyboard-state,
-#cpu,
-#memory,
-#custom-power,
-#custom-nightmode,
-#battery,
-#backlight,
-#pulseaudio,
-#network,
 #clock,
-#mpd,
-#mpris,
+#custom-nightmode,
 #idle_inhibitor,
-#tray,
+#pulseaudio,
+#cpu,
+#backlight,
+#battery,
+#battery#bat2,
+#clock,
 #custom-notification,
-#custom-ddcutil,
-tooltip {
-    border-radius: 13px;
-    margin: 6px 4px;
-    padding: 8px 12px;
-    min-width: 20px;
-    min-height: 20px;
-    color: white;
-    background-color: black;
-}
-
-#tray {
-    min-height: 24px;
-}
-
-#workspaces button.active,
-#custom-nightmode.activated,
-#idle_inhibitor.activated {
-    background-color: white;
-    color: black;
-}
-
-tooltip {
-    padding: 15px;
-    background-color: #131822;
-}
-
-#custom-notification,
-#tray {
-    background-color: black;
-    color: white;
-}
-
-#custom-nightmode {
-    background-color: #412983;
-    color: #ffffff;
-}
-
-#battery {
-    background-color: #f38ba8;
-    color: black;
-}
-
-@keyframes blink {
-    to {
-        background-color: #f38ba8;
-        color: #181825;
-    }
-}
-
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-    background-color: #ff0048;
-    color: #181825;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#battery.charging {
-    background-color: #a6e3a1;
-    color: black;
-}
-
-#mpris {
-    background-color: #303030;
-    color: #cacaca;
-    min-height: 30px;
-    border-radius: 13px;
-    margin: 6px 6px;
-    padding: 8px 8px;
-}
-
-#backlight {
-    background-color: #fab387;
-    color: black;
-}
-
-#pulseaudio {
-    background-color: #f9e2af;
-    color: black;
-}
-
-#network {
-    background-color: #94e2d5;
-    color: black;
-}
-
-#clock {
-    background-color: #cba6f7;
-    color: black;
-}
-
-#custom-power {
-    background-color: #f2cdcd;
-    color: black;
-}
-
-tooltip label {
-    padding: 5px;
-    background-color: #131822;
-}
-
-#cpu {
-    background-color: #2ecc71;
-    color: black;
-}
-
-#idle_inhibitor {
-    background-color: #2d3446;
-    color: white;
+box.module {
+    border: 2px dashed @surface1;
+    margin: 0px 0.25rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: 0em 6px;
 }
