@@ -2,52 +2,76 @@
 
 * {
     all: initial;
-    min-width: 0;
     border-radius: 2rem;
-    font-family: Iosevka Nerd Font;
-    font-size: 1rem;
+    font-family: 'Iosevka Nerd Font';
+    font-size: 1.45rem;
     color: @text;
 }
 
-#window#waybar,
-#workspaces {
+/* whole bar size */
+window > box.horizontal {
+    /* min-height: 2rem; */
+}
+
+/* whole bar  */
+#window#waybar {
     background-color: transparent;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
 
-button {
-    border: 2px dashed @surface1;
-    min-width: 2rem;
-    min-height: 2rem;
-    margin: 0px 2.5px;
-}
-
-#workspaces button.active {
-    background-color: @pink;
-}
+/* active workspace button */
 #workspaces button.active label {
+    background-color: @pink;
     color: @base;
 }
 
-#tray {
+/* // so that things are not some sticks */
+box.horizontal widget label {
+    min-width: 24px;
+}
+
+/* // main Boxes */
+box.horizontal > box.horizontal,
+tooltip {
+    background-color: @base;
+    margin: 0.1rem 0.5rem;
+}
+
+tooltip {
+    border: 1px solid @pink;
+}
+
+/* // Basicly everything in boxes */
+#workspaces button label,
+box.horizontal widget > label,
+#tray,
+tooltip label {
+    color: @text;
+    padding: 0px 0.5rem;
+    min-width: 1.5rem;
     padding: 0px 0.5rem;
 }
 
-#clock,
-#custom-nightmode,
-#idle_inhibitor,
-#pulseaudio,
-#cpu,
-#backlight,
-#battery,
-#battery#bat2,
-#clock,
-#custom-notification,
-box.module {
-    border: 2px dashed @surface1;
-    margin: 0px 0.25rem;
-    min-width: 2rem;
-    min-height: 2rem;
-    padding: 0em 6px;
+/* Active custom modules */
+widget > label.module.activated {
+    background-color: @pink;
+    color: @base;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }

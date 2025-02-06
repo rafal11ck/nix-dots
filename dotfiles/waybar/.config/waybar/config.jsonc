@@ -14,15 +14,15 @@
     "custom/notification"
   ],
   "modules-right": [
+    "tray",
     "custom/nightmode",
     "idle_inhibitor",
     "pulseaudio",
-    "cpu",
+    // "cpu",
     "backlight",
     "battery",
     "battery#bat2",
-    "clock",
-    "tray"
+    "clock"
   ],
   "keyboard-state": {
     "numlock": true,
@@ -48,7 +48,7 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "",
+      "activated": "👁",
       "deactivated": ""
     }
   },
@@ -65,7 +65,7 @@
     "format": "{:%H:%M %d-%m-%Y}"
   },
   "cpu": {
-    "format": "{usage}% ",
+    "format": "{usage}% " ,
     "tooltip": false,
     "on-click": "foot btop"
   },
