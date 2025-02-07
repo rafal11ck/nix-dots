@@ -71,6 +71,7 @@
     go-task
     yazi
     httpie
+    asciinema
   ];
 
   programs = {
