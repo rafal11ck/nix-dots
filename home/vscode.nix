@@ -56,6 +56,7 @@ in
       ms-ceintl.vscode-language-pack-pl
       editorconfig.editorconfig
       csstools.postcss
+      mikestead.dotenv
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
