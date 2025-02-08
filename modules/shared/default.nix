@@ -7,4 +7,8 @@
     ./system.nix
     ./values.nix
   ];
+
+  i18n.extraLocaleSettings = {
+    LC_TIME = "pl_PL.UTF-8";
+  };
 }
