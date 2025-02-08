@@ -1,7 +1,6 @@
 @import 'mocha.css';
 
 * {
-    all: initial;
     border-radius: 2rem;
     font-family: 'Iosevka Nerd Font';
     font-size: 1.45rem;
@@ -10,13 +9,15 @@
 }
 
 /* whole bar size */
-window > box.horizontal {
+#waybar window > box.horizontal {
     padding: 0rem 0.5rem;
     min-height: 2rem;
 }
 
-/* whole bar  */
-#window#waybar {
+#waybar,
+#waybar button,
+#tray {
+    all: initial;
     background: transparent;
 }
 
