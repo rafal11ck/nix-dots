@@ -8,17 +8,44 @@
     transition-duration: 0.25s;
 }
 
-/* whole bar size */
-#waybar window > box.horizontal {
-    padding: 0rem 0.5rem;
-    min-height: 2rem;
-}
-
 #waybar,
 #waybar button,
 #tray {
+    /* // get rid of GTK theme */
     all: initial;
     background: transparent;
+}
+
+/* whole bar size */
+#waybar > box {
+    /* // margin from sides of screen */
+    margin: 0rem 0.5rem;
+    min-height: 2rem;
+}
+
+#tray {
+    padding-left: 10px;
+}
+
+/* add paddings to module labels so that font awesome does't do aliasing with neiberhoods */
+box.modules-right widget > label {
+    padding: 0px 0.75rem;
+}
+
+/* // so that things are not some sticks, and stay put (when icons change for example */
+#waybar label,
+#workspaces button box label {
+    min-width: 3.5rem;
+}
+
+/* MARGINS */
+/* Basicly everything in boxes, modules */
+#workspaces button label,
+box.horizontal widget > label,
+#tray,
+#tray label,
+tooltip label {
+    margin: 0px 0.25rem;
 }
 
 /* active workspace button */
@@ -27,16 +54,11 @@
     color: @base;
 }
 
-/* // so that things are not some sticks */
-box.horizontal widget label {
-    min-width: 24px;
-}
-
-/* // main Boxes */
+/* main Boxes */
 box.horizontal > box.horizontal,
 tooltip {
     background: @base;
-    padding: 0rem 0.25rem;
+    margin: 0rem 0.25rem;
 }
 
 tooltip,
@@ -81,22 +103,16 @@ check:checked {
     background: @green;
 }
 
-/* // Basicly everything in boxes */
-#workspaces button label,
-box.horizontal widget > label,
-#tray,
-#tray label,
-tooltip label {
-    min-width: 1.5rem;
-    padding: 0px 0.5rem;
-}
-
 /* Active custom modules */
 widget > label.module.activated {
     background-color: @pink;
     color: @base;
 }
 
+/* Buttons toggable 
+  - active workspace
+  - toggable custom buttons
+ */
 widget > label.module.text-button,
 #workspaces button label {
     transition-property: all;
