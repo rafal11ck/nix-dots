@@ -6,19 +6,18 @@
     font-family: 'Iosevka Nerd Font';
     font-size: 1.45rem;
     color: @text;
+    transition-duration: 0.25s;
 }
 
 /* whole bar size */
 window > box.horizontal {
-    /* background-color: @blue; */
     padding: 0rem 0.5rem;
     min-height: 2rem;
 }
 
 /* whole bar  */
 #window#waybar {
-    transition-property: background-color;
-    transition-duration: 0.5s;
+    background: transparent;
 }
 
 /* active workspace button */
@@ -35,20 +34,58 @@ box.horizontal widget label {
 /* // main Boxes */
 box.horizontal > box.horizontal,
 tooltip {
-    background-color: @base;
+    background: @base;
     padding: 0rem 0.25rem;
 }
 
-tooltip {
+tooltip,
+menu {
     border: 1px solid @pink;
+    background: @base;
+}
+
+menu {
+    padding: 0.5rem 0.25rem;
+}
+
+menuitem {
+    margin: 0.25rem;
+    background-color: @surface0;
+}
+
+separator {
+    background-color: @surface1;
+    margin: 0.1rem 0.5rem;
+    padding: 0.1rem;
+}
+
+menuitem:hover,
+button:hover,
+label:hover {
+    background-color: @surface1;
+}
+
+menuitem:disabled {
+    background-color: @crust;
+}
+
+check {
+    min-height: 1rem;
+    min-width: 1rem;
+    background: @red;
+    margin-left: 0.5rem;
+}
+
+check:checked {
+    background: @green;
 }
 
 /* // Basicly everything in boxes */
 #workspaces button label,
 box.horizontal widget > label,
 #tray,
+#tray label,
 tooltip label {
-    color: @text;
     min-width: 1.5rem;
     padding: 0px 0.5rem;
 }
@@ -57,6 +94,11 @@ tooltip label {
 widget > label.module.activated {
     background-color: @pink;
     color: @base;
+}
+
+widget > label.module.text-button,
+#workspaces button label {
+    transition-property: all;
 }
 
 @keyframes blink {
