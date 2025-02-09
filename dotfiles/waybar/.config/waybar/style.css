@@ -2,7 +2,6 @@
 
 * {
     all: initial; /* get rid of GTK theme */
-
     border-radius: 2rem;
     font-family: 'Iosevka Nerd Font';
     font-size: 1.45rem;
@@ -97,11 +96,21 @@ menuitem:disabled {
     background-color: @crust;
 }
 
-check {
+menuitem check,
+radio {
     min-height: 1rem;
     min-width: 1rem;
     background: @red;
-    margin-left: 0.5rem;
+    margin: 0rem 0.5rem;
+}
+
+radio {
+    background: @overlay0;
+    outline: 1px solid @pink;
+}
+
+radio:checked {
+    background: @pink;
 }
 
 check:checked {
