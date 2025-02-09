@@ -1,14 +1,13 @@
 format = """
 [](#5F00D3)\
-$hostname(fg:#DA627D bg:#5F00D3)\
-[](fg:#5F00D3 bg:#E600E6)\
-$cmd_duration\
-[](fg:#E600E6 bg:#DA627D)\
+[$os$hostname](bg:prev_fg)\
+[](fg:prev_bg bg:#E600E6)\
+[$cmd_duration](bg:prev_fg)\
+[](fg:prev_bg bg:#DA627D)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
-$git_branch\
-$git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:prev_bg bg:#FCA17D)\
+$git_branch$git_status\
+[](fg:prev_bg bg:#86BBD8)\
 $c\
 $elixir\
 $elm\
@@ -21,11 +20,11 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:prev_bg bg:#06969A)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:prev_bg bg:#33658A)\
 $time\
-[ ](fg:#33658A)\
+[ ](fg:prev_bg)\
 \n\
 [](fg:#5F00D3)\
 $username\
@@ -34,6 +33,7 @@ $username\
 
 # Disable the blank line at the start of the prompt
 #add_newline = false
+
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
@@ -47,7 +47,7 @@ disabled = false
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#9A348E"
+style = "#fff"
 disabled = false # Disabled by default
 
 [hostname]
@@ -56,7 +56,7 @@ style = "bg:#5F00D3"
 format='[$ssh_symbol$hostname ]($style)'
 
 [directory]
-style = "bg:#DA627D"
+style = "bg:#DA627D fg:#000000"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -96,11 +96,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#FCA17D"
+style = "bg:#FCA17D fg:#000000"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
+style = "bg:#FCA17D fg:#000000"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
@@ -119,7 +119,7 @@ format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#86BBD8 fg:#000000"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
@@ -154,6 +154,6 @@ style = "bg:#33658A"
 format = '[ $time ]($style)'
 
 [cmd_duration]
-style = "bg:#E600E6"
+style = "bg:#E600E6 "
 format='[took $duration]($style)'
 show_notifications=false
