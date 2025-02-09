@@ -10,15 +10,12 @@ services:
         container_name: open-webui
         restart: always
         image: ghcr.io/open-webui/open-webui:main
-        environment:
-            - WEBUI_AUTH=false
     watchtower:
         image: containrrr/watchtower
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - /root/.docker/config.json:/config.json
         command: --include-restarting
-
 volumes:
     open-webui:
         name: open-webui
