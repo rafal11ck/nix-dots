@@ -1,6 +1,8 @@
 @import 'mocha.css';
 
 * {
+    all: initial; /* get rid of GTK theme */
+
     border-radius: 2rem;
     font-family: 'Iosevka Nerd Font';
     font-size: 1.45rem;
@@ -11,9 +13,16 @@
 #waybar,
 #waybar button,
 #tray {
-    /* // get rid of GTK theme */
-    all: initial;
     background: transparent;
+}
+
+/* Buttons toggable 
+  - active workspace
+  - toggable custom buttons
+ */
+widget > label.module.text-button,
+#workspaces button label {
+    transition-property: all;
 }
 
 /* whole bar size */
@@ -33,14 +42,16 @@ box.modules-right widget > label {
     padding: 0px 0.75rem;
 }
 
-/* // so that things are not some sticks, and stay put (when icons change for example */
+/*  so that things are not some sticks, and stay put (when icons change for example */
 #waybar label,
 #workspaces button box label {
     min-width: 3.5rem;
 }
 
 /* active workspace button */
-#workspaces button.active label {
+#workspaces button.active label,
+/* active togglable buttons such as custom */
+widget > label.module.activated {
     background-color: @pink;
     color: @base;
 }
@@ -52,21 +63,19 @@ tooltip {
     /* margin: 0rem 0.25rem; */
 }
 
+/* tray stuff */
 tooltip,
 menu {
     border: 1px solid @pink;
     background: @base;
 }
-
 menu {
     padding: 0.5rem 0.25rem;
 }
-
 menuitem {
     margin: 0.25rem;
     background-color: @surface0;
 }
-
 separator {
     background-color: @surface1;
     margin: 0.1rem 0.5rem;
@@ -75,7 +84,8 @@ separator {
 
 menuitem:hover,
 button:hover,
-label:hover {
+label:hover,
+#workspaces button:hover {
     background-color: @surface1;
 }
 
@@ -92,21 +102,6 @@ check {
 
 check:checked {
     background: @green;
-}
-
-/* Active custom modules */
-widget > label.module.activated {
-    background-color: @pink;
-    color: @base;
-}
-
-/* Buttons toggable 
-  - active workspace
-  - toggable custom buttons
- */
-widget > label.module.text-button,
-#workspaces button label {
-    transition-property: all;
 }
 
 @keyframes blink {
