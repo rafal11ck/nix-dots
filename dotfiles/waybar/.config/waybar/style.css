@@ -60,7 +60,11 @@ widget > label.module.activated {
 box.horizontal > box.horizontal,
 tooltip {
     background: @base;
-    /* margin: 0rem 0.25rem; */
+}
+
+/* tooltips labels (the thing that popup when for ex #cpu is hovered over) */
+tooltip label {
+    padding: 0rem 0.5rem;
 }
 
 /* tray stuff */
