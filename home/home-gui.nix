@@ -59,7 +59,11 @@
 
   services = {
     blueman-applet.enable = true;
-    kdeconnect.enable = true;
+    kdeconnect = {
+      enable = true;
+      indicator = true;
+    };
+
   };
 
   programs = {
