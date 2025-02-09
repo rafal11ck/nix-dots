@@ -11,4 +11,6 @@
   i18n.extraLocaleSettings = {
     LC_TIME = "pl_PL.UTF-8";
   };
+
+  home-manager.backupFileExtension = "backup";
 }
