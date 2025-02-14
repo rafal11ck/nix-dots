@@ -53,7 +53,7 @@ in
     neovim
     nil
     nmap
-    nvtop
+    nvtopPackages.full
     p7zip
     pandoc
     playerctl
