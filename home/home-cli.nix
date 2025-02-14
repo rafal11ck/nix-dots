@@ -128,4 +128,8 @@ in
     enable = true;
   };
 
+  home.sessionPath = [
+    "$HOME/.config/scripts/path"
+  ];
+
 }
