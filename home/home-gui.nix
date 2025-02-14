@@ -9,32 +9,11 @@
     ./shared.nix
 
     ./style
-    ./scripts
 
-    ./brightnessctl.nix
-    ./ffmpeg.nix
-    ./firefox.nix
-    ./hypridle.nix
-    ./hyprland
-    ./hyprpaper.nix
-    ./jellyfin-media-player.nix
-    ./jellyfin-mpv-shim.nix
-    ./keepassxc.nix
-    ./libreoffice.nix
-    ./mpv.nix
-    ./notify-send.nix
-    ./nvtop.nix
-    ./obs-studio.nix
-    ./scrcpy.nix
-    ./svp.nix
-    ./swaync.nix
-    ./texlive.nix
-    ./thunderbird.nix
-    ./tofi.nix
-    ./virt-manager.nix
     ./vscode.nix
-    ./waybar.nix
-    ./wl-clipboard.nix
+    ./tofi.nix
+    ./emacs.nix
+    ./firefox.nix
   ];
 
   home.sessionVariables = {
@@ -44,6 +23,7 @@
   };
 
   home.packages = with pkgs; [
+    ddcutil
     (flameshot.override { enableWlrSupport = true; })
     gimp
     networkmanagerapplet
@@ -57,6 +37,25 @@
     syncplay
     mermaid-cli
     wlogout
+    jellyfin-mpv-shim
+    ffmpeg
+    jellyfin-media-player
+    jellyfin-mpv-shim
+    brightnessctl
+    keepassxc
+    libreoffice
+    libnotify
+    scrcpy
+    svp
+    thunderbird
+    virt-manager
+    gammastep
+    material-design-icons
+    iosevka
+    font-awesome
+    wl-clipboard
+    zathura
+    swaynotificationcenter
   ];
 
   services = {
@@ -65,18 +64,33 @@
       enable = true;
       indicator = true;
     };
+    hypridle.enable = true;
+    hyprpaper.enable = true;
 
   };
 
   programs = {
+    waybar = {
+      enable = true;
+      systemd = {
+        # workaround https://github.com/nix-community/home-manager/issues/5927
+        # Starting waybar from WM directly
+        # enable = true;
+      };
+    };
     swaylock.enable = true;
-    zathura.enable = true;
-  };
-
-  xdg.configFile."MangoHud" = {
-    enable = true;
-    recursive = true;
-    source = "${config.values.dotfilesPath}" + "/mangohud/.config/MangoHud";
+    foot = {
+      enable = true;
+      server = {
+        enable = true;
+      };
+    };
+    mpv = {
+      enable = true;
+    };
+    obs-studio = {
+      enable = true;
+    };
   };
 
 }

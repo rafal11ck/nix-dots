@@ -1,3 +1,0 @@
-{
-  programs.hello.enable = true;
-}
