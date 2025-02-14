@@ -56,6 +56,9 @@
     wl-clipboard
     zathura
     swaynotificationcenter
+    swappy
+    slurp
+    grim
   ];
 
   services = {
@@ -66,7 +69,19 @@
     };
     hypridle.enable = true;
     hyprpaper.enable = true;
+  };
 
+  systemd.user.targets = {
+
+    # HACK Fix services depending on tray.traget
+    # https://github.com/nix-community/home-manager/issues/6329#issuecomment-2598736548
+    # workaround https://github.com/nix-community/home-manager/issues/6329
+    tray = {
+      Unit = {
+        Description = "Home Manager System Tray";
+        Requires = [ "graphical-session-pre.target" ];
+      };
+    };
   };
 
   programs = {
@@ -75,7 +90,7 @@
       systemd = {
         # workaround https://github.com/nix-community/home-manager/issues/5927
         # Starting waybar from WM directly
-        # enable = true;
+        enable = true;
       };
     };
     swaylock.enable = true;
