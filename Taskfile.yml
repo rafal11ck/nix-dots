@@ -1,0 +1,16 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  DOTFILES_DIRECTORY: "./dotfiles"
+
+tasks:
+  default:
+    cmds:
+      - task --list-all
+    silent: true
+  setup-dotfiles:
+    dir: "{{.DOTFILES_DIRECTORY}}"
+    cmds:
+      - stow -t ~ -v *
