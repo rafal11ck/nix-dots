@@ -5,7 +5,6 @@
     font-family: 'Iosevka Nerd Font';
     font-size: 1.45rem;
     color: @text;
-    all: initial;
 }
 
 #waybar * {
@@ -24,7 +23,8 @@
 
 #waybar * {
     caret-color: initial;
-    outline: 0;-gtk-outline-bottom-left-radius: 0px;
+    outline: 0;
+    -gtk-outline-bottom-left-radius: 0px;
     -gtk-outline-bottom-right-radius: 0px;
     -gtk-outline-top-left-radius: 0px;
     -gtk-outline-top-right-radius: 0px;
