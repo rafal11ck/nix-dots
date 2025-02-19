@@ -143,6 +143,8 @@ in
       "cSpell.diagnosticLevel" = "Hint";
       "update.mode" = "none";
       "editor.fontFamily" = "'FiraCode Nerd Font'";
+      "typescript.suggest.paths" = false;
+      "javascript.suggest.paths" = false;
     };
   };
 
