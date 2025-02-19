@@ -57,6 +57,7 @@ in
       editorconfig.editorconfig
       csstools.postcss
       mikestead.dotenv
+      christian-kohler.path-intellisense
     ];
     #   mutableExtensionsDir = true;
     userSettings = {
