@@ -22,6 +22,19 @@
     padding: 0;
 }
 
+#waybar * {
+    caret-color: initial;
+    outline: 0;-gtk-outline-bottom-left-radius: 0px;
+    -gtk-outline-bottom-right-radius: 0px;
+    -gtk-outline-top-left-radius: 0px;
+    -gtk-outline-top-right-radius: 0px;
+    -gtk-secondary-caret-color: initial;
+    outline-offset: 0;
+    min-height: initial;
+    min-width: initial;
+    padding: 0;
+}
+
 #waybar,
 #waybar button,
 #tray {
