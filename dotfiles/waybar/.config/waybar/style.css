@@ -1,12 +1,25 @@
 @import 'mocha.css';
 
 * {
-    all: initial; /* get rid of GTK theme */
     border-radius: 2rem;
     font-family: 'Iosevka Nerd Font';
     font-size: 1.45rem;
     color: @text;
-    transition-duration: 0.25s;
+    all: initial;
+}
+
+#waybar * {
+    caret-color: initial;
+    outline: 0;
+    -gtk-outline-bottom-left-radius: 0px;
+    -gtk-outline-bottom-right-radius: 0px;
+    -gtk-outline-top-left-radius: 0px;
+    -gtk-outline-top-right-radius: 0px;
+    -gtk-secondary-caret-color: initial;
+    outline-offset: 0;
+    min-height: initial;
+    min-width: initial;
+    padding: 0;
 }
 
 #waybar,
@@ -32,12 +45,12 @@ widget > label.module.text-button,
 }
 
 /* tray has trash style by default, make it end smoothly */
-#tray {
+#waybar #tray {
     padding: 0px 10px;
 }
 
 /* add paddings to module labels so that font awesome does't do aliasing with neiberhoods */
-box.modules-right widget > label {
+#waybar box.modules-right widget > label {
     padding: 0px 0.75rem;
 }
 
@@ -50,13 +63,13 @@ box.modules-right widget > label {
 /* active workspace button */
 #workspaces button.active label,
 /* active togglable buttons such as custom */
-widget > label.module.activated {
+#waybar widget > label.module.activated {
     background-color: @pink;
     color: @base;
 }
 
 /* main Boxes */
-box.horizontal > box.horizontal,
+#waybar box.horizontal > box.horizontal,
 tooltip {
     background: @base;
 }
@@ -68,52 +81,52 @@ tooltip label {
 
 /* tray stuff */
 tooltip,
-menu {
+#waybar menu {
     border: 1px solid @pink;
     background: @base;
 }
-menu {
+#waybar menu {
     padding: 0.5rem 0.25rem;
 }
-menuitem {
+#waybar menuitem {
     margin: 0.25rem;
     background-color: @surface0;
 }
-separator {
+#waybar separator {
     background-color: @surface1;
     margin: 0.1rem 0.5rem;
     padding: 0.1rem;
 }
 
-menuitem:hover,
-button:hover,
-label:hover,
+#waybar menuitem:hover,
+#waybar button:hover,
+#waybar label:hover,
 #workspaces button:hover {
     background-color: @surface1;
 }
 
-menuitem:disabled {
+#waybar menuitem:disabled {
     background-color: @crust;
 }
 
-menuitem check,
-radio {
+#waybar menuitem check,
+#waybar radio {
     min-height: 1rem;
     min-width: 1rem;
     background: @red;
     margin: 0rem 0.5rem;
 }
 
-radio {
+#waybar radio {
     background: @overlay0;
     outline: 1px solid @pink;
 }
 
-radio:checked {
+#waybar radio:checked {
     background: @pink;
 }
 
-check:checked {
+#waybar check:checked {
     background: @green;
 }
 
