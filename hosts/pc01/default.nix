@@ -26,7 +26,6 @@
       loadModels = [
         "codestral"
         "deepseek-r1:14b"
-        "deepseek-r1:32b"
       ];
       acceleration = "rocm";
       environmentVariables = {
