@@ -42,7 +42,9 @@ nix run home-manager/master -- switch --flake .
 
 ## Standalone stow-able dotfiles
 
-In `dotfiles` directory run `stow -t ~ -v *` which means: Stow to `~` verbose so that you can see what happens `*` glob to everything in current directory
+To apply using [go-task](https://taskfile.dev/) run `task setup-dotfiles`.
+
+Files can be applied manually too using stow, that's what aftermentioned task does.
 
 # Structure
 
