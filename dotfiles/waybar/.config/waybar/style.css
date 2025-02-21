@@ -159,3 +159,18 @@ tooltip,
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+@keyframes notify {
+    to {
+        background-color: @yellow;
+        color: @base;
+    }
+}
+
+.notification {
+    animation-name: notify;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(24);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
