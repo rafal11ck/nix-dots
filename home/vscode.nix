@@ -58,6 +58,7 @@ in
       csstools.postcss
       mikestead.dotenv
       christian-kohler.path-intellisense
+      mrmlnc.vscode-json5
     ];
   };
 
