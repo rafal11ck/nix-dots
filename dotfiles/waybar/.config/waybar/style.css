@@ -116,6 +116,7 @@ tooltip,
 #waybar label:hover,
 #workspaces button:hover {
     background-color: @surface1;
+    transition-duration: 0;
 }
 
 #waybar menuitem:disabled {
