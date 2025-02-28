@@ -85,8 +85,11 @@
   "workbench.iconTheme": "catppuccin-mocha",
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "enabled"
+  },
+  "files.associations": {
+    ".renovaterc.json5": "json5"
   }
 }
-  
-    
-    
+
+
+
