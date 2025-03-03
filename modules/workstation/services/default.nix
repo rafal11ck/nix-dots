@@ -27,7 +27,14 @@
       nssmdns4 = true;
       openFirewall = true;
     };
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = with pkgs; [
+        gutenprint
+        gutenprintBin
+        brlaser
+      ];
+    };
 
   };
 
