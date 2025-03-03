@@ -88,7 +88,8 @@
   },
   "files.associations": {
     ".renovaterc.json5": "json5"
-  }
+  },
+  "chat.commandCenter.enabled": false
 }
 
 
