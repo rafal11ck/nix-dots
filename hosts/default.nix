@@ -35,6 +35,7 @@ in
 
     modules = [
       ./gram17rg
+      gaming
       shared
       workstation
     ];
