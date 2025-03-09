@@ -43,6 +43,7 @@ in
     yazi
     httpie
     asciinema
+    asciinema-agg
     aria2
     dict
     hunspell
