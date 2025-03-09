@@ -1,96 +1,91 @@
-
 {
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "alt-catppuccin.accentColor": "pink",
-  "cSpell.diagnosticLevel": "Hint",
-  "cSpell.ignorePaths": [
-    "package-lock.json",
-    "node_modules",
-    "vscode-extension",
-    ".git/{info,lfs,logs,refs,objects}/**",
-    ".git/{index,*refs,*HEAD}",
-    ".vscode",
-    ".vscode-insiders",
-    "**.nix"
-  ],
-  "cmake.pinnedCommands": [
-    "workbench.action.tasks.configureTaskRunner",
-    "workbench.action.tasks.runTask"
-  ],
-  "cmake.showOptionsMovedNotification": false,
-  "editor.fontFamily": "'FiraCode Nerd Font'",
-  "editor.formatOnSave": true,
-  "editor.lineNumbers": "relative",
-  "explorer.confirmDelete": false,
-  "extensions.autoUpdate": false,
-  "files.autoSave": "afterDelay",
-  "files.refactoring.autoSave": true,
-  "javascript.suggest.paths": false,
-  "latex-workshop.check.duplicatedLabels.enabled": true,
-  "latex-workshop.formatting.latex": "latexindent",
-  "latex-workshop.latex.autoClean.run": "onFailed",
-  "nix.enableLanguageServer": true,
-  "nix.serverPath": "nil",
-  "nix.serverSettings": {
-    "nil": {
-      "formatting": {
-        "command": [
-          "nixfmt"
-        ]
-      }
-    }
-  },
-  "plantuml.render": "PlantUMLServer",
-  "plantuml.server": "http://127.0.0.1:9123/plantuml",
-  "prettier.singleQuote": true,
-  "prettier.tabWidth": 4,
-  "telemetry.telemetryLevel": "off",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "typescript.suggest.paths": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "update.mode": "none",
-  "vim.disableExtension": true,
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-b>": false,
-    "<C-f>": false,
-    "<C-k>": false,
-    "<C-p>": false
-  },
-  "vim.useSystemClipboard": true,
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.iconTheme": "catppuccin-mocha",
-  "vs-kubernetes": {
-    "vs-kubernetes.crd-code-completion": "enabled"
-  },
-  "files.associations": {
-    ".renovaterc.json5": "json5"
-  },
-  "chat.commandCenter.enabled": false
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "alt-catppuccin.accentColor": "pink",
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.ignorePaths": [
+        "package-lock.json",
+        "node_modules",
+        "vscode-extension",
+        ".git/{info,lfs,logs,refs,objects}/**",
+        ".git/{index,*refs,*HEAD}",
+        ".vscode",
+        ".vscode-insiders",
+        "**.nix"
+    ],
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.showOptionsMovedNotification": false,
+    "editor.fontFamily": "'FiraCode Nerd Font'",
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "explorer.confirmDelete": false,
+    "extensions.autoUpdate": false,
+    "files.autoSave": "afterDelay",
+    "files.refactoring.autoSave": true,
+    "javascript.suggest.paths": false,
+    "latex-workshop.check.duplicatedLabels.enabled": true,
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
+    "nix.serverSettings": {
+        "nil": {
+            "formatting": {
+                "command": ["nixfmt"]
+            }
+        }
+    },
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.server": "http://127.0.0.1:9123/plantuml",
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "typescript.suggest.paths": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "update.mode": "none",
+    "vim.disableExtension": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-f>": false,
+        "<C-k>": false,
+        "<C-p>": false
+    },
+    "vim.useSystemClipboard": true,
+    "workbench.iconTheme": "catppuccin-mocha",
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "enabled"
+    },
+    "files.associations": {
+        ".renovaterc.json5": "json5"
+    },
+    "chat.commandCenter.enabled": false,
+    "errorLens.enabled": false,
+    "workbench.colorTheme": "Catppuccin Mocha"
 }
-
-
-
