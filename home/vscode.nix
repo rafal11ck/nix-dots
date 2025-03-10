@@ -59,6 +59,7 @@ in
       mikestead.dotenv
       christian-kohler.path-intellisense
       mrmlnc.vscode-json5
+      ms-python.python
     ];
   };
 
