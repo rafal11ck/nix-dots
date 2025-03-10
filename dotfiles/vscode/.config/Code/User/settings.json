@@ -78,7 +78,6 @@
         "<C-p>": false
     },
     "vim.useSystemClipboard": true,
-    "workbench.iconTheme": "catppuccin-mocha",
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "enabled"
     },
@@ -87,5 +86,6 @@
     },
     "chat.commandCenter.enabled": false,
     "errorLens.enabled": false,
-    "workbench.colorTheme": "Catppuccin Mocha"
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha"
 }
