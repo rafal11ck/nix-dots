@@ -17,8 +17,6 @@
     -gtk-outline-top-right-radius: 0px;
     -gtk-secondary-caret-color: initial;
     outline-offset: 0;
-    min-height: initial;
-    min-width: initial;
     padding: 0;
 }
 
