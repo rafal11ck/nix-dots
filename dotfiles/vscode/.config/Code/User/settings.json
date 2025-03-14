@@ -56,7 +56,9 @@
     "nix.serverSettings": {
         "nil": {
             "formatting": {
-                "command": ["nixfmt"]
+                "command": [
+                    "nixfmt"
+                ]
             }
         }
     },
@@ -82,10 +84,17 @@
         "vs-kubernetes.crd-code-completion": "enabled"
     },
     "files.associations": {
-        ".renovaterc.json5": "json5"
+        ".renovaterc.json5": "json5",
+        "*.json5": "json5"
     },
     "chat.commandCenter.enabled": false,
     "errorLens.enabled": false,
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha"
+    "workbench.iconTheme": "catppuccin-mocha",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json5]": {
+        "editor.defaultFormatter": "savh.json5-kit"
+    },
 }
