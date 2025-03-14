@@ -19,7 +19,7 @@ in
     #
     # Extensions that are in nixpkgs (and not work from vs-extensions) should be taken from nixpkgs
     #
-    extensions = with vs-extensions.vscode-marketplace; [
+    profiles.default.extensions = with vs-extensions.vscode-marketplace; [
       james-yu.latex-workshop
       bierner.markdown-mermaid
       bpruitt-goddard.mermaid-markdown-syntax-highlighting
