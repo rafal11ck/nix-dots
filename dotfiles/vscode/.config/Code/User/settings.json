@@ -97,4 +97,5 @@
     "[json5]": {
         "editor.defaultFormatter": "savh.json5-kit"
     },
+    "yaml.format.singleQuote": true,
 }
