@@ -52,7 +52,7 @@
     "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.latex.autoClean.run": "onFailed",
     "nix.enableLanguageServer": true,
-    "nix.serverPath": "nil",
+    "nix.serverPath": "nixd",
     "nix.serverSettings": {
         "nil": {
             "formatting": {
