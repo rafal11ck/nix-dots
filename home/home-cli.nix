@@ -64,6 +64,7 @@ in
     termdown
     tree
     zellij
+    uv
   ];
 
   programs = {
