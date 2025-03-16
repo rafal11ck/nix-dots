@@ -65,6 +65,7 @@ in
     tree
     zellij
     texliveFull
+    uv
   ];
 
   programs = {
