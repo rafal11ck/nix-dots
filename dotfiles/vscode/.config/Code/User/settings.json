@@ -52,11 +52,13 @@
     "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.latex.autoClean.run": "onFailed",
     "nix.enableLanguageServer": true,
-    "nix.serverPath": "nil",
+    "nix.serverPath": "nixd",
     "nix.serverSettings": {
         "nil": {
             "formatting": {
-                "command": ["nixfmt"]
+                "command": [
+                    "nixfmt"
+                ]
             }
         }
     },
@@ -78,14 +80,22 @@
         "<C-p>": false
     },
     "vim.useSystemClipboard": true,
-    "workbench.iconTheme": "catppuccin-mocha",
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "enabled"
     },
     "files.associations": {
-        ".renovaterc.json5": "json5"
+        ".renovaterc.json5": "json5",
+        "*.json5": "json5"
     },
     "chat.commandCenter.enabled": false,
     "errorLens.enabled": false,
-    "workbench.colorTheme": "Catppuccin Mocha"
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json5]": {
+        "editor.defaultFormatter": "savh.json5-kit"
+    },
+    "yaml.format.singleQuote": true,
 }

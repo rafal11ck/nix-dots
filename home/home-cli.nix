@@ -52,7 +52,7 @@ in
     megatools
     ncdu
     neovim
-    nil
+    nixd
     nmap
     nvtopPackages.full
     p7zip
