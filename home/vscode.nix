@@ -40,7 +40,6 @@ in
       ms-kubernetes-tools.vscode-kubernetes-tools
       mechatroner.rainbow-csv
       naumovs.color-highlight
-      ms-vscode-remote.remote-containers
       jock.svg
       mkhl.direnv
       waderyan.gitblame
