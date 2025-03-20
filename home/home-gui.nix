@@ -29,9 +29,7 @@
     networkmanagerapplet
     nsxiv
     pwvucontrol
-    (vesktop.override {
-      electron = pkgs.electron_32; # FIXME https://github.com/NixOS/nixpkgs/issues/380429
-    })
+    vesktop
     wev
     virt-viewer
     syncplay
