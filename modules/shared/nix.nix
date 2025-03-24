@@ -7,6 +7,9 @@
     settings = {
       build-dir = "/var/tmp";
       auto-optimise-store = true;
+      trusted-users = [
+        "@wheel"
+      ];
     };
   };
 }
