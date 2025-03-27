@@ -19,6 +19,7 @@ in
   home.packages = with pkgs; [
     android-tools
     kubectl
+    kubectl-explore
     kubectx
     dig
     gnuplot
