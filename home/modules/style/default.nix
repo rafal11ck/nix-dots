@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   imports = [
     ./cursor.nix
     ./fonts.nix

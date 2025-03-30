@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   ...
 }:
 
@@ -35,5 +34,4 @@
     ];
   };
 
-  xdg.configFile."hypr/".source = "${config.values.dotfilesPath}" + "/hypr/.config/hypr/";
 }

@@ -1,13 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-let
-  values = config.values;
-in
-{
 
   qt = {
     enable = true;

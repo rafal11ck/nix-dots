@@ -3,7 +3,7 @@
 }:
 {
   home.pointerCursor = {
-    size = 24;
+    size = 32;
     gtk.enable = true;
   };
 
