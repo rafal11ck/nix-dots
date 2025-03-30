@@ -1,5 +1,4 @@
 {
-  pkgs,
   config,
   ...
 }:
@@ -8,68 +7,14 @@ let
 in
 {
   imports = [
-    ./values.nix
-    ./shared.nix
-
-    ./style
-
-    ./python.nix
-  ];
-
-  home.packages = with pkgs; [
-    android-tools
-    kubectl
-    kubectl-explore
-    kubectx
-    dig
-    gnuplot
-    jq
-    less
-    nix-output-monitor
-    qpdf
-    unzip
-    zip
-    wireguard-tools
-    gcc
-    stow
-    payload-dumper-go
-    plantuml
-    smartmontools
-    inkscape
-    kubernetes-helm
-    yt-dlp
-    talosctl
-    mise
-    go-task
-    yazi
-    httpie
-    asciinema
-    asciinema-agg
-    aria2
-    dict
-    hunspell
-    hunspellDicts.pl_PL # Polish dictionary
-    hunspellDicts.en_US # English dictionary
-    megatools
-    ncdu
-    neovim
-    nixd
-    nmap
-    nvtopPackages.full
-    p7zip
-    pandoc
-    playerctl
-    pulsemixer
-    shellcheck
-    shfmt
-    termdown
-    tree
-    zellij
-    texliveFull
-    uv
+    ./firefox.nix
+    ./vscode.nix
   ];
 
   programs = {
+    # Let Home Manager install and manage itself.
+    home-manager.enable = true;
+
     bash.enable = true;
     bat.enable = true;
     btop = {
@@ -122,18 +67,28 @@ in
         "--cmd cd"
       ];
     };
+
+    waybar = {
+      enable = true;
+      systemd = {
+        # workaround https://github.com/nix-community/home-manager/issues/5927
+        # Starting waybar from WM directly
+        enable = true;
+      };
+    };
+    swaylock.enable = true;
+    foot = {
+      enable = true;
+      server = {
+        enable = true;
+      };
+    };
+    mpv = {
+      enable = true;
+    };
+    obs-studio = {
+      enable = true;
+    };
+
   };
-
-  nix = {
-    gc.automatic = true;
-  };
-
-  services.ssh-agent = {
-    enable = true;
-  };
-
-  home.sessionPath = [
-    "$HOME/.config/scripts/path"
-  ];
-
 }

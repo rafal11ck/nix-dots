@@ -16,7 +16,7 @@ in
       inherit inputs;
     };
     users.${config.values.mainUser}.imports = [
-      ../../home/home.nix
+      ../../home
       (modulesPath + /shared/values.nix)
       inputs.catppuccin.homeManagerModules.catppuccin
     ];

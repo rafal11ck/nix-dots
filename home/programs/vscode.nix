@@ -1,13 +1,10 @@
 {
-  config,
-  lib,
   pkgs,
   inputs,
   ...
 }:
 
 let
-  values = config.values;
   vs-extensions = inputs.nix-vscode-extensions.extensions.${pkgs.system};
 in
 {

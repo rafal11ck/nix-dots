@@ -1,0 +1,98 @@
+{
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ./python.nix
+  ];
+
+  home.packages = with pkgs; [
+    ddcutil
+    android-tools
+    aria2
+    asciinema
+    asciinema-agg
+    brightnessctl
+    dict
+    dig
+    (flameshot.override { enableWlrSupport = true; })
+    ffmpeg
+    font-awesome
+    gammastep
+    gcc
+    gimp
+    gnuplot
+    go-task
+    grim
+    httpie
+    hunspell
+    hunspellDicts.en_US # English dictionary
+    hunspellDicts.pl_PL # Polish dictionary
+    inkscape
+    iosevka
+    jellyfin-media-player
+    jellyfin-mpv-shim
+    jellyfin-mpv-shim
+    jq
+    keepassxc
+    kubectl
+    kubectl-explore
+    kubectx
+    kubernetes-helm
+    less
+    libnotify
+    libreoffice
+    material-design-icons
+    megatools
+    mermaid-cli
+    mise
+    ncdu
+    neovim
+    networkmanagerapplet
+    nix-output-monitor
+    nixd
+    nmap
+    nsxiv
+    nvtopPackages.full
+    p7zip
+    pandoc
+    payload-dumper-go
+    plantuml
+    playerctl
+    pulsemixer
+    pwvucontrol
+    qpdf
+    scrcpy
+    shellcheck
+    shfmt
+    slurp
+    smartmontools
+    stow
+    svp
+    swappy
+    swaynotificationcenter
+    syncplay
+    talosctl
+    termdown
+    texliveFull
+    thunderbird
+    tree
+    unzip
+    uv
+    vesktop
+    virt-manager
+    virt-viewer
+    wev
+    wireguard-tools
+    wl-clipboard
+    wlogout
+    yazi
+    yt-dlp
+    zathura
+    zellij
+    zip
+
+  ];
+
+}

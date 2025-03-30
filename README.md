@@ -50,16 +50,11 @@ Files can be applied manually too using stow, that's what aftermentioned task do
 
 [./dotfiles](./dotfiles) regular stow-able dot files
 
-[./home](./home) nix home-manager home configuration.
-It is split into two main files [home-cli](./home/home-cli.nix) and [home-gui](./home/home-gui.nix).
-Which are responsible for command-line-interface and graphical user interface respectively.
-
-By default [home.nix](./home/home.nix) should be used which imports both. If host systems has GUI dependencies, otherwise CLI only config should be used.
+[./home](./home) nix home-manager home configuration. See it's own readme.md for detil
 
 [/hosts](./hosts) Contains host specific configurations.
 
 [./lib](./lib) Contains function used to define nixOS systems outside of main [flake](./flake.nix) module.
 
-[./modules](./modules) Modules which could be called workflows.
+[./modules](./modules) Modules so that hosts can be made out modular parts.
 
-[./pkgs](./pkgs) Custom pkgs.
