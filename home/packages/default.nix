@@ -37,6 +37,7 @@
     jq
     keepassxc
     kubectl
+    krew
     kubectl-explore
     kubectx
     kubernetes-helm
