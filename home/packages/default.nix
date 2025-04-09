@@ -8,15 +8,15 @@
   ];
 
   home.packages = with pkgs; [
-    ddcutil
+    (flameshot.override { enableWlrSupport = true; })
     android-tools
     aria2
     asciinema
     asciinema-agg
     brightnessctl
+    ddcutil
     dict
     dig
-    (flameshot.override { enableWlrSupport = true; })
     ffmpeg
     font-awesome
     gammastep
@@ -36,8 +36,8 @@
     jellyfin-mpv-shim
     jq
     keepassxc
-    kubectl
     krew
+    kubectl
     kubectl-explore
     kubectx
     kubernetes-helm
