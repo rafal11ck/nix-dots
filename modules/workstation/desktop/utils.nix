@@ -19,8 +19,6 @@
   };
 
   security = {
-    # Swaylock unlock ability
-    pam.services.swaylock = { };
     pam.services.swaylock.fprintAuth = true;
     polkit = {
       enable = true;

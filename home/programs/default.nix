@@ -76,7 +76,6 @@ in
         enable = true;
       };
     };
-    swaylock.enable = true;
     foot = {
       enable = true;
       server = {
