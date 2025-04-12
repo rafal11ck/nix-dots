@@ -57,7 +57,7 @@
     nmap
     nsxiv
     nvtopPackages.full
-    p7zip
+    p7zip-rar
     pandoc
     payload-dumper-go
     plantuml
