@@ -54,7 +54,7 @@
           # for user name
           (modulesPath + /shared/values.nix)
           hyprland.homeManagerModules.default
-          catppuccin.homeManagerModules.catppuccin
+          catppuccin.homeModules.catppuccin
           ./home/home-cli.nix # Do not use for standalone GUI it requres labor to work
         ];
 
