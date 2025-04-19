@@ -15,7 +15,12 @@ in
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
 
-    bash.enable = true;
+    bash = {
+      enable = true;
+      bashrcExtra = ''
+        alias k=kubectl
+      '';
+    };
     bat.enable = true;
     btop = {
       enable = true;
