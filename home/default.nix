@@ -1,6 +1,5 @@
 {
   imports = [
-    ./environment.nix
     ./home.nix
     ./modules
     ./nix.nix
