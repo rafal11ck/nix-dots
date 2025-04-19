@@ -17,7 +17,7 @@ in
     };
     users.${config.values.mainUser}.imports = [
       ../../home
-      (modulesPath + /shared/values.nix)
+      (modulesPath + /shared/options.nix)
       inputs.catppuccin.homeModules.catppuccin
     ];
 

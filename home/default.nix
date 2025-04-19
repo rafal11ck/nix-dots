@@ -9,7 +9,6 @@
     ./services.nix
     ./systemd.nix
     ./xdg.nix
-
   ];
 
 }

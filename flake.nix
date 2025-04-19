@@ -52,7 +52,7 @@
         # the path to your home.nix.
         modules = [
           # for user name
-          (modulesPath + /shared/values.nix)
+          (modulesPath + /shared/options.nix)
           hyprland.homeManagerModules.default
           catppuccin.homeModules.catppuccin
           ./home/home-cli.nix # Do not use for standalone GUI it requres labor to work
