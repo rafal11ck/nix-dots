@@ -2,24 +2,32 @@
   config,
   ...
 }:
-
+let
+  mainUser = config.values.mainUser;
+in
 {
-  users.users.${config.values.mainUser} = {
-    isNormalUser = true;
-    extraGroups = [
-      "adbusers"
-      "audio"
-      "davfs2"
-      "docker"
-      "i2c"
-      "input"
-      "libvirtd"
-      "networkmanager"
-      "power"
-      "storage"
-      "video"
-      "wheel"
-    ];
+  users = {
+    groups.${mainUser} = { };
+
+    users.${mainUser} = {
+      group = mainUser;
+      isNormalUser = true;
+      extraGroups = [
+        mainUser
+        "adbusers"
+        "audio"
+        "davfs2"
+        "docker"
+        "i2c"
+        "input"
+        "libvirtd"
+        "networkmanager"
+        "power"
+        "storage"
+        "video"
+        "wheel"
+      ];
+    };
   };
 
   programs = {
