@@ -5,8 +5,8 @@
 {
   fileSystems = {
     # NOTE requires setup in /etc/ceph
-    "/media/ext" = {
-      device = "192.168.0.55:6789,192.168.0.56:6789,192.168.0.57:6789:/ext";
+    "/media/cephfs" = {
+      device = "192.168.0.55:6789,192.168.0.56:6789,192.168.0.57:6789:/";
       fsType = "ceph";
       options = [
         "x-systemd.automount"
@@ -18,6 +18,5 @@
         "noatime"
       ];
     };
-
   };
 }
