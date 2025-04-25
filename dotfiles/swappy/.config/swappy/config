@@ -1,2 +1,3 @@
 [Default]
-save_dir=$HOME/Picutres/
+save_dir=$HOME/Pictures/screenshots
+save_filename_format=swappy-%Y-%m-%d-%H%-M%S.png
