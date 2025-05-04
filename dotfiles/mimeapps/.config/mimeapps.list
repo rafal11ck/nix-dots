@@ -10,8 +10,10 @@ image/jpeg=nsxiv.desktop
 image/png=nsxiv.desktop
 x-scheme-handler/discord=vesktop.desktop
 inode/directory=org.gnome.Nautilus.desktop
+text/markdown=code.desktop
 
 [Added Associations]
 text/plain=emacs.desktop;
 image/jpeg=nsxiv.desktop;
 image/png=nsxiv.desktop;
+text/markdown=code.desktop;
