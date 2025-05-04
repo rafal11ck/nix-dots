@@ -49,7 +49,6 @@ in
     };
     lsd = {
       enable = true;
-      enableAliases = true;
     };
     ripgrep = {
       enable = true;
