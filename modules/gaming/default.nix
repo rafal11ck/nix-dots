@@ -17,5 +17,6 @@
     heroic
     mangohud
     nix-alien
+    prismlauncher
   ];
 }
