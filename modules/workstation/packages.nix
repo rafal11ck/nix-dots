@@ -7,5 +7,6 @@
     wayvnc
     jetbrains.idea-ultimate
     borgbackup
+    jaq
   ];
 }
