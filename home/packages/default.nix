@@ -21,7 +21,7 @@
     font-awesome
     gammastep
     gcc
-    gimp
+    gimp3
     gnuplot
     go-task
     grim
