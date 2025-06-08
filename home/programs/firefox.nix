@@ -27,6 +27,7 @@
           (extension "istilldontcareaboutcookies" "idcac-pub@guus.ninja")
           (extension "polish-spellchecker-dictionary" "pl@dictionaries.addons.mozilla.org")
           (extension "react-devtools" "@react-devtools")
+          (extension "youtube-nonstop" "{0d7cafdd-501c-49ca-8ebb-e3341caaa55e}")
         ];
       # To add additional extensions:
       # If you have it installed:
