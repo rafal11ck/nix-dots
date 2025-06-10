@@ -295,4 +295,5 @@
       ]
     }
   ],
+  "python.analysis.typeCheckingMode": "basic",
 }
