@@ -1,5 +1,5 @@
 [Default Applications]
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=firefox.desktop
 text/html=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
@@ -7,7 +7,7 @@ x-scheme-handler/about=firefox.desktop
 x-scheme-handler/unknown=firefox.desktop
 text/plain=emacs.desktop
 image/jpeg=nsxiv.desktop
-image/png=nsxiv.desktop
+image/png=firefox.desktop
 x-scheme-handler/discord=vesktop.desktop
 inode/directory=org.gnome.Nautilus.desktop
 text/markdown=code.desktop
@@ -15,5 +15,6 @@ text/markdown=code.desktop
 [Added Associations]
 text/plain=emacs.desktop;
 image/jpeg=nsxiv.desktop;
-image/png=nsxiv.desktop;
+image/png=nsxiv.desktop;org.gnome.Nautilus.desktop;firefox.desktop;
 text/markdown=code.desktop;
+application/pdf=firefox.desktop;
