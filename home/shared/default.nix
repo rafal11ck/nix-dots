@@ -7,7 +7,6 @@
     ./packages
     ./programs
     ./services.nix
-    ./systemd.nix
     ./xdg.nix
   ];
 

@@ -34,4 +34,11 @@
     ];
   };
 
+  imports = [
+    ./systemd.nix
+    ./style
+    ./tofi.nix
+    ./programs.nix
+    ./services.nix
+  ];
 }

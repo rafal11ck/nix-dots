@@ -5,6 +5,9 @@
 }:
 let
   modulesPath = ./..;
+  homePath = ./../../home;
+
+  homeShared = homePath + /shared;
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
@@ -16,7 +19,7 @@ in
       inherit inputs;
     };
     users.${config.values.mainUser}.imports = [
-      ../../home
+      homeShared
       (modulesPath + /shared/options.nix)
       inputs.catppuccin.homeModules.catppuccin
     ];

@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 {
@@ -10,32 +9,6 @@
       username = "${config.values.mainUser}";
     in
     {
-
-      activation = {
-        prismlauncher-fix =
-          let
-            prismAccontFilePath = "$HOME/.local/share/PrismLauncher/accounts.json";
-          in
-          lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-            # fix prism launcher 
-            [ -f ${prismAccontFilePath} ] &&
-            run ${pkgs.jaq}/bin/jaq -i '
-              .accounts += (
-                if any(.accounts[]; (.type == "MSA" and has("entitlement"))) then
-                  []
-                else
-                  [{
-                    entitlement: {
-                      canPlayMinecraft: true,
-                      ownsMinecraft: true
-                    },
-                    type: "MSA"
-                  }]
-                end
-              )
-              ' ${prismAccontFilePath} 
-          '';
-      };
 
       # Home Manager needs a bit of information about you and the paths it should
       # manage.

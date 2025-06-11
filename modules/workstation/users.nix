@@ -30,17 +30,6 @@ in
     };
   };
 
-  programs = {
-    nix-ld = {
-      enable = true;
-    };
-    nh = {
-      enable = true;
-      flake = "/home/${config.values.mainUser}/nix-dots";
-    };
-    kdeconnect.enable = true;
-  };
-
   # Make hosts mutable but cleaned on switch
   # https://discourse.nixos.org/t/a-fast-way-for-modifying-etc-hosts-using-networking-extrahosts/4190
   environment.etc.hosts.mode = "0644";

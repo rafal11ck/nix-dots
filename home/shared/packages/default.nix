@@ -5,6 +5,7 @@
 {
   imports = [
     ./python.nix
+    ./fonts.nix
   ];
 
   home.packages = with pkgs; [

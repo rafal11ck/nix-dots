@@ -7,6 +7,7 @@ let
   shared = modulePath + /shared;
   workstation = modulePath + /workstation;
   gaming = modulePath + /gaming;
+  cosmic = modulePath + /cosmic;
 in
 {
   local-hardware-config = mkNixosSystem {
@@ -27,6 +28,7 @@ in
       gaming
       shared
       workstation
+      cosmic
     ];
   };
 
@@ -38,6 +40,7 @@ in
       gaming
       shared
       workstation
+      cosmic
     ];
   };
 

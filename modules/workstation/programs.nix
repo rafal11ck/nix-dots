@@ -1,13 +1,21 @@
 {
-
+  config,
+  ...
+}:
+{
   programs = {
     nautilus-open-any-terminal = {
       enable = true;
       terminal = "foot";
     };
-    hyprland = {
+
+    nix-ld = {
       enable = true;
-      withUWSM = true;
     };
+    nh = {
+      enable = true;
+      flake = "/home/${config.values.mainUser}/nix-dots";
+    };
+    kdeconnect.enable = true;
   };
 }

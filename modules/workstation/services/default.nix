@@ -8,7 +8,6 @@
   services = {
     logind.lidSwitchExternalPower = "ignore";
 
-    blueman.enable = true;
     plantuml-server = {
       enable = true;
       listenPort = 9123;
@@ -35,16 +34,11 @@
         brlaser
       ];
     };
-
-    gnome.sushi.enable = true;
-    tumbler.enable = true;
-
   };
 
   imports = [
     ./libvirtd.nix
     ./networking.nix
     ./pipewire.nix
-    ./display-manager.nix
   ];
 }

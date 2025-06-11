@@ -8,12 +8,11 @@
     ./programs.nix
     ./secuirty.nix
     ./services
-    ./style
-    ./system.nix
     ./systemd.nix
     ./virtualzation.nix
     ./xdg.nix
     ./hardware.nix
+    ./users.nix
   ];
 
   system.stateVersion = "24.05"; # Did you read the comment?
