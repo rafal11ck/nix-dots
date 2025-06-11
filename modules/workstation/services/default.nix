@@ -39,7 +39,6 @@
   };
 
   imports = [
-    ./docker.nix
     ./libvirtd.nix
     ./networking.nix
   ];
