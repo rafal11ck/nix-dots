@@ -1,13 +1,10 @@
-{ lib' }:
+{
+  lib',
+}:
 let
   inherit (lib') mkNixosSystem;
 
-  modulePath = ../modules;
-
-  shared = modulePath + /shared;
-  workstation = modulePath + /workstation;
-  gaming = modulePath + /gaming;
-  cosmic = modulePath + /cosmic;
+  mkModulePath = moduleName: ../modules + "/${moduleName}";
 in
 {
   local-hardware-config = mkNixosSystem {
@@ -15,8 +12,10 @@ in
 
     modules = [
       /etc/nixos/hardware-configuration.nix
-      shared
-      workstation
+      (map mkModulePath [
+        "shared"
+        "workstation"
+      ])
     ];
   };
 
@@ -25,11 +24,13 @@ in
 
     modules = [
       ./pc01
-      gaming
-      shared
-      workstation
-      cosmic
+      (mkModulePath "gaming")
+      (mkModulePath "shared")
+      (mkModulePath "workstation")
+      (mkModulePath "style")
+      (mkModulePath "gnome")
     ];
+
   };
 
   gram17rg = mkNixosSystem {
@@ -37,11 +38,13 @@ in
 
     modules = [
       ./gram17rg
-      gaming
-      shared
-      workstation
-      cosmic
+      (mkModulePath "gaming")
+      (mkModulePath "shared")
+      (mkModulePath "workstation")
+      (mkModulePath "hyprland")
+
     ];
+
   };
 
 }
