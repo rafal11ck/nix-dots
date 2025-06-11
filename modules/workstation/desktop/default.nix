@@ -2,7 +2,6 @@
   imports = [
     ./pipewire.nix
     ./utils.nix
-    ./wine.nix
   ];
 
   services = {

@@ -9,7 +9,6 @@
 {
   imports = [
     ./catppuccin.nix
-    ./plymouth.nix
   ];
 
 }

@@ -1,7 +1,7 @@
 {
   imports = [
     ./filesystems.nix
-    ./boot
+    ./boot.nix
     ./desktop
     ./display-manager
     ./driver

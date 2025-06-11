@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   # disable default from shared.
   boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
@@ -18,5 +11,9 @@
     efiSupport = true;
     enable = true;
     useOSProber = true;
+  };
+
+  boot.plymouth = {
+    enable = true;
   };
 }
