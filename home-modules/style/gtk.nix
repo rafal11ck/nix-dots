@@ -29,7 +29,7 @@
     };
 
     iconTheme = {
-      name = "ePapirus-Dark";
+      name = "Papirus-Dark";
       package = (
         pkgs.epapirus-icon-theme.override {
           color = (lib.strings.toLower config.values.catppuccinAccent);
@@ -42,6 +42,7 @@
     "org/gnome/desktop/interface" = {
       gtk-theme = "Pop-dark";
       color-scheme = "prefer-dark";
+      iconTheme = "Papirus-Dark";
     };
   };
 
