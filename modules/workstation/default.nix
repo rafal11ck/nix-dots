@@ -1,8 +1,6 @@
 {
   imports = [
     ./boot.nix
-    ./display-manager
-    ./driver
     ./environment.nix
     ./filesystems.nix
     ./home-manager.nix
@@ -15,6 +13,7 @@
     ./systemd.nix
     ./virtualzation.nix
     ./xdg.nix
+    ./hardware.nix
   ];
 
   system.stateVersion = "24.05"; # Did you read the comment?

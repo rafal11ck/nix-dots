@@ -45,5 +45,6 @@
     ./libvirtd.nix
     ./networking.nix
     ./pipewire.nix
+    ./display-manager.nix
   ];
 }
