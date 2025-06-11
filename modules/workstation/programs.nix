@@ -1,13 +1,4 @@
 {
-  imports = [
-    ./pipewire.nix
-    ./utils.nix
-  ];
-
-  services = {
-    gnome.sushi.enable = true;
-    tumbler.enable = true;
-  };
 
   programs = {
     nautilus-open-any-terminal = {
@@ -19,5 +10,4 @@
       withUWSM = true;
     };
   };
-
 }

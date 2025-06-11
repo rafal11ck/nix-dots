@@ -36,10 +36,14 @@
       ];
     };
 
+    gnome.sushi.enable = true;
+    tumbler.enable = true;
+
   };
 
   imports = [
     ./libvirtd.nix
     ./networking.nix
+    ./pipewire.nix
   ];
 }
