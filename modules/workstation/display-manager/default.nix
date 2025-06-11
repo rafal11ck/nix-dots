@@ -5,7 +5,7 @@
 
 {
   services = {
-    xserver.displayManager.gdm = {
+    displayManager.gdm = {
       enable = true;
     };
 
