@@ -28,7 +28,8 @@ in
       (mkModulePath "shared")
       (mkModulePath "workstation")
       (mkModulePath "style")
-      (mkModulePath "gnome")
+      # (mkModulePath "gnome")r
+      (mkModulePath "hyprland")
     ];
 
   };
@@ -41,10 +42,9 @@ in
       (mkModulePath "gaming")
       (mkModulePath "shared")
       (mkModulePath "workstation")
+      (mkModulePath "style")
       (mkModulePath "hyprland")
-
     ];
-
   };
 
 }

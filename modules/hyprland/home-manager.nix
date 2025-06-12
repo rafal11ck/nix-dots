@@ -5,21 +5,15 @@
 }:
 let
   modulesPath = ./..;
-  homeModulesPath = ./../../home-modules;
+  mkHomeModulePath = modulePath: ../../home-modules + "/${modulePath}";
 
-  homeShared = homeModulesPath + /shared;
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
 
   config.home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = {
-      inherit inputs;
-    };
     users.${config.values.mainUser}.imports = [
-      homeShared
+      (mkHomeModulePath "hyprland")
       (modulesPath + /shared/options.nix)
     ];
   };

@@ -5,6 +5,7 @@
     ./environment.nix
     ./programs.nix
     ./secuirty.nix
+    ./home-manager.nix
   ];
 
 }
