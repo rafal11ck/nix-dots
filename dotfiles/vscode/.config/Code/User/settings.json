@@ -296,4 +296,5 @@
     }
   ],
   "python.analysis.typeCheckingMode": "basic",
+  "cSpell.language": "en,pl",
 }
