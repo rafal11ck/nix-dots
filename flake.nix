@@ -46,24 +46,6 @@
         inherit lib';
       };
 
-      # For home-manager standalone install. NixOS-less home manager.
-      homeConfigurations."rafal" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [
-          # for user name
-          (modulesPath + /shared/options.nix)
-          hyprland.homeManagerModules.default
-          catppuccin.homeModules.catppuccin
-          ./home/home-cli.nix # Do not use for standalone GUI it requres labor to work
-        ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
-      };
-
     };
 
   nixConfig = {

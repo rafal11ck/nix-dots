@@ -25,21 +25,6 @@ In [NixOs Live CD](https://nixos.org/download/)
 
 <https://nixpk.gs/pr-tracker.html>
 
-## Standalone Nix home manager
-
-Nix command and flakes support has to be enabled.
-
-```sh
-mkdir -p ~/.config/nix
-echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
-```
-
-Nix home-manager config provides cli part of config only. As gui has host system dependencies and workarounds. For GUI configuration use stow-able dotfiles.
-
-```sh
-nix run home-manager/master -- switch --flake .
-```
-
 ## Standalone stow-able dotfiles
 
 To apply using [go-task](https://taskfile.dev/) run `task setup-dotfiles`.
@@ -50,11 +35,10 @@ Files can be applied manually too using stow, that's what aftermentioned task do
 
 [./dotfiles](./dotfiles) regular stow-able dot files
 
-[./home](./home) nix home-manager home configuration. See it's own readme.md for detil
-
 [/hosts](./hosts) Contains host specific configurations.
 
 [./lib](./lib) Contains function used to define nixOS systems outside of main [flake](./flake.nix) module.
 
 [./modules](./modules) Modules so that hosts can be made out modular parts.
 
+[./home-modules](./home-modules) Modules so that home can be made out modular parts. (home manager)
