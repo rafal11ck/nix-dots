@@ -31,7 +31,7 @@
     iconTheme = {
       name = "Papirus-Dark";
       package = (
-        pkgs.epapirus-icon-theme.override {
+        pkgs.papirus-icon-theme.override {
           color = (lib.strings.toLower config.values.catppuccinAccent);
         }
       );
