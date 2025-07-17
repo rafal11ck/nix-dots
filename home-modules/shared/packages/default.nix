@@ -65,6 +65,7 @@
     playerctl
     pulsemixer
     pwvucontrol
+    qbittorrent
     qpdf
     scrcpy
     shellcheck
