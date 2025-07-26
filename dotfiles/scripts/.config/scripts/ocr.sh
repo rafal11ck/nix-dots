@@ -6,7 +6,7 @@ set -xeu
 # check for dependencies
 for cmd in tesseract tofi grim slurp; do
     if ! command -v "$cmd" &>/dev/null; then
-        notify-send "OCR dependencies are missing" "Missing command: $cmd in script $0"
+        notify-send  -e "OCR dependencies are missing" "Missing command: $cmd in script $0"
         exit 1
     fi
 done
