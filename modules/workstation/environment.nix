@@ -7,5 +7,6 @@
     wineWowPackages.stable
     docker-compose
     pydf
+    tesseract
   ];
 }
