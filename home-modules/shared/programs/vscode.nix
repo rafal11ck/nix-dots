@@ -56,7 +56,6 @@ in
       christian-kohler.path-intellisense
       savh.json5-kit
       ms-python.python
-      vs-extensions.vscode-marketplace."2gua".rainbow-brackets
       oderwat.indent-rainbow
     ];
   };
