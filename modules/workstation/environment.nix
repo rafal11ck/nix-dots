@@ -8,5 +8,6 @@
     docker-compose
     pydf
     tesseract
+    sonusmix
   ];
 }
