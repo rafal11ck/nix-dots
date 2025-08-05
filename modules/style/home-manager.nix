@@ -16,6 +16,5 @@ in
       (modulesPath + /shared/options.nix)
       inputs.catppuccin.homeModules.catppuccin
     ];
-
   };
 }

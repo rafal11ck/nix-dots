@@ -28,7 +28,7 @@ in
       (mkModulePath "shared")
       (mkModulePath "workstation")
       (mkModulePath "style")
-      # (mkModulePath "gnome")r
+      # (mkModulePath "gnome")
       (mkModulePath "hyprland")
     ];
 

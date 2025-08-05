@@ -7,6 +7,7 @@
 
   services = {
     logind.lidSwitchExternalPower = "ignore";
+    power-profiles-daemon.enable = true;
 
     plantuml-server = {
       enable = true;
@@ -39,6 +40,8 @@
       ];
     };
   };
+
+  gtk.iconCache.enable = true;
 
   imports = [
     ./libvirtd.nix

@@ -18,6 +18,10 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     nix-alien.url = "github:thiagokokada/nix-alien";
+
+    caelestia-cli.url = "github:caelestia-dots/cli";
+
+    caelestia-shell.url = "github:caelestia-dots/shell";
   };
 
   outputs =

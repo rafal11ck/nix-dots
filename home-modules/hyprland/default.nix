@@ -37,7 +37,6 @@
   imports = [
     ./systemd.nix
     ./tofi.nix
-    ./programs.nix
     ./services.nix
   ];
 }

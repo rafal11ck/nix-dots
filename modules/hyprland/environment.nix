@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 
@@ -13,5 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     ffmpegthumbnailer
+    inputs.caelestia-cli.packages.${pkgs.system}.with-shell
+    inputs.caelestia-shell.packages.${pkgs.system}.caelestia-shell
   ];
 }

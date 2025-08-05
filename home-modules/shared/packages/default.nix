@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }:
 {
@@ -75,7 +76,6 @@
     stow
     svp
     swappy
-    swaynotificationcenter
     syncplay
     talosctl
     termdown
@@ -96,6 +96,7 @@
     zathura
     zellij
     zip
+
   ];
 
 }

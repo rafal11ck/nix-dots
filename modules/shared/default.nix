@@ -17,8 +17,11 @@
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
 
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services = {
+    # Enable the OpenSSH daemon.
+    openssh.enable = true;
+    upower.enable = true;
+  };
 
   home-manager.backupFileExtension = "backup";
 }
