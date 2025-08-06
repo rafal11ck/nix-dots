@@ -1,12 +1,12 @@
 {
 
   qt = {
-    enable = true;
+    enable = false;
 
-    platformTheme.name = "kvantum";
-    style = {
-      name = "kvantum";
-    };
+    platformTheme.name = "qt5ct";
+    # style = {
+    #   name = "kvantum";
+    # };
 
   };
 
@@ -22,7 +22,8 @@
   #};
 
   home.sessionVariables = {
-    #QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
     QT_QPA_PLATFORM = "wayland;xcb";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_STYLE_OVERRIDE = "Fusion";
   };
 }

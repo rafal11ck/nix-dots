@@ -11,7 +11,7 @@ in
     accent = "${lib.strings.toLower values.catppuccinAccent}";
     flavor = "${lib.strings.toLower values.catppuccinFlavor}";
     kvantum = {
-      enable = true;
+      enable = false;
       flavor = lib.toLower "${values.catppuccinFlavor}";
       apply = true;
     };

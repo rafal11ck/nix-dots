@@ -10,7 +10,7 @@
   home.packages = [ pkgs.pop-gtk-theme ];
 
   gtk = {
-    enable = true;
+    enable = false;
     theme = {
       name = "Pop-dark";
       package = pkgs.pop-gtk-theme;
@@ -29,22 +29,21 @@
     };
 
     iconTheme = {
-      name = "Dracula";
-      package = pkgs.dracula-icon-theme;
-      # package = (
-      #   pkgs.papirus-icon-theme.override {
-      #     color = (lib.strings.toLower config.values.catppuccinAccent);
-      #   }
-      # );
+      name = "Papirus-Dark";
+      package = (
+        pkgs.papirus-icon-theme.override {
+          color = (lib.strings.toLower config.values.catppuccinAccent);
+        }
+      );
     };
   };
 
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      gtk-theme = "Pop-dark";
-      color-scheme = "prefer-dark";
-      iconTheme = "Papirus-Dark";
-    };
-  };
+  # dconf.settings = {
+  #   "org/gnome/desktop/interface" = {
+  #     gtk-theme = "Pop-dark";
+  #     color-scheme = "prefer-dark";
+  #     iconTheme = "Papirus-Dark";
+  #   };
+  # };
 
 }
