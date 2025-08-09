@@ -87,6 +87,7 @@
     vesktop
     virt-manager
     virt-viewer
+    OVMF
     wev
     wireguard-tools
     wl-clipboard
