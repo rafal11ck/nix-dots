@@ -17,7 +17,4 @@
     useOSProber = true;
   };
 
-  boot.plymouth = {
-    enable = true;
-  };
 }
