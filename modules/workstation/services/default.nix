@@ -39,9 +39,8 @@
         brlaser
       ];
     };
-  };
 
-  gtk.iconCache.enable = true;
+  };
 
   imports = [
     ./libvirtd.nix
