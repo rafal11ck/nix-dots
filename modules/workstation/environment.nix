@@ -20,5 +20,7 @@
     })
     adwaita-icon-theme
     kdePackages.breeze
+
+    pv-migrate
   ];
 }
