@@ -36,7 +36,6 @@
     iosevka
     jellyfin-media-player
     jellyfin-mpv-shim
-    jellyfin-mpv-shim
     jq
     keepassxc
     krew
