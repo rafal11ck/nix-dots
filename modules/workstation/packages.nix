@@ -23,7 +23,6 @@
     dict
     dig
     ffmpeg
-    font-awesome
     gammastep
     gcc
     gimp3
@@ -105,13 +104,6 @@
     borgbackup
     jaq
 
-    # fotns
-    font-awesome
-    nerd-fonts.symbols-only
-    nerd-fonts.fira-code
-    nerd-fonts.droid-sans-mono
-    noto-fonts-cjk-sans
-    noto-fonts-lgc-plus
-    nerd-fonts.roboto-mono
   ];
+
 }
