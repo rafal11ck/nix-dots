@@ -33,7 +33,6 @@
     hunspell
     hunspellDicts.en_US # English dictionary
     hunspellDicts.pl_PL # Polish dictionary
-    hyprlock
     inkscape
     iosevka
     jellyfin-media-player
