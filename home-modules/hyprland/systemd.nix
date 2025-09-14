@@ -7,7 +7,7 @@
   ...
 }:
 let
-  quickshellPackage = inputs.caelestia-shell.packages.${pkgs.system}.caelestia-shell;
+  quickshellPackage = inputs.caelestia-shell.packages.${pkgs.system}.caelestia;
 in
 {
   systemd.user = {
@@ -34,7 +34,7 @@ in
 
         Service = {
           Type = "simple";
-          ExecStart = "${quickshellPackage}/bin/caelestia-shell";
+          ExecStart = "${quickshellPackage}/bin/caelestia shell";
           ExecStartPre = "/bin/sh -c 'test -n \"$WAYLAND_DISPLAY\"'";
           Restart = "always";
           RestartSec = "5s";
