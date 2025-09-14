@@ -86,14 +86,14 @@
         "dragThreshold": 50,
         "vimKeybinds": false,
         "enableDangerousActions": false,
-        "maxShown": 8,
+        "maxShown": 13,
         "maxWallpapers": 9,
         "useFuzzy": {
             "apps": true,
-            "actions": false,
-            "schemes": false,
-            "variants": false,
-            "wallpapers": false
+            "actions": true,
+            "schemes": true,
+            "variants": true,
+            "wallpapers": true
         }
     },
     "lock": {
@@ -112,7 +112,7 @@
     "paths": {
         "mediaGif": "root:/assets/bongocat.gif",
         "sessionGif": "root:/assets/kurukuru.gif",
-        "wallpaperDir": "~/Pictures/wallpapers"
+        "wallpaperDir": "~/Pictures/wallpapers/"
     },
     "services": {
         "audioIncrement": 0.1,
