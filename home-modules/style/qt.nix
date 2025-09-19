@@ -21,9 +21,5 @@
   # "Kvantum/Catppuccin-${values.catppuccinFlavor}-${values.catppuccinAccent}".source = "${kvantumThemePackage}/share/Kvantum/Catppuccin-${values.catppuccinFlavor}-${values.catppuccinAccent}";
   #};
 
-  home.sessionVariables = {
-    QT_QPA_PLATFORM = "wayland;xcb";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    QT_STYLE_OVERRIDE = "Fusion";
-  };
+
 }

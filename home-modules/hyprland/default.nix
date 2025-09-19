@@ -10,6 +10,7 @@
     grim
     slurp
 
+    papirus-icon-theme
     killall
   ];
 
