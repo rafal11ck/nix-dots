@@ -15,7 +15,8 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - /root/.docker/config.json:/config.json
-        command: --include-restarting
+        command: --include-restarting --run-once
+        restart: always
 volumes:
     open-webui:
         name: open-webui
