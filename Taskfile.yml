@@ -1,9 +1,9 @@
 # https://taskfile.dev
 
-version: "3"
+version: '3'
 
 vars:
-  DOTFILES_DIRECTORY: "./dotfiles"
+  DOTFILES_DIRECTORY: './dotfiles'
 
 tasks:
   default:
@@ -16,6 +16,12 @@ tasks:
     # Stow to `~` verbose so that you can see what happens
     # `*` glob to everything in current directory
     desc: setup dotfiles
-    dir: "{{.DOTFILES_DIRECTORY}}"
+    dir: '{{.DOTFILES_DIRECTORY}}'
     cmds:
       - stow -t ~ -v *
+  setup-dotfiles-adopt:
+    desc: setup dotfiles
+    dir: '{{.DOTFILES_DIRECTORY}}'
+    cmds:
+      - stow --target ~ --verbose * --adopt
+    prompt: This might overwrite files in repo with already exsisting ones... Do you want to continue?
