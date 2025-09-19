@@ -27,8 +27,8 @@
             "occupiedBg": false,
             "occupiedLabel": "󰮯 ",
             "rounded": true,
-            "showWindows": true,
-            "shown": 10
+            "showWindows": false,
+            "shown": 5
         },
         "entries": [
             {
