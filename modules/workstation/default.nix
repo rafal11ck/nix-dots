@@ -6,7 +6,6 @@
     ./fonts.nix
     ./hardware.nix
     ./home-manager.nix
-    ./packages.nix
     ./programs.nix
     ./secuirty.nix
     ./services
