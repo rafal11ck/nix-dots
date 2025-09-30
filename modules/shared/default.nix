@@ -10,8 +10,10 @@
   i18n = {
     extraLocaleSettings = {
       LC_TIME = "pl_PL.UTF-8";
+      LANG = "en_US.UTF-8";
     };
-    defaultLocale = "en_US.UTF-8";
+    # extraLocales = [ "en_US.UTF-8" ];
+    defaultLocale = "pl_PL.UTF-8";
   };
 
   # Set your time zone.
