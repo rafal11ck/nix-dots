@@ -20,6 +20,8 @@
         matplotlib
       ]
     ))
+
+    freecad
     android-tools
     aria2
     asciinema
