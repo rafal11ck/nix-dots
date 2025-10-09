@@ -4,6 +4,13 @@
 }:
 {
   systemd = {
+
+    tmpfiles = {
+      rules = [
+        "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware"
+      ];
+    };
+
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
       wantedBy = [ "graphical-session.target" ];
