@@ -68,6 +68,9 @@ in
         init = {
           defaultBranch = "main";
         };
+        fetch = {
+          prune = true;
+        };
       };
     };
     starship = {
