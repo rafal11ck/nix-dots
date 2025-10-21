@@ -21,10 +21,6 @@
     davfs2.enable = true;
     gvfs.enable = true;
 
-    hardware.openrgb = {
-      enable = true;
-    };
-
     resolved.enable = true;
     avahi = {
       enable = true;
