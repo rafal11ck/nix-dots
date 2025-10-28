@@ -82,7 +82,6 @@
     slurp
     smartmontools
     stow
-    svp
     swappy
     syncplay
     talosctl
