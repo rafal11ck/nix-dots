@@ -58,9 +58,14 @@ in
     };
     git = {
       enable = true;
-      userName = "${values.mainUser}";
-      userEmail = "you@example.com";
 
+      settings = {
+        user = {
+          name = "${values.mainUser}";
+          email = "you@example.com";
+
+        };
+      };
       extraConfig = {
         pull = {
           rebase = true;

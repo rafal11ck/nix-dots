@@ -88,7 +88,6 @@
     "*.json5": "json5"
   },
   "errorLens.enabled": false,
-  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "catppuccin-mocha",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
