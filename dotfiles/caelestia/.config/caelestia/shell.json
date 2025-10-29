@@ -2,7 +2,26 @@
     "general": {
         "apps": {
             "terminal": ["foot"],
-            "audio": ["pavucontrol"]
+            "audio": ["pwvucontrol"]
+        },
+        "idle": {
+            "lockBeforeSleep": true,
+            "inhibitWhenAudio": true,
+            "timeouts": [
+                {
+                    "timeout": 600,
+                    "idleAction": "lock"
+                },
+                {
+                    "timeout": 900,
+                    "idleAction": "dpms off",
+                    "returnAction": "dpms on"
+                },
+                {
+                    "timeout": 1800,
+                    "idleAction": ["systemctl", "suspend-then-hibernate"]
+                }
+            ]
         }
     },
     "background": {
@@ -128,6 +147,33 @@
             "shutdown": ["systemctl", "poweroff"],
             "hibernate": ["systemctl", "sleep"],
             "reboot": ["systemctl", "reboot"]
+        }
+    },
+    "utilities": {
+        "enabled": true,
+        "maxToasts": 4,
+        "toasts": {
+            "audioInputChanged": true,
+            "audioOutputChanged": true,
+            "capsLockChanged": true,
+            "chargingChanged": true,
+            "configLoaded": true,
+            "dndChanged": true,
+            "gameModeChanged": true,
+            "kbLayoutChanged": true,
+            "numLockChanged": true,
+            "vpnChanged": true,
+            "nowPlaying": false
+        },
+        "vpn": {
+            "enabled": false,
+            "provider": [
+                {
+                    "name": "wireguard",
+                    "interface": "your-connection-name",
+                    "displayName": "Wireguard (Your VPN)"
+                }
+            ]
         }
     }
 }
