@@ -43,7 +43,6 @@
     hunspellDicts.pl_PL # Polish dictionary
     inkscape
     iosevka
-    jellyfin-media-player
     jellyfin-mpv-shim
     jq
     keepassxc
