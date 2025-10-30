@@ -297,4 +297,5 @@
   "python.analysis.typeCheckingMode": "basic",
   "cSpell.language": "en,pl",
   "editor.guides.bracketPairs": true,
+  "workbench.colorTheme": "Catppuccin Mocha",
 }
