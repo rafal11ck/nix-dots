@@ -5,7 +5,7 @@
       "flakes"
     ];
     settings = {
-      build-dir = "/var/tmp";
+      build-dir = "/nix/var/nix/builds";
       auto-optimise-store = true;
       trusted-users = [
         "@wheel"
