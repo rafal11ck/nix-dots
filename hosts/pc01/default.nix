@@ -24,8 +24,9 @@
     ollama = {
       enable = true;
       loadModels = [
-        "codestral"
-        "deepseek-r1:14b"
+        "qwen3-coder"
+        "gpt-oss"
+        "deepseek-r1:8b"
       ];
       acceleration = "rocm";
       environmentVariables = {
