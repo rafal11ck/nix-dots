@@ -8,6 +8,7 @@
     # fontDir.enable = true;
 
     packages = with pkgs; [
+      corefonts # Verdana
       font-awesome
       nerd-fonts.droid-sans-mono
       nerd-fonts.fira-code
