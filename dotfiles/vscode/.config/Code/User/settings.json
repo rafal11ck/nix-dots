@@ -298,4 +298,12 @@
   "cSpell.language": "en,pl",
   "editor.guides.bracketPairs": true,
   "workbench.colorTheme": "Catppuccin Mocha",
+  "chat.agent.enabled": false,
+  "chat.checkpoints.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "chat.detectParticipant.enabled": false,
+  "chat.implicitContext.suggestedContext": false,
+  "files.watcherExclude": {
+    "\"**/node_modules/**\"": true
+  },
 }
