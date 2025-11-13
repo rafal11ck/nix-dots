@@ -5,7 +5,7 @@
 }:
 
 let
-  vs-extensions = inputs.nix-vscode-extensions.extensions.${pkgs.system};
+  vs-extensions = inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system};
 in
 {
 

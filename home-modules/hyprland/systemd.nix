@@ -7,7 +7,7 @@
   ...
 }:
 let
-  quickshellPackage = inputs.caelestia-cli.packages.${pkgs.system}.with-shell;
+  quickshellPackage = inputs.caelestia-cli.packages.${pkgs.stdenv.hostPlatform.system}.with-shell;
 in
 {
   systemd.user = {
