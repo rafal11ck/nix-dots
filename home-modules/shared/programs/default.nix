@@ -65,8 +65,7 @@ in
           email = "you@example.com";
 
         };
-      };
-      extraConfig = {
+
         pull = {
           rebase = true;
         };
