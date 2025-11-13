@@ -69,7 +69,7 @@
         rocmPackages.rocm-comgr
         rocmPackages.rocsparse
         libva
-        vaapiVdpau
+        libva-vdpau-driver
         libvdpau-va-gl
       ];
     };
