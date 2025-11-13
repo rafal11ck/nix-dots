@@ -57,6 +57,7 @@ in
       savh.json5-kit
       ms-python.python
       oderwat.indent-rainbow
+      ms-azuretools.vscode-containers
     ];
   };
 
