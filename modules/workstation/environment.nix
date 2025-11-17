@@ -115,10 +115,10 @@
     pydf
     tesseract
 
-    papirus-icon-theme
     hicolor-icon-theme
     material-symbols
 
+    # papirus-icon-theme
     (catppuccin-papirus-folders.override {
       accent = (lib.strings.toLower config.values.catppuccinAccent);
       flavor = (lib.strings.toLower config.values.catppuccinFlavor);
@@ -152,7 +152,6 @@
     imagemagick
     curl
     adw-gtk3
-    papirus-icon-theme
     kdePackages.qt6ct
     libsForQt5.qt5ct
     nerd-fonts.jetbrains-mono
