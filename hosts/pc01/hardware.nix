@@ -24,6 +24,9 @@
 
   boot = {
     initrd = {
+      kernelModules = [
+        "amdgpu"
+      ];
       availableKernelModules = [
         "xhci_pci"
         "ahci"

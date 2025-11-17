@@ -22,10 +22,8 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   services = {
     ollama = {
-      enable = true;
+      enable = false;
       loadModels = [
-        "qwen3-coder"
-        "gpt-oss"
         "deepseek-r1:8b"
       ];
       acceleration = "rocm";
@@ -33,25 +31,20 @@
         HSA_OVERRIDE_GFX_VERSION = "11.0.2";
       };
       host = "0.0.0.0";
-      openFirewall = true;
+      # openFirewall = true;
     };
 
     xserver.videoDrivers = [
       "amdgpu"
-      "nvidia"
     ];
 
   };
 
   hardware = {
-    nvidia = {
-      powerManagement.finegrained = false;
-      open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.production;
-    };
 
     amdgpu = {
       initrd.enable = true;
+      opencl.enable = true;
     };
 
     graphics = {
