@@ -6,7 +6,7 @@
 {
 
   services = {
-    logind.lidSwitchExternalPower = "ignore";
+    logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
     power-profiles-daemon.enable = true;
 
     plantuml-server = {

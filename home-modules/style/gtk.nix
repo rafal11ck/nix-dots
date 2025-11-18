@@ -38,12 +38,4 @@
     };
   };
 
-  # dconf.settings = {
-  #   "org/gnome/desktop/interface" = {
-  #     gtk-theme = "Pop-dark";
-  #     color-scheme = "prefer-dark";
-  #     iconTheme = "Papirus-Dark";
-  #   };
-  # };
-
 }

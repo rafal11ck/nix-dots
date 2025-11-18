@@ -95,7 +95,7 @@
         };
 
         "browser.download.useDownloadDir" = {
-          Value = false;
+          Value = true;
         };
       };
     };

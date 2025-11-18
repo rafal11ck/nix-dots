@@ -5,7 +5,7 @@
 }:
 
 let
-  vs-extensions = inputs.nix-vscode-extensions.extensions.${pkgs.system};
+  vs-extensions = inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system};
 in
 {
 
@@ -57,7 +57,7 @@ in
       savh.json5-kit
       ms-python.python
       oderwat.indent-rainbow
-      vscjava.vscode-java-pack
+      ms-azuretools.vscode-containers
     ];
   };
 

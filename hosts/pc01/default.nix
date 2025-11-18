@@ -22,35 +22,29 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   services = {
     ollama = {
-      enable = true;
+      enable = false;
       loadModels = [
-        "codestral"
-        "deepseek-r1:14b"
+        "deepseek-r1:8b"
       ];
       acceleration = "rocm";
       environmentVariables = {
         HSA_OVERRIDE_GFX_VERSION = "11.0.2";
       };
       host = "0.0.0.0";
-      openFirewall = true;
+      # openFirewall = true;
     };
 
     xserver.videoDrivers = [
       "amdgpu"
-      "nvidia"
     ];
 
   };
 
   hardware = {
-    nvidia = {
-      powerManagement.finegrained = false;
-      open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.production;
-    };
 
     amdgpu = {
       initrd.enable = true;
+      opencl.enable = true;
     };
 
     graphics = {
@@ -68,7 +62,7 @@
         rocmPackages.rocm-comgr
         rocmPackages.rocsparse
         libva
-        vaapiVdpau
+        libva-vdpau-driver
         libvdpau-va-gl
       ];
     };
