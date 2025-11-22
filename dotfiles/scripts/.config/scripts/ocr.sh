@@ -12,4 +12,6 @@ for cmd in tesseract tofi grim slurp; do
 done
 
 ocrlang="$(tesseract --list-langs | tail -n+2 | tr '\n' '+' | sed 's/+$//')"
-grim -g "$(slurp)" - | tesseract -l "$ocrlang" stdin stdout | wl-copy
+text="$(grim -g "$(slurp)" - | tesseract -l "$ocrlang" stdin stdout)" 
+wl-copy "$text"
+notify-send "OCR finished" "$text"
