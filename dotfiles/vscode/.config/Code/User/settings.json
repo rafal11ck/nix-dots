@@ -306,4 +306,6 @@
   "files.watcherExclude": {
     "\"**/node_modules/**\"": true
   },
+  "ltex.language": "en",
+  "ltex.additionalRules.motherTongue": "en",
 }
