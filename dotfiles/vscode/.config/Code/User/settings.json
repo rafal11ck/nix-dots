@@ -101,6 +101,13 @@
   "security.workspace.trust.untrustedFiles": "open",
   "latex-workshop.latex.tools": [
     {
+      "name": "biber",
+      "command": "biber",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+    {
       "name": "latexmk",
       "command": "latexmk",
       "args": [
@@ -267,6 +274,15 @@
       ]
     },
     {
+      "name": "pdflatex -> biber -> pdflatex * 2",
+      "tools": [
+        "pdflatex",
+        "biber",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
       "name": "Compile Rnw files",
       "tools": [
         "rnw2tex",
@@ -308,4 +324,5 @@
   },
   "ltex.language": "en",
   "ltex.additionalRules.motherTongue": "en",
+  "latex-workshop.latex.recipe.default": "lastUsed",
 }
