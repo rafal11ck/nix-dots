@@ -21,6 +21,7 @@
       ]
     ))
 
+    kdePackages.okular
     freecad
     android-tools
     aria2
