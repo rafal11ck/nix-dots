@@ -231,7 +231,7 @@
         "%DOC%.tex"
       ],
       "env": {}
-    }
+    },
   ],
   "latex-workshop.latex.recipes": [
     {
@@ -312,6 +312,9 @@
   ],
   "python.analysis.typeCheckingMode": "basic",
   "cSpell.language": "en,pl",
+  "cSpell.dictionaries": [
+    "polish"
+  ],
   "editor.guides.bracketPairs": true,
   "workbench.colorTheme": "Catppuccin Mocha",
   "chat.agent.enabled": false,
@@ -325,4 +328,5 @@
   "ltex.language": "en",
   "ltex.additionalRules.motherTongue": "en",
   "latex-workshop.latex.recipe.default": "lastUsed",
+  "cSpell.autoFormatConfigFile": true,
 }
