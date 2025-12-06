@@ -316,7 +316,6 @@
     "polish"
   ],
   "editor.guides.bracketPairs": true,
-  "workbench.colorTheme": "Catppuccin Mocha",
   "chat.agent.enabled": false,
   "chat.checkpoints.enabled": false,
   "chat.commandCenter.enabled": false,
