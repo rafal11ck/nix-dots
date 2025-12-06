@@ -57,7 +57,6 @@ in
       signageos.signageos-vscode-sops
       streetsidesoftware.code-spell-checker
       usernamehw.errorlens
-      vscodevim.vim
       waderyan.gitblame
     ];
   };
