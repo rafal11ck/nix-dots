@@ -30,6 +30,7 @@ in
       editorconfig.editorconfig
       esbenp.prettier-vscode
       fcrespo82.markdown-table-formatter
+      golang.go
       gruntfuggly.todo-tree
       james-yu.latex-workshop
       jebbs.plantuml
