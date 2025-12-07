@@ -324,8 +324,6 @@
   "files.watcherExclude": {
     "\"**/node_modules/**\"": true
   },
-  "ltex.language": "en",
-  "ltex.additionalRules.motherTongue": "en",
-  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
   "cSpell.autoFormatConfigFile": true,
 }
