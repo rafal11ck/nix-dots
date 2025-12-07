@@ -326,4 +326,5 @@
   },
   "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
   "cSpell.autoFormatConfigFile": true,
+  "todo-tree.regex.regex": "(//|%|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
 }
