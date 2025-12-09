@@ -119,6 +119,8 @@
     hicolor-icon-theme
     material-symbols
 
+    nwg-displays
+
     # papirus-icon-theme
     (catppuccin-papirus-folders.override {
       accent = (lib.strings.toLower config.values.catppuccinAccent);
