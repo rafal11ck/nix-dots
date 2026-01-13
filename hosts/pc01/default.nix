@@ -65,6 +65,6 @@
         libvdpau-va-gl
       ];
     };
-
   };
+
 }

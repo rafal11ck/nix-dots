@@ -17,5 +17,7 @@
       persistent = true;
       dates = "weekly";
     };
+    daemonIOSchedClass = "idle";
+    daemonCPUSchedPolicy = "batch";
   };
 }

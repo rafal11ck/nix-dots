@@ -13,23 +13,6 @@
     overlays = [
       inputs.nix-alien.overlays.default
       (self: super: {
-        mpv = super.mpv-unwrapped.wrapper {
-          mpv = super.mpv-unwrapped.override {
-            vapoursynthSupport = true;
-            sixelSupport = true;
-          };
-          scripts = with super.mpvScripts; [
-            mpris
-          ];
-
-          extraMakeWrapperArgs = [
-            # Add paths to required libraries
-            "--prefix"
-            "LD_LIBRARY_PATH"
-            ":"
-            "/run/opengl-driver/lib:${lib.makeLibraryPath [ super.ocl-icd ]}"
-          ];
-        };
 
         nix-output-monitor =
           let

@@ -11,7 +11,7 @@
   nix = {
     settings = {
       max-jobs = 4;
-      cores = 6;
+      cores = 8;
     };
   };
 }
