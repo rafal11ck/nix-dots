@@ -8,4 +8,10 @@
   };
 
   services.fprintd.enable = true;
+  nix = {
+    settings = {
+      max-jobs = 4;
+      cores = 6;
+    };
+  };
 }
