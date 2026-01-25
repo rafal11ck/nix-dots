@@ -107,7 +107,7 @@
     fluxcd-operator-mcp
 
     wayvnc
-    jetbrains.idea-ultimate
+    jetbrains.idea
     borgbackup
     jaq
 
