@@ -35,7 +35,7 @@
   };
 
   imports = [
-    ./systemd.nix
+    # ./systemd.nix # TODO REMOVE IF WORKS DANK SHELL
     ./tofi.nix
     ./services.nix
   ];

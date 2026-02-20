@@ -6,9 +6,7 @@
   window_manager,
   ...
 }:
-let
-  quickshellPackage = inputs.caelestia-cli.packages.${pkgs.stdenv.hostPlatform.system}.with-shell;
-in
+
 {
   systemd.user = {
 
@@ -23,28 +21,5 @@ in
         };
       };
     };
-
-    services = {
-      quickshell = {
-        Unit = {
-          Description = "QuickShell Application";
-          After = [ "graphical-session.target" ];
-          Requires = [ "graphical-session.target" ];
-        };
-
-        Service = {
-          Type = "simple";
-          ExecStart = "${quickshellPackage}/bin/caelestia shell";
-          ExecStartPre = "/bin/sh -c 'test -n \"$WAYLAND_DISPLAY\"'";
-          Restart = "always";
-          RestartSec = "5s";
-        };
-
-        Install = {
-          WantedBy = [ "graphical-session.target" ];
-        };
-      };
-    };
   };
-
 }

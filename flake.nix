@@ -19,9 +19,10 @@
 
     nix-alien.url = "github:thiagokokada/nix-alien";
 
-    caelestia-cli.url = "github:caelestia-dots/cli";
-
-    caelestia-shell.url = "github:caelestia-dots/shell";
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

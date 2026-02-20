@@ -1,5 +1,7 @@
 {
   config,
+  inputs,
+  pkgs,
   ...
 }:
 {
@@ -17,5 +19,6 @@
       flake = "/home/${config.values.mainUser}/nix-dots";
     };
     kdeconnect.enable = true;
+
   };
 }
