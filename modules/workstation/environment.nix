@@ -61,7 +61,6 @@
     mise
     ncdu
     neovim
-    networkmanagerapplet
     nix-output-monitor
     nixd
     nmap
@@ -159,10 +158,6 @@
     libsForQt5.qt5ct
     nerd-fonts.jetbrains-mono
     (mpv.override {
-      # mpv = super.mpv.override {
-      #   vapoursynthSupport = true;
-      #   sixelSupport = true;
-      # };
       scripts = with mpvScripts; [
         mpris
         mpv-cheatsheet
