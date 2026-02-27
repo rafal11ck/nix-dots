@@ -5,3 +5,5 @@ dotfiles/hypr/.config/hypr/scheme/current.conf
 dotfiles/hypr/.config/hypr/monitors.conf
 dotfiles/hypr/.config/hypr/dms
 dotfiles/nvim/.config/nvim/lua/plugins/dankcolors.lua
+dotfiles/DankMaterialShell/.config/DankMaterialShell/.changelog-*
+dotfiles/DankMaterialShell/.config/DankMaterialShell/.firstlaunch
