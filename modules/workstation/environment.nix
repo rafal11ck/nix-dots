@@ -73,6 +73,7 @@
     playerctl
     pulsemixer
     pwvucontrol
+    openssh-askpass
     qbittorrent
     qpdf
     scrcpy
