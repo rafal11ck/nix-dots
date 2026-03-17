@@ -19,6 +19,6 @@
       flake = "/home/${config.values.mainUser}/nix-dots";
     };
     kdeconnect.enable = true;
-
+    openvpn3.enable = true;
   };
 }
