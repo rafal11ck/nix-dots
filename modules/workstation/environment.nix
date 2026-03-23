@@ -51,6 +51,7 @@
     jdk25
     jellyfin-mpv-shim
     jetbrains.idea
+    jetbrains.rider
     jq
     kdePackages.okular
     keepassxc
@@ -158,7 +159,7 @@
     (mpv.override {
       scripts = with mpvScripts; [
         mpris
-        mpv-cheatsheet-ng
+        mpv-cheatsheet
       ];
     })
 
