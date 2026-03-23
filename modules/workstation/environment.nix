@@ -21,31 +21,38 @@
       ]
     ))
 
-    kdePackages.okular
-    freecad
     android-tools
     aria2
     asciinema
     asciinema-agg
+    borgbackup
     brightnessctl
     ddcutil
     dict
     dig
+    docker-compose
     ffmpeg
+    fluxcd-operator-mcp
+    freecad
     gammastep
     gcc
     gimp3
     gnuplot
     go-task
     grim
+    hicolor-icon-theme
     httpie
     hunspell
     hunspellDicts.en_US # English dictionary
     hunspellDicts.pl_PL # Polish dictionary
     inkscape
     iosevka
+    jaq
+    jdk25
     jellyfin-mpv-shim
+    jetbrains.idea
     jq
+    kdePackages.okular
     keepassxc
     krew
     kubectl
@@ -56,6 +63,7 @@
     libnotify
     libreoffice
     material-design-icons
+    material-symbols
     megatools
     mermaid-cli
     mise
@@ -66,6 +74,9 @@
     nmap
     nsxiv
     nvtopPackages.full
+    nwg-displays
+    openssh-askpass
+    OVMF
     p7zip-rar
     pandoc
     payload-dumper-go
@@ -73,7 +84,7 @@
     playerctl
     pulsemixer
     pwvucontrol
-    openssh-askpass
+    pydf
     qbittorrent
     qpdf
     scrcpy
@@ -86,6 +97,7 @@
     syncplay
     talosctl
     termdown
+    tesseract
     texliveFull
     thunderbird
     tree
@@ -94,8 +106,9 @@
     vesktop
     virt-manager
     virt-viewer
-    OVMF
+    wayvnc
     wev
+    wineWowPackages.stable
     wireguard-tools
     wl-clipboard
     wlogout
@@ -104,22 +117,6 @@
     zathura
     zellij
     zip
-    fluxcd-operator-mcp
-
-    wayvnc
-    jetbrains.idea
-    borgbackup
-    jaq
-
-    wineWowPackages.stable
-    docker-compose
-    pydf
-    tesseract
-
-    hicolor-icon-theme
-    material-symbols
-
-    nwg-displays
 
     # papirus-icon-theme
     (catppuccin-papirus-folders.override {
@@ -161,7 +158,7 @@
     (mpv.override {
       scripts = with mpvScripts; [
         mpris
-        mpv-cheatsheet
+        mpv-cheatsheet-ng
       ];
     })
 
