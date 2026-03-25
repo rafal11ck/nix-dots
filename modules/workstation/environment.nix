@@ -93,6 +93,7 @@
     shfmt
     slurp
     smartmontools
+    snitch
     stow
     swappy
     syncplay
