@@ -1,9 +1,11 @@
 {
   inputs,
-  pkgs,
   ...
 }:
 {
+
+  imports = [ inputs.dms-plugin-registry.modules.default ];
+
   programs = {
     hyprland = {
       enable = true;
@@ -11,7 +13,12 @@
     };
     dms-shell = {
       enable = true;
-      package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
+
+      plugins = {
+        dankBatteryAlerts.enable = true;
+        dankKDEConnect.enable = true;
+        nixMonitor.enable = true;
+      };
     };
   };
 }
