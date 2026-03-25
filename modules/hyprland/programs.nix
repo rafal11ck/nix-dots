@@ -17,7 +17,6 @@
       plugins = {
         dankBatteryAlerts.enable = true;
         dankKDEConnect.enable = true;
-        nixMonitor.enable = true;
       };
     };
   };
