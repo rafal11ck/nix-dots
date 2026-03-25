@@ -26,6 +26,7 @@ in
       christian-kohler.path-intellisense
       csstools.postcss
       dbaeumer.vscode-eslint
+      danklinux.dms-theme
       dsznajder.es7-react-js-snippets
       editorconfig.editorconfig
       esbenp.prettier-vscode
@@ -58,6 +59,7 @@ in
       streetsidesoftware.code-spell-checker
       usernamehw.errorlens
       waderyan.gitblame
+
     ];
   };
 

@@ -88,7 +88,7 @@
     "*.json5": "json5"
   },
   "errorLens.enabled": false,
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "material-icon-theme",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -259,4 +259,5 @@
   "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
   "cSpell.autoFormatConfigFile": true,
   "todo-tree.regex.regex": "(//|%|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
+  "workbench.colorTheme": "Dynamic Base16 DankShell",
 }
