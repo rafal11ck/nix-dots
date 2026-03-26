@@ -248,8 +248,6 @@
     "polish"
   ],
   "editor.guides.bracketPairs": true,
-  "chat.agent.enabled": false,
-  "chat.checkpoints.enabled": false,
   "chat.commandCenter.enabled": false,
   "chat.detectParticipant.enabled": false,
   "chat.implicitContext.suggestedContext": false,
@@ -259,4 +257,6 @@
   "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
   "cSpell.autoFormatConfigFile": true,
   "todo-tree.regex.regex": "(//|%|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
+  "chat.viewSessions.orientation": "stacked",
+  "chat.checkpoints.showFileChanges": true,
 }
