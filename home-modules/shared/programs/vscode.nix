@@ -25,12 +25,13 @@ in
       catppuccin.catppuccin-vsc-icons
       christian-kohler.path-intellisense
       csstools.postcss
-      dbaeumer.vscode-eslint
       danklinux.dms-theme
+      dbaeumer.vscode-eslint
       dsznajder.es7-react-js-snippets
       editorconfig.editorconfig
       esbenp.prettier-vscode
       fcrespo82.markdown-table-formatter
+      github.copilot-chat
       golang.go
       gruntfuggly.todo-tree
       james-yu.latex-workshop
@@ -58,8 +59,8 @@ in
       signageos.signageos-vscode-sops
       streetsidesoftware.code-spell-checker
       usernamehw.errorlens
+      vscjava.vscode-java-pack
       waderyan.gitblame
-
     ];
   };
 
