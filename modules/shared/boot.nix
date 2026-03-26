@@ -12,7 +12,7 @@
       efi.canTouchEfiVariables = lib.mkDefault true;
     };
     kernelModules = [ "v4l2loopback" ];
-    tmp.useTmpfs = true;
+    tmp.useZram = true;
   };
 
 }
