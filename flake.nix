@@ -21,6 +21,10 @@
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
 
+    nixpkgs-stable = {
+      url = "github:nixos/nixpkgs/nixos-25.11";
+    };
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     nix-alien.url = "github:thiagokokada/nix-alien";
@@ -39,6 +43,7 @@
     {
       self,
       nixpkgs,
+      nixpkgs-stable,
       home-manager,
       hyprland,
       catppuccin,
@@ -47,6 +52,10 @@
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      pkgs-stable = import nixpkgs-stable {
         inherit system;
         config.allowUnfree = true;
       };

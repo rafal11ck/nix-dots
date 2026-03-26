@@ -110,7 +110,7 @@
     virt-viewer
     wayvnc
     wev
-    wineWowPackages.stable
+    wineWow64Packages.stable
     wireguard-tools
     wl-clipboard
     wlogout
@@ -160,7 +160,7 @@
     (mpv.override {
       scripts = with mpvScripts; [
         mpris
-        mpv-cheatsheet
+        mpv-cheatsheet-ng
       ];
     })
 

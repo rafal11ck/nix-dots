@@ -1,5 +1,6 @@
 {
   pkgs,
+  flakePkgs,
   ...
 }:
 {
@@ -7,6 +8,6 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    ceph-client
+    flakePkgs.nixpkgs-stable.ceph-client
   ];
 }

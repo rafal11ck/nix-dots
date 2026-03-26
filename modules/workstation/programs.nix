@@ -2,6 +2,7 @@
   config,
   inputs,
   pkgs,
+  flakePkgs,
   ...
 }:
 {
@@ -19,6 +20,9 @@
       flake = "/home/${config.values.mainUser}/nix-dots";
     };
     kdeconnect.enable = true;
-    openvpn3.enable = true;
+    openvpn3 = {
+      enable = true;
+      package = flakePkgs.nixpkgs-stable.openvpn3;
+    };
   };
 }
