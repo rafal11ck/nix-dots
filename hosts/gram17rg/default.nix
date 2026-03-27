@@ -14,4 +14,8 @@
       cores = 8;
     };
   };
+
+  zramSwap = {
+    enable = true;
+  };
 }
