@@ -22,9 +22,11 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   services = {
     ollama = {
-      enable = false;
+      enable = true;
       loadModels = [
-        "deepseek-r1:8b"
+        "lfm2"
+        "qwen3.5"
+        "nemotron-cascade-2"
       ];
       environmentVariables = {
         HSA_OVERRIDE_GFX_VERSION = "11.0.2";
