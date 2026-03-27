@@ -88,7 +88,6 @@
     "*.json5": "json5"
   },
   "errorLens.enabled": false,
-  "workbench.iconTheme": "material-icon-theme",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -259,4 +258,11 @@
   "todo-tree.regex.regex": "(//|%|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)",
   "chat.viewSessions.orientation": "stacked",
   "chat.checkpoints.showFileChanges": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
 }
