@@ -431,13 +431,12 @@
           "enabled": true,
           "clockCompactMode": false
         },
-        "weather"
+        {
+          "id": "weather",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
-        {
-          "id": "network_speed_monitor",
-          "enabled": true
-        },
         {
           "id": "systemTray",
           "enabled": true
@@ -455,7 +454,7 @@
           "id": "memUsage",
           "enabled": true,
           "minimumWidth": true,
-          "showSwap": true
+          "showSwap": false
         },
         {
           "id": "notificationButton",
@@ -472,13 +471,17 @@
         {
           "id": "controlCenterButton",
           "enabled": true,
+          "showNetworkIcon": true,
+          "showBluetoothIcon": true,
+          "showAudioIcon": true,
           "showAudioPercent": true,
-          "showBrightnessIcon": true,
-          "showBrightnessPercent": true,
+          "showVpnIcon": true,
+          "showBrightnessIcon": false,
+          "showBrightnessPercent": false,
           "showMicIcon": true,
-          "showMicPercent": true,
-          "showBatteryIcon": false,
-          "showPrinterIcon": true,
+          "showMicPercent": false,
+          "showBatteryIcon": true,
+          "showPrinterIcon": false,
           "showScreenSharingIcon": true
         }
       ],
