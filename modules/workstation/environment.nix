@@ -48,6 +48,7 @@
     inkscape
     iosevka
     jaq
+    opencode
     jdk25
     jellyfin-mpv-shim
     jetbrains.idea
