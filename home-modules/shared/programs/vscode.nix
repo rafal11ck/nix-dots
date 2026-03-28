@@ -50,6 +50,7 @@ in
       ms-python.python
       ms-python.python
       ms-vscode.cmake-tools
+      ms-vscode.cpptools-extension-pack
       naumovs.color-highlight
       oderwat.indent-rainbow
       pkgs.vscode-extensions.jnoortheen.nix-ide
