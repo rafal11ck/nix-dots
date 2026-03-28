@@ -83,7 +83,7 @@
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
-      "deviceName": "backlight:intel_backlight"
+      "deviceName": "ddc:i2c-3"
     },
     {
       "id": "wifi",
@@ -199,7 +199,7 @@
   "dankLauncherV2UnloadOnClose": false,
   "useAutoLocation": true,
   "weatherEnabled": true,
-  "networkPreference": "ethernet",
+  "networkPreference": "wifi",
   "iconTheme": "Papirus",
   "cursorSettings": {
     "theme": "System Default",
@@ -226,7 +226,7 @@
   "launcherLogoSizeOffset": 0,
   "fontFamily": "Inter Variable",
   "monoFontFamily": "Fira Code",
-  "fontWeight": 700,
+  "fontWeight": 500,
   "fontScale": 1,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
@@ -319,7 +319,7 @@
   "dockMaxVisibleApps": 0,
   "dockMaxVisibleRunningApps": 0,
   "dockShowOverflowBadge": true,
-  "notificationOverlayEnabled": false,
+  "notificationOverlayEnabled": true,
   "notificationPopupShadowEnabled": true,
   "notificationPopupPrivacyMode": false,
   "modalDarkenBackground": true,
