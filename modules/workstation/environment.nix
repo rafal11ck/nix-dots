@@ -52,6 +52,7 @@
     jellyfin-mpv-shim
     jetbrains.idea
     jetbrains.rider
+    jetbrains.goland
     jq
     kdePackages.okular
     keepassxc
