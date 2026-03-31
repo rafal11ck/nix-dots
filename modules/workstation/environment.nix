@@ -33,7 +33,6 @@
     docker-compose
     ffmpeg
     fluxcd-operator-mcp
-    freecad
     gammastep
     gcc
     gimp3
