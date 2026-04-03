@@ -1,8 +1,8 @@
 {
-  "dankBatteryAlerts": {
+  "dankKDEConnect": {
     "enabled": true
   },
-  "dankKDEConnect": {
+  "dankBatteryAlerts": {
     "enabled": true
   }
 }
