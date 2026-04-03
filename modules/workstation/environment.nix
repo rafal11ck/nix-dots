@@ -27,6 +27,7 @@
     asciinema-agg
     borgbackup
     brightnessctl
+    claude-code
     ddcutil
     dict
     dig

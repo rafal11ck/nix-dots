@@ -12,6 +12,10 @@
       terminal = "foot";
     };
 
+    ssh = {
+      startAgent = true;
+    };
+
     nix-ld = {
       enable = true;
     };
