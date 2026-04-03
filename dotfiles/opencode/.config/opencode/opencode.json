@@ -1,0 +1,13 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "tools": {
+        "git": false
+    },
+    "permission": {
+        "*": "ask",
+        "read": "allow",
+        "git": "deny",
+        "dotnet *": "ask",
+        "head *": "allow"
+    }
+}
