@@ -6,7 +6,7 @@
     "permission": {
         "*": "ask",
         "read": "allow",
-        "git": "deny",
+        "git *": "deny",
         "dotnet *": "ask",
         "head *": "allow"
     }
