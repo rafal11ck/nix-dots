@@ -1,7 +1,8 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "tools": {
-        "git": false
+        "git": false,
+        "WebFetch": true
     },
     "permission": {
         "*": "ask",
