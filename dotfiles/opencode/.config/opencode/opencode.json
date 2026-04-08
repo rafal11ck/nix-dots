@@ -9,6 +9,7 @@
         "read": "allow",
         "git *": "deny",
         "dotnet *": "ask",
-        "head *": "allow"
+        "head *": "allow",
+        "ls -la *": "allow"
     }
 }
