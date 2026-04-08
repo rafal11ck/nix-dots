@@ -37,6 +37,12 @@
       url = "github:AvengeMedia/dms-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    kokoro-tts = {
+      url = "github:rafal11ck/kokoro-tts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
