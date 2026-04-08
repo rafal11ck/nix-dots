@@ -6,7 +6,11 @@
   ...
 }:
 {
+  imports = [ inputs.kokoro-tts.nixosModules.default ];
+
   programs = {
+    kokoro-tts.enable = true;
+    
     nautilus-open-any-terminal = {
       enable = true;
       terminal = "foot";
