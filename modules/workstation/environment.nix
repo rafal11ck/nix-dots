@@ -108,6 +108,7 @@
     unzip
     uv
     vesktop
+    sox
     virt-manager
     virt-viewer
     wayvnc
