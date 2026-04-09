@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch"
+    ]
+  },
+  "effortLevel": "high",
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '\"[\\(.cwd | split(\"/\") | last) · \\(.session_id[0:8])]\\n\\(.message)\"' | xargs -0 -I{} notify-send 'Claude Code' '{}'"
+          }
+        ]
+      }
+    ]
+  }
+}
