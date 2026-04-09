@@ -22,11 +22,11 @@
         listToAttrs [
           (extension "ublock-origin" "uBlock0@raymondhill.net")
           (extension "floccus" "floccus@handmadeideas.org")
-          (extension "keepassxc-browser" "keepassxc-browser@keepassxc.org")
           (extension "darkreader" "addon@darkreader.org")
           (extension "istilldontcareaboutcookies" "idcac-pub@guus.ninja")
           (extension "polish-spellchecker-dictionary" "pl@dictionaries.addons.mozilla.org")
           (extension "react-devtools" "@react-devtools")
+          (extension "bitwarden-password-manager" "{446900e4-71c2-419f-a6a7-df9c091e268b}")
         ];
       # To add additional extensions:
       # If you have it installed:
