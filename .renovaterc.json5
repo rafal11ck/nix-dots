@@ -1,0 +1,4 @@
+{
+    $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+    extends: ['github>rafal11ck/renovate-config//.renovaterc.json5'],
+}
