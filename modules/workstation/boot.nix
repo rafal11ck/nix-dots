@@ -11,7 +11,6 @@
     #copyKernels = true;
     devices = [ "nodev" ];
     configurationLimit = 4;
-    efiInstallAsRemovable = true;
     efiSupport = true;
     enable = true;
     useOSProber = true;
