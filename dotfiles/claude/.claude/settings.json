@@ -4,7 +4,6 @@
       "WebFetch"
     ]
   },
-  "effortLevel": "high",
   "hooks": {
     "Notification": [
       {
