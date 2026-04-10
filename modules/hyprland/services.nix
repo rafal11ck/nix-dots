@@ -9,8 +9,9 @@
     gnome.sushi.enable = true;
     tumbler.enable = true;
 
-    displayManager.gdm = {
+    displayManager.dms-greeter = {
       enable = true;
+      compositor.name = "hyprland";
     };
 
   };
