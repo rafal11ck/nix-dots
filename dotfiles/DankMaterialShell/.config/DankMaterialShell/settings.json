@@ -469,6 +469,10 @@
           "enabled": true
         },
         {
+          "id": "dankLidSleepToggle",
+          "enabled": true
+        },
+        {
           "id": "controlCenterButton",
           "enabled": true,
           "showNetworkIcon": true,
