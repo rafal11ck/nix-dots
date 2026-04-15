@@ -1,0 +1,12 @@
+{
+    "id": "dankLidSleepToggle",
+    "name": "Lid Sleep Toggle",
+    "description": "Toggle laptop lid close suspend behavior",
+    "version": "1.0.0",
+    "author": "rafal",
+    "icon": "bedtime",
+    "type": "widget",
+    "component": "./DankLidSleepToggle.qml",
+    "capabilities": ["dankbar-widget"],
+    "requires_dms": ">=1.4.2"
+}

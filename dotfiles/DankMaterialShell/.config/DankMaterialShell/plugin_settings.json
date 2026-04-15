@@ -4,5 +4,8 @@
   },
   "dankBatteryAlerts": {
     "enabled": true
+  },
+  "dankLidSleepToggle": {
+    "enabled": true
   }
 }
