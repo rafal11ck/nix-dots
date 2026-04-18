@@ -6,7 +6,10 @@
 {
 
   services = {
-    logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
+    logind.settings.Login = {
+      HandleLidSwitchExternalPower = "ignore";
+      HandlePowerKey = "suspend";
+    };
     power-profiles-daemon.enable = true;
 
     plantuml-server = {
