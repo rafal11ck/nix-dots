@@ -17,6 +17,8 @@ in
     # Extensions that are in nixpkgs (and not work from vs-extensions) should be taken from nixpkgs
     #
     profiles.default.extensions = with vs-extensions.vscode-marketplace; [
+   
+      
       albert.tabout
       bierner.markdown-mermaid
       bpruitt-goddard.mermaid-markdown-syntax-highlighting
@@ -55,12 +57,17 @@ in
       oderwat.indent-rainbow
       pkgs.vscode-extensions.jnoortheen.nix-ide
       pkgs.vscode-extensions.ms-vscode.cpptools
+      redhat.java
       redhat.vscode-yaml
       savh.json5-kit
       signageos.signageos-vscode-sops
       streetsidesoftware.code-spell-checker
       usernamehw.errorlens
-      vscjava.vscode-java-pack
+      vscjava.vscode-java-debug
+      vscjava.vscode-java-test
+      vscjava.vscode-maven
+      vscjava.vscode-gradle
+      vscjava.vscode-java-dependency
       waderyan.gitblame
     ];
   };
