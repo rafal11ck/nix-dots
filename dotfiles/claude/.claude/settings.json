@@ -30,5 +30,6 @@
         "repo": "JuliusBrussee/caveman"
       }
     }
-  }
+  },
+  "skipDangerousModePermissionPrompt": true
 }
