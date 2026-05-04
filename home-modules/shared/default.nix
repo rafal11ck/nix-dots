@@ -5,7 +5,6 @@
     ./options.nix
     ./programs
     ./services.nix
-    ./xdg.nix
   ];
 
 }
