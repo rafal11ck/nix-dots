@@ -19,7 +19,6 @@ in
       enable = true;
       bashrcExtra = ''
         alias k=kubectl
-        alias claude="claude --dangerously-skip-permissions"
 
         # Source all scripts in ~/.bashrc.d/
         if [ -d "$HOME/.bashrc.d" ]; then
