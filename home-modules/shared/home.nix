@@ -29,6 +29,6 @@
         # '';
       };
 
-      stateVersion = lib.mkDefault "25.11"; # Please read the comment before changing.
+      stateVersion = lib.mkDefault "26.05"; # Please read the comment before changing.
     };
 }
