@@ -97,6 +97,7 @@
     smartmontools
     snitch
     stow
+    svp
     swappy
     syncplay
     talosctl

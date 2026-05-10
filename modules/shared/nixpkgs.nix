@@ -14,6 +14,10 @@
       inputs.nix-alien.overlays.default
       (self: super: {
 
+        mpv = super.mpv.override {
+          mpv-unwrapped = super.mpv-unwrapped.override { vapoursynthSupport = true; };
+        };
+
         nix-output-monitor =
           let
             icons = {
