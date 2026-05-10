@@ -25,3 +25,8 @@ tasks:
     cmds:
       - stow --target ~ --verbose * --adopt
     prompt: This might overwrite files in repo with already exsisting ones... Do you want to continue?
+  setup-git-filters:
+    desc: configure local git filters required by .gitattributes
+    cmds:
+      - git config filter.dms-settings.clean 'jq "(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\""'
+      - git config filter.dms-settings.smudge cat
