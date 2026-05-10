@@ -2,6 +2,9 @@
   programs.firefox = {
 
     enable = true;
+    # Stay on legacy path: Mozilla still hardcodes ~/.mozilla/native-messaging-hosts/
+    # and Thunderbird has no XDG support, so ~/.mozilla/ exists either way.
+    configPath = ".mozilla/firefox";
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
