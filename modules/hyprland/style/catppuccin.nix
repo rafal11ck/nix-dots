@@ -15,6 +15,8 @@ in
   ];
 
   catppuccin = {
+    enable = true;
+    autoEnable = true;
     cache.enable = true;
     grub.enable = true;
     accent = "${lib.strings.toLower values.catppuccinAccent}";
