@@ -9,7 +9,7 @@ in
 {
   catppuccin = {
     enable = true;
-    autoEnable = true;
+    autoEnable = false;
     accent = "${lib.strings.toLower values.catppuccinAccent}";
     flavor = "${lib.strings.toLower values.catppuccinFlavor}";
     kvantum = {
