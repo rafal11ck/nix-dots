@@ -135,7 +135,6 @@
     pv-migrate
 
     darkly
-    darkly-qt5
 
     #caelstia dots need those
     hyprpicker
