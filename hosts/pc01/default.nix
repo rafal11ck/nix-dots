@@ -15,6 +15,12 @@
     firewall.allowedTCPPorts = [ 5900 ];
   };
 
+  fileSystems."/media/storage" = {
+    device = "/dev/disk/by-uuid/01eaf25a-4b5b-440a-824f-4508cd183665";
+    fsType = "btrfs";
+    options = [ "subvol=data" ];
+  };
+
   nixpkgs.config = {
     rocmSupport = true;
   };
