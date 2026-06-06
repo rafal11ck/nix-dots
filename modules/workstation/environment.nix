@@ -108,7 +108,7 @@
     tree
     unzip
     uv
-    vesktop
+    discord
     sox
     virt-manager
     virt-viewer
