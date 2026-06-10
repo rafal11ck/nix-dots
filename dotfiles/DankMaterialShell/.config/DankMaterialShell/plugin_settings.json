@@ -7,5 +7,17 @@
   },
   "dankLidSleepToggle": {
     "enabled": true
+  },
+  "dankHyprlandWindows": {
+    "enabled": true
+  },
+  "dankPomodoroTimer": {
+    "enabled": true,
+    "autoStartBreaks": false,
+    "autoStartPomodoros": false,
+    "autoSetDND": false
+  },
+  "dankClight": {
+    "enabled": false
   }
 }

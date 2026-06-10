@@ -441,6 +441,10 @@
         {
           "id": "weather",
           "enabled": true
+        },
+        {
+          "id": "dankPomodoroTimer",
+          "enabled": true
         }
       ],
       "rightWidgets": [
