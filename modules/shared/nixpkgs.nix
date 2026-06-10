@@ -18,6 +18,15 @@
           mpv-unwrapped = super.mpv-unwrapped.override { vapoursynthSupport = true; };
         };
 
+        # python-mpv has a flaky concurrency test (jaseg/python-mpv#286).
+        # Disable the test suite so builds don't fail intermittently.
+        python3 = super.python3.override {
+          packageOverrides = pyself: pysuper: {
+            mpv = pysuper.mpv.overridePythonAttrs (_: { doCheck = false; });
+          };
+        };
+        python3Packages = self.python3.pkgs;
+
         nix-output-monitor =
           let
             icons = {
