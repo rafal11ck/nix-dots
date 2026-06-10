@@ -28,5 +28,5 @@ tasks:
   setup-git-filters:
     desc: configure local git filters required by .gitattributes
     cmds:
-      - git config filter.dms-settings.clean 'jq "(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\""'
+      - git config filter.dms-settings.clean 'jq -j "(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\""'
       - git config filter.dms-settings.smudge cat
