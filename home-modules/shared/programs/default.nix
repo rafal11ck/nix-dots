@@ -8,7 +8,6 @@ in
 {
   imports = [
     ./firefox.nix
-    ./zen.nix
     ./vscode.nix
   ];
 
