@@ -273,4 +273,7 @@
     "**/.forgejo/workflows/*.yml",
     "**/.forgejo/workflows/*.yaml"
   ],
+  "claudeCode.preferredLocation": "panel",
+  "chat.mcp.gallery.enabled": true,
+  "explorer.confirmPasteNative": false,
 }
