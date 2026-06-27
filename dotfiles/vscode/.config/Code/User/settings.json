@@ -44,7 +44,7 @@
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "explorer.confirmDelete": false,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
   "files.autoSave": "afterDelay",
   "files.refactoring.autoSave": true,
   "javascript.suggest.paths": false,

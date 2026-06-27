@@ -89,6 +89,7 @@
     pwvucontrol
     pydf
     qbittorrent
+    discord
     qpdf
     scrcpy
     shellcheck
@@ -96,6 +97,7 @@
     slurp
     smartmontools
     snitch
+    sox
     stow
     svp
     swappy
@@ -108,8 +110,7 @@
     tree
     unzip
     uv
-    discord
-    sox
+    vesktop
     virt-manager
     virt-viewer
     wayvnc
@@ -180,7 +181,10 @@
   # shell profile, so sessionVariables/env-hyprland never reach it. Injecting it
   # via the user manager's DefaultEnvironment is the only thing every user unit
   # (incl. the compositor) reliably inherits.
-  systemd.user.extraConfig = "DefaultEnvironment=AMD_DEBUG=nodcc";
+  environment.etc."systemd/user.conf.d/amd-debug.conf".text = ''
+    [Manager]
+    DefaultEnvironment=AMD_DEBUG=nodcc
+  '';
 
   environment.sessionVariables = {
     AMD_DEBUG = "nodcc";
