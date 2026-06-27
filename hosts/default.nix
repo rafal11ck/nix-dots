@@ -30,6 +30,7 @@ in
       (mkModulePath "style")
       # (mkModulePath "gnome")
       (mkModulePath "hyprland")
+      (mkModulePath "whisper")
     ];
 
   };
