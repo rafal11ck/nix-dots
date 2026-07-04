@@ -110,7 +110,7 @@
     tree
     unzip
     uv
-    vesktop
+    # vesktop
     virt-manager
     virt-viewer
     wayvnc
