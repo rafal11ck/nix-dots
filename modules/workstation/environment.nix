@@ -173,20 +173,4 @@
     NIX_REMOTE = "daemon";
   };
 
-  # RDNA3: disable DCC so Chromium/Electron (Vesktop) can import the screencast
-  # DMA-BUF (DCC modifier -> EGL_BAD_MATCH -> black/empty share). It must be in
-  # the Hyprland *process* env (the compositor allocates the buffer). Hyprland
-  # runs as a systemd --user unit started by greetd, which does not source the
-  # shell profile, so sessionVariables/env-hyprland never reach it. Injecting it
-  # via the user manager's DefaultEnvironment is the only thing every user unit
-  # (incl. the compositor) reliably inherits.
-  environment.etc."systemd/user.conf.d/amd-debug.conf".text = ''
-    [Manager]
-    DefaultEnvironment=AMD_DEBUG=nodcc
-  '';
-
-  environment.sessionVariables = {
-    AMD_DEBUG = "nodcc";
-  };
-
 }
