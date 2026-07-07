@@ -2,6 +2,7 @@
   pkgs,
   config,
   lib,
+  flakePkgs,
   ...
 }:
 {
@@ -135,8 +136,6 @@
 
     pv-migrate
 
-    darkly
-
     #caelstia dots need those
     hyprpicker
     hypridle
@@ -161,7 +160,7 @@
     kdePackages.qt6ct
     libsForQt5.qt5ct
     nerd-fonts.jetbrains-mono
-    (mpv.override {
+    (flakePkgs.nixpkgs-stable.mpv.override {
       scripts = with mpvScripts; [
         mpris
         mpv-cheatsheet-ng

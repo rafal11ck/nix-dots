@@ -92,7 +92,7 @@
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
-      "deviceName": ""
+      "deviceName": "ddc:i2c-7"
     },
     {
       "id": "wifi",
@@ -194,7 +194,7 @@
   "spotlightSectionViewModes": {},
   "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
-  "dankLauncherV2Size": "compact",
+  "dankLauncherV2Size": "large",
   "dankLauncherV2BorderEnabled": false,
   "dankLauncherV2BorderThickness": 2,
   "dankLauncherV2BorderColor": "primary",
@@ -205,8 +205,8 @@
   "networkPreference": "wifi",
   "iconTheme": "Papirus",
   "cursorSettings": {
-    "theme": "System Default",
-    "size": 24,
+    "theme": "catppuccin-mocha-pink-cursors",
+    "size": 32,
     "niri": {
       "hideWhenTyping": false,
       "hideAfterInactiveMs": 0
@@ -301,7 +301,7 @@
   "matugenTemplateEmacs": true,
   "matugenTemplateZed": true,
   "showDock": false,
-  "dockAutoHide": false,
+  "dockAutoHide": true,
   "dockSmartAutoHide": false,
   "dockGroupByApp": false,
   "dockOpenOnOverview": false,
@@ -382,7 +382,7 @@
     "suspend",
     "restart"
   ],
-  "powerMenuDefaultAction": "logout",
+  "powerMenuDefaultAction": "suspend",
   "powerMenuGridLayout": false,
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
@@ -394,7 +394,7 @@
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
-  "displayNameMode": "system",
+  "displayNameMode": "model",
   "screenPreferences": {
     "wallpaper": [
       "all"
