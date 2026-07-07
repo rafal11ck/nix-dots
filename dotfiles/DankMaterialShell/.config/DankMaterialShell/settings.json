@@ -172,7 +172,33 @@
   "runningAppsCurrentWorkspace": true,
   "runningAppsGroupByApp": false,
   "runningAppsCurrentMonitor": false,
-  "appIdSubstitutions": [],
+  "appIdSubstitutions": [
+    {
+      "pattern": "Spotify",
+      "replacement": "spotify",
+      "type": "exact"
+    },
+    {
+      "pattern": "beepertexts",
+      "replacement": "beeper",
+      "type": "exact"
+    },
+    {
+      "pattern": "home assistant desktop",
+      "replacement": "homeassistant-desktop",
+      "type": "exact"
+    },
+    {
+      "pattern": "com.transmissionbt.transmission",
+      "replacement": "transmission-gtk",
+      "type": "contains"
+    },
+    {
+      "pattern": "^steam_app_(\\d+)$",
+      "replacement": "steam_icon_$1",
+      "type": "regex"
+    }
+  ],
   "centeringMode": "index",
   "clockDateFormat": "",
   "lockDateFormat": "",
@@ -351,7 +377,7 @@
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,
-  "notificationPopupPosition": 0,
+  "notificationPopupPosition": -1,
   "notificationAnimationSpeed": 1,
   "notificationCustomAnimationDuration": 400,
   "notificationHistoryEnabled": true,
@@ -362,15 +388,15 @@
   "notificationHistorySaveCritical": true,
   "notificationRules": [],
   "osdAlwaysShowValue": false,
-  "osdPosition": 5,
-  "osdVolumeEnabled": true,
-  "osdMediaVolumeEnabled": true,
+  "osdPosition": 4,
+  "osdVolumeEnabled": false,
+  "osdMediaVolumeEnabled": false,
   "osdMediaPlaybackEnabled": false,
-  "osdBrightnessEnabled": true,
-  "osdIdleInhibitorEnabled": true,
-  "osdMicMuteEnabled": true,
-  "osdCapsLockEnabled": true,
-  "osdPowerProfileEnabled": true,
+  "osdBrightnessEnabled": false,
+  "osdIdleInhibitorEnabled": false,
+  "osdMicMuteEnabled": false,
+  "osdCapsLockEnabled": false,
+  "osdPowerProfileEnabled": false,
   "osdAudioOutputEnabled": true,
   "powerActionConfirm": true,
   "powerActionHoldDuration": 0.5,
@@ -398,9 +424,14 @@
   "screenPreferences": {
     "wallpaper": [
       "all"
+    ],
+    "toast": [
+      "all"
     ]
   },
-  "showOnLastDisplay": {},
+  "showOnLastDisplay": {
+    "toast": true
+  },
   "niriOutputSettings": {},
   "hyprlandOutputSettings": {},
   "displayProfiles": {},
