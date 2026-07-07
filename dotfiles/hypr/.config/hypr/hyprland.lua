@@ -568,9 +568,6 @@ hl.config({
     -- Colour picker
     -- TODO DANK SHELL KEYBINDS MIGRATION
     -- Clipboard and emoji picker
-    -- bind = Super, Period, exec, pkill fuzzel || caelestia emoji -p # TODO emoji picker
-    -- bind = Super, b, exec, caelestia toggle music
-    -- bind = Super, y, exec, caelestia toggle communication
     --float rules
     --float rules
     --noanim rule
