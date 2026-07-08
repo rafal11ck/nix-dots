@@ -31,13 +31,13 @@ local rounding = 15
 --monitor=HDMI-A-1,transform,1
 --monitor=DP-1,highrr,1080x210,1
 hl.monitor({
-    output = "",
-    mode = "preferred",
-    position = "auto-up",
-    scale = "1",
+  output = "",
+  mode = "preferred",
+  position = "auto-up",
+  scale = "1",
 })
 
---nwg-displays generated file, it's in .gitignore so that multiple devices configs do not clash 
+--nwg-displays generated file, it's in .gitignore so that multiple devices configs do not clash
 --use nwg-dispalys to setup monitors
 -- Source: ~/.config/hypr/monitors.conf — convert this file to Lua and ensure it is on Lua's package.path.
 require("monitors")
@@ -58,58 +58,58 @@ local animationspeed = 7
 
 hl.curve("myBezier", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.00 } } })
 hl.animation({
-    leaf = "windows",
-    enabled = true,
-    speed = animationspeed,
-    bezier = "myBezier",
+  leaf = "windows",
+  enabled = true,
+  speed = animationspeed,
+  bezier = "myBezier",
 })
 hl.animation({
-    leaf = "windowsOut",
-    enabled = true,
-    speed = animationspeed,
-    bezier = "default",
-    style = "popin 80%",
+  leaf = "windowsOut",
+  enabled = true,
+  speed = animationspeed,
+  bezier = "default",
+  style = "popin 80%",
 })
 hl.animation({
-    leaf = "border",
-    enabled = true,
-    speed = 10,
-    bezier = "default",
+  leaf = "border",
+  enabled = true,
+  speed = 10,
+  bezier = "default",
 })
 hl.animation({
-    leaf = "borderangle",
-    enabled = true,
-    speed = 8,
-    bezier = "default",
+  leaf = "borderangle",
+  enabled = true,
+  speed = 8,
+  bezier = "default",
 })
 hl.animation({
-    leaf = "fade",
-    enabled = true,
-    speed = animationspeed,
-    bezier = "default",
+  leaf = "fade",
+  enabled = true,
+  speed = animationspeed,
+  bezier = "default",
 })
 hl.animation({
-    leaf = "workspaces",
-    enabled = true,
-    speed = 6,
-    bezier = "default",
+  leaf = "workspaces",
+  enabled = true,
+  speed = 6,
+  bezier = "default",
 })
 hl.animation({
-    leaf = "specialWorkspace",
-    enabled = true,
-    speed = animationspeed,
-    bezier = "myBezier",
-    style = "fade",
+  leaf = "specialWorkspace",
+  enabled = true,
+  speed = animationspeed,
+  bezier = "myBezier",
+  style = "fade",
 })
 
 hl.workspace_rule({
-    workspace = "special:terminal",
-    on_created_empty =cmdmainterminal,
+  workspace = "special:terminal",
+  on_created_empty = cmdmainterminal,
 })
 
 hl.workspace_rule({
-    workspace = "special:sysmon",
-    on_created_empty ="foot btop",
+  workspace = "special:sysmon",
+  on_created_empty = "foot btop",
 })
 
 hl.bind("CTRL + SHIFT + Escape", hl.dsp.workspace.toggle_special("sysmon"))
@@ -117,86 +117,124 @@ hl.bind("CTRL + SHIFT + Escape", hl.dsp.workspace.toggle_special("sysmon"))
 local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + W", hl.dsp.window.close(), { description = "kill active window" })
-    hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-    hl.bind(mainMod .. " + N", hl.dsp.window.fullscreen_state({ internal = -1, client = 2, action = "toggle" }), { description = "fake fullscreen" })
+hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+hl.bind(mainMod .. " + N", hl.dsp.window.fullscreen_state({ internal = -1, client = 2, action = "toggle" }),
+  { description = "fake fullscreen" })
 
-    hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
-    hl.bind(mainMod .. " + P", hl.dsp.window.pseudo(), { description = "pseudotile" })
-    hl.bind(mainMod .. " + I", hl.dsp.layout("togglesplit"))
-    hl.bind(mainMod .. " + CTRL + SHIFT +Q", hl.dsp.exit())
+hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + P", hl.dsp.window.pseudo(), { description = "pseudotile" })
+hl.bind(mainMod .. " + I", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + CTRL + SHIFT +Q", hl.dsp.exit())
 
-    hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
-    hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
-    hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
-    hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
 
-    hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ into_or_create_group = "l" }))
-    hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ into_or_create_group = "r" }))
-    hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ into_or_create_group = "u" }))
-    hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ into_or_create_group = "d" }))
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ into_or_create_group = "l" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ into_or_create_group = "r" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ into_or_create_group = "u" }))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ into_or_create_group = "d" }))
 
-    hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ next = true }))
-    hl.bind("ALT + Tab", hl.dsp.window.bring_to_top())
-    hl.bind(mainMod .. " + u", hl.dsp.focus({ urgent_or_last = true }))
+hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ next = true }))
+hl.bind("ALT + Tab", hl.dsp.window.bring_to_top())
+hl.bind(mainMod .. " + u", hl.dsp.focus({ urgent_or_last = true }))
 
-    hl.bind(mainMod .. " + g", hl.dsp.group.toggle())
-    hl.bind(mainMod .. " + s", hl.dsp.group.next())
+hl.bind(mainMod .. " + g", hl.dsp.group.toggle())
+hl.bind(mainMod .. " + s", hl.dsp.group.next())
 
-    hl.bind(mainMod .. " + 1", hl.dsp.focus({ workspace = 1 }))
-    hl.bind(mainMod .. " + 2", hl.dsp.focus({ workspace = 2 }))
-    hl.bind(mainMod .. " + 3", hl.dsp.focus({ workspace = 3 }))
-    hl.bind(mainMod .. " + 4", hl.dsp.focus({ workspace = 4 }))
-    hl.bind(mainMod .. " + 5", hl.dsp.focus({ workspace = 5 }))
-    hl.bind(mainMod .. " + 6", hl.dsp.focus({ workspace = 6 }))
-    hl.bind(mainMod .. " + 7", hl.dsp.focus({ workspace = 7 }))
-    hl.bind(mainMod .. " + 8", hl.dsp.focus({ workspace = 8 }))
-    hl.bind(mainMod .. " + 9", hl.dsp.focus({ workspace = 9 }))
-    hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
+hl.bind(mainMod .. " + 1", hl.dsp.focus({ workspace = 1 }))
+hl.bind(mainMod .. " + 2", hl.dsp.focus({ workspace = 2 }))
+hl.bind(mainMod .. " + 3", hl.dsp.focus({ workspace = 3 }))
+hl.bind(mainMod .. " + 4", hl.dsp.focus({ workspace = 4 }))
+hl.bind(mainMod .. " + 5", hl.dsp.focus({ workspace = 5 }))
+hl.bind(mainMod .. " + 6", hl.dsp.focus({ workspace = 6 }))
+hl.bind(mainMod .. " + 7", hl.dsp.focus({ workspace = 7 }))
+hl.bind(mainMod .. " + 8", hl.dsp.focus({ workspace = 8 }))
+hl.bind(mainMod .. " + 9", hl.dsp.focus({ workspace = 9 }))
+hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
 
-    hl.bind(mainMod .. " + SHIFT + 1", hl.dsp.window.move({ workspace = 1 }))
-    hl.bind(mainMod .. " + SHIFT + 2", hl.dsp.window.move({ workspace = 2 }))
-    hl.bind(mainMod .. " + SHIFT + 3", hl.dsp.window.move({ workspace = 3 }))
-    hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.window.move({ workspace = 4 }))
-    hl.bind(mainMod .. " + SHIFT + 5", hl.dsp.window.move({ workspace = 5 }))
-    hl.bind(mainMod .. " + SHIFT + 6", hl.dsp.window.move({ workspace = 6 }))
-    hl.bind(mainMod .. " + SHIFT + 7", hl.dsp.window.move({ workspace = 7 }))
-    hl.bind(mainMod .. " + SHIFT + 8", hl.dsp.window.move({ workspace = 8 }))
-    hl.bind(mainMod .. " + SHIFT + 9", hl.dsp.window.move({ workspace = 9 }))
-    hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
+hl.bind(mainMod .. " + SHIFT + 1", hl.dsp.window.move({ workspace = 1 }))
+hl.bind(mainMod .. " + SHIFT + 2", hl.dsp.window.move({ workspace = 2 }))
+hl.bind(mainMod .. " + SHIFT + 3", hl.dsp.window.move({ workspace = 3 }))
+hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.window.move({ workspace = 4 }))
+hl.bind(mainMod .. " + SHIFT + 5", hl.dsp.window.move({ workspace = 5 }))
+hl.bind(mainMod .. " + SHIFT + 6", hl.dsp.window.move({ workspace = 6 }))
+hl.bind(mainMod .. " + SHIFT + 7", hl.dsp.window.move({ workspace = 7 }))
+hl.bind(mainMod .. " + SHIFT + 8", hl.dsp.window.move({ workspace = 8 }))
+hl.bind(mainMod .. " + SHIFT + 9", hl.dsp.window.move({ workspace = 9 }))
+hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
-    hl.bind(mainMod .. " + CTRL + SHIFT +down", function() local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({ workspace = w.id, monitor = "d" })) end)
-    hl.bind(mainMod .. " + CTRL + SHIFT +up", function() local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({ workspace = w.id, monitor = "u" })) end)
-    hl.bind(mainMod .. " + CTRL + SHIFT +left", function() local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({ workspace = w.id, monitor = "l" })) end)
-    hl.bind(mainMod .. " + CTRL + SHIFT +right", function() local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({ workspace = w.id, monitor = "r" })) end)
+hl.bind(mainMod .. " + CTRL + SHIFT +down",
+  function()
+    local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({
+      workspace = w.id,
+      monitor =
+      "d"
+    }))
+  end)
+hl.bind(mainMod .. " + CTRL + SHIFT +up",
+  function()
+    local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({
+      workspace = w.id,
+      monitor =
+      "u"
+    }))
+  end)
+hl.bind(mainMod .. " + CTRL + SHIFT +left",
+  function()
+    local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({
+      workspace = w.id,
+      monitor =
+      "l"
+    }))
+  end)
+hl.bind(mainMod .. " + CTRL + SHIFT +right",
+  function()
+    local w = hl.get_active_workspace(); if not w then return end; hl.dispatch(hl.dsp.workspace.move({
+      workspace = w.id,
+      monitor =
+      "r"
+    }))
+  end)
 
-    hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
-    hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
-    hl.bind(mainMod .. " + return", hl.dsp.workspace.toggle_special("terminal"), { repeating = true })
-    hl.bind(mainMod .. " + SHIFT + return", hl.dsp.window.move({ workspace = "special:terminal" }), { repeating = true })
+hl.bind(mainMod .. " + return", hl.dsp.workspace.toggle_special("terminal"), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + return", hl.dsp.window.move({ workspace = "special:terminal" }), { repeating = true })
 
-    hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("firefox"), { repeating = true })
-    hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nautilus"), { repeating = true })
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("firefox"), { repeating = true })
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nautilus"), { repeating = true })
 
-    hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("[workspace unset] firefox -P"), { repeating = true })
-    hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("[workspace unset;float;size 40% 85%;minsize 820, 800;center;pin] " .. cmddictionary), { repeating = true })
-    hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(cmdOCR), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("[workspace unset] firefox -P"), { repeating = true })
+hl.bind(mainMod .. " + D",
+  hl.dsp.exec_cmd("[workspace unset;float;size 40% 85%;minsize 820, 800;center;pin] " .. cmddictionary),
+  { repeating = true })
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(cmdOCR), { repeating = true })
 
 hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace",
+  fingers = 3,
+  direction = "horizontal",
+  action = "workspace",
 })
 
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
 hl.bind("SUPER + SHIFT + M", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+"), { locked = true, repeating = true, description = "raise audio volume" })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"), { locked = true, repeating = true, description = "lower audio volume" })
+hl.bind("XF86AudioRaiseVolume",
+  hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+"),
+  { locked = true, repeating = true, description = "raise audio volume" })
+hl.bind("XF86AudioLowerVolume",
+  hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"),
+  { locked = true, repeating = true, description = "lower audio volume" })
 
-hl.bind("SUPER + ALT + C", hl.dsp.exec_cmd("dms ipc notifications clearAll"), { locked = true, description = "clear notifications" })
-hl.bind(mainMod .. " + CTRL + SHIFT +H", hl.dsp.exec_cmd("dms ipc call keybinds open hyprland"), { locked = true, description = "show keybinds" })
+hl.bind("SUPER + ALT + C", hl.dsp.exec_cmd("dms ipc notifications clearAll"),
+  { locked = true, description = "clear notifications" })
+hl.bind(mainMod .. " + CTRL + SHIFT +H", hl.dsp.exec_cmd("dms ipc call keybinds open hyprland"),
+  { locked = true, description = "show keybinds" })
 
-hl.bind("SUPER + CTRL + SHIFT + L", hl.dsp.exec_cmd("dms ipc call lock lock"), { locked = true, description = "lock screen" })
+hl.bind("SUPER + CTRL + SHIFT + L", hl.dsp.exec_cmd("dms ipc call lock lock"),
+  { locked = true, description = "lock screen" })
 
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("dms ipc call mpris next"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("dms ipc call mpris previous"), { locked = true })
@@ -222,231 +260,231 @@ hl.bind("SUPER + R", hl.dsp.exec_cmd("dms ipc spotlight toggle"))
 hl.bind("SUPER + T", hl.dsp.exec_cmd("app2unit -- foot"))
 
 hl.window_rule({
-    match = {
-        class = "^(org.qbittorrent.qBittorrent)$",
-    },
-    float = true,
+  match = {
+    class = "^(org.qbittorrent.qBittorrent)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(org.qbittorrent.qBittorrent)$",
-        title = "^(qBittorrent)",
-    },
-    float = false,
+  match = {
+    class = "^(org.qbittorrent.qBittorrent)$",
+    title = "^(qBittorrent)",
+  },
+  float = false,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(firefox)$",
-        title = "^(Firefox - Choose User Profile)$",
-    },
-    float = true,
+  match = {
+    class = "^(firefox)$",
+    title = "^(Firefox - Choose User Profile)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        title = "^(File Upload)$",
-    },
-    workspace = "unset:^(firefox)$",
+  match = {
+    title = "^(File Upload)$",
+  },
+  workspace = "unset:^(firefox)$",
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Enter name of file to save to…)$",
-    },
-    workspace = "unset:^(firefox)$",
+  match = {
+    title = "^(Enter name of file to save to…)$",
+  },
+  workspace = "unset:^(firefox)$",
 })
 
 hl.window_rule({
-    match = {
-        title = "^()$",
-    },
-    workspace = "unset:^(firefox)$",
+  match = {
+    title = "^()$",
+  },
+  workspace = "unset:^(firefox)$",
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Firefox)$",
-    },
-    workspace = "unset:^(firefox)$",
+  match = {
+    title = "^(Firefox)$",
+  },
+  workspace = "unset:^(firefox)$",
 })
 
 hl.window_rule({
-    match = {
-        class = "^(showmethekey-gtk)$",
-    },
-    float = true,
-    pin = true,
-    move = "((monitor_w*0.4)) ((monitor_h*1)-window_h-50)",
-    border_size = 0,
-    no_initial_focus = true,
+  match = {
+    class = "^(showmethekey-gtk)$",
+  },
+  float = true,
+  pin = true,
+  move = "((monitor_w*0.4)) ((monitor_h*1)-window_h-50)",
+  border_size = 0,
+  no_initial_focus = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^((T|t)hunar)$",
-        title = "^(File Operation Progress)$",
-    },
-    float = true,
+  match = {
+    class = "^((T|t)hunar)$",
+    title = "^(File Operation Progress)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(com.saivert.pwvucontrol)$",
-    },
-    float = true,
-    pin = true,
-    center = true,
-    size = "(monitor_w*0.5) (monitor_h*0.7)",
-    min_size = "400 400",
+  match = {
+    class = "^(com.saivert.pwvucontrol)$",
+  },
+  float = true,
+  pin = true,
+  center = true,
+  size = "(monitor_w*0.5) (monitor_h*0.7)",
+  min_size = "400 400",
 })
 
 hl.window_rule({
-    match = {
-        class = "^((P|p)cmanfm)$",
-        title = "^(Copying files)$",
-    },
-    float = true,
+  match = {
+    class = "^((P|p)cmanfm)$",
+    title = "^(Copying files)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^((P|p)cmanfm)$",
-        title = "^(Confirm File Replacing)$",
-    },
-    float = true,
+  match = {
+    class = "^((P|p)cmanfm)$",
+    title = "^(Confirm File Replacing)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        title = "^()$",
-        class = "^(steam)$",
-    },
-    stay_focused = true,
-    min_size = "1 1",
+  match = {
+    title = "^()$",
+    class = "^(steam)$",
+  },
+  stay_focused = true,
+  min_size = "1 1",
 })
 
 hl.window_rule({
-    match = {
-        class = "^(jetbrains-idea)$",
-    },
-    no_anim = true,
-    no_initial_focus = true,
+  match = {
+    class = "^(jetbrains-idea)$",
+  },
+  no_anim = true,
+  no_initial_focus = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(SVPManager)$",
-    },
-    float = true,
-    pin = true,
+  match = {
+    class = "^(SVPManager)$",
+  },
+  float = true,
+  pin = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(xdg-desktop-portal-gtk)$",
-    },
-    float = true,
+  match = {
+    class = "^(xdg-desktop-portal-gtk)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(Emulator)$",
-    },
-    float = true,
-    border_size = 0,
+  match = {
+    class = "^(Emulator)$",
+  },
+  float = true,
+  border_size = 0,
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Open .*)$",
-    },
-    float = true,
+  match = {
+    title = "^(Open .*)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Select .*Folder)",
-    },
-    float = true,
+  match = {
+    title = "^(Select .*Folder)",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Save .*)",
-    },
-    float = true,
+  match = {
+    title = "^(Save .*)",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(vesktop)$",
-        title = "^(vesktop)$",
-    },
-    no_initial_focus = true,
+  match = {
+    class = "^(vesktop)$",
+    title = "^(vesktop)$",
+  },
+  no_initial_focus = true,
 })
 
 hl.window_rule({
-    name = "flameshot-multi-display-fix",
-    match = {
-        class = "flameshot",
-    },
-    animation = "fade",
-    rounding = 0,
-    border_size = 0,
-    fullscreen_state = "0 0",
-    float = true,
-    pin = true,
-    monitor = "HDMI-A-2",
-    move = "0 0",
-    -- size = (monitor_w*3) (monitor_h)
-    size = "500 500",
+  name = "flameshot-multi-display-fix",
+  match = {
+    class = "flameshot",
+  },
+  animation = "fade",
+  rounding = 0,
+  border_size = 0,
+  fullscreen_state = "0 0",
+  float = true,
+  pin = true,
+  monitor = "HDMI-A-2",
+  move = "0 0",
+  -- size = (monitor_w*3) (monitor_h)
+  size = "500 500",
 })
 
 hl.window_rule({
-    match = {
-        class = "^(\\.?blueman-manager)",
-    },
-    float = true,
-    pin = true,
+  match = {
+    class = "^(\\.?blueman-manager)",
+  },
+  float = true,
+  pin = true,
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Save As)$",
-    },
-    float = true,
+  match = {
+    title = "^(Save As)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(nm-connection-editor)$",
-    },
-    float = true,
-    pin = true,
+  match = {
+    class = "^(nm-connection-editor)$",
+  },
+  float = true,
+  pin = true,
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Picture-in-Picture)$",
-    },
-    float = true,
-    border_size = 0,
+  match = {
+    title = "^(Picture-in-Picture)$",
+  },
+  float = true,
+  border_size = 0,
 })
 
 hl.window_rule({
-    match = {
-        title = "^(Select Executable)$",
-    },
-    float = true,
+  match = {
+    title = "^(Select Executable)$",
+  },
+  float = true,
 })
 
 hl.window_rule({
-    match = {
-        class = "^(org.keepassxc.KeePassXC)$",
-    },
-    float = true,
+  match = {
+    class = "^(org.keepassxc.KeePassXC)$",
+  },
+  float = true,
 })
 
 -- Source: ~/.config/hypr/appsworkspaces.conf — convert this file to Lua and ensure it is on Lua's package.path.
@@ -457,138 +495,137 @@ require("dms.layout")
 require("dms.cursor")
 require("dms.windowrules")
 hl.config({
-    input = {
-        kb_layout = "pl",
-        kb_variant = "",
-        kb_model = "",
-        kb_options = "",
-        kb_rules = "",
-        follow_mouse = 1,
-        touchpad = {
-            natural_scroll = false,
-        },
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+  input = {
+    kb_layout = "pl",
+    kb_variant = "",
+    kb_model = "",
+    kb_options = "",
+    kb_rules = "",
+    follow_mouse = 1,
+    touchpad = {
+      natural_scroll = false,
     },
-    general = {
-        -- See https://wiki.hyprland.org/Configuring/Variables/ for more
-        gaps_in = 5,
-        gaps_out = 6,
-        border_size = 2,
-        -- col.active_border = $pink
-        -- col.inactive_border = $overlay0
-        layout = "dwindle",
+    sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+  },
+  general = {
+    -- See https://wiki.hyprland.org/Configuring/Variables/ for more
+    gaps_in = 5,
+    gaps_out = 6,
+    border_size = 2,
+    -- col.active_border = $pink
+    -- col.inactive_border = $overlay0
+    layout = "dwindle",
+  },
+  group = {
+    -- col.border_active = $pink
+    -- col.border_inactive = $overlay0
+    groupbar = {
+      -- col.active = $pink
+      -- col.inactive  = $overlay0
+      -- text_color = $text # $base
+      font_size = fontsize,
+      keep_upper_gap = false,
+      -- FIXME uncomment rounding after hyprland update
+      -- rounding = 5
     },
-    group = {
-        -- col.border_active = $pink
-        -- col.border_inactive = $overlay0
-        groupbar = {
-            -- col.active = $pink
-            -- col.inactive  = $overlay0
-            -- text_color = $text # $base
-            font_size = fontsize,
-            keep_upper_gap = false,
-            -- FIXME uncomment rounding after hyprland update
-            -- rounding = 5 
-        },
+  },
+  misc = {
+    vrr = 1,
+    key_press_enables_dpms = true,
+    mouse_move_enables_dpms = true,
+  },
+  decoration = {
+    -- See https://wiki.hyprland.org/Configuring/Variables/ for more
+    rounding = rounding,
+    blur = {
+      enabled = false,
+      size = 3,
+      passes = 1,
     },
-    misc = {
-        vrr = 1,
-        key_press_enables_dpms = true,
-        mouse_move_enables_dpms = true,
+    shadow = {
+      enabled = true,
+      range = 4,
+      render_power = 3,
+      color = "rgba(1a1a1aee)",
     },
-    decoration = {
-        -- See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = rounding,
-        blur = {
-            enabled = false,
-            size = 3,
-            passes = 1,
-        },
-        shadow = {
-            enabled = true,
-            range = 4,
-            render_power = 3,
-            color = "rgba(1a1a1aee)",
-        },
-    },
-    animations = {
-        enabled = true,
-        -- Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
-    },
-    dwindle = {
-        -- See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-        -- pseudotile is no longer a config option (removed). Toggle per-window with the `pseudo` dispatcher (bound to mainMod + P below).
-        preserve_split = true, -- you probably want this
-    },
-    master = {
-        -- See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-        --new_is_master = true
-    },
-    render = {
-        direct_scanout = 0,
-        -- cm_fs_passthrough was removed; replaced by cm_auto_hdr (0=disable, 1=hdr, 2=hdredid). Default is 1.
-        cm_auto_hdr = 1,
-    },
-    binds = {
-        hide_special_on_workspace_change = true,
-    },
-    -- Example per-device config
-    -- See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
-    --device:epic-mouse-v1 {
-    --    sensitivity = -0.5
-    --}
-    -- Workspace rules (workspaces not app to workspace assigments)
-    -- Example windowrule v1
-    -- windowrule = float, ^(kitty)$
-    -- Example windowrule v2
-    -- windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-    -- See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-    -- See https://wiki.hyprland.org/Configuring/Keywords/ for more
-    -- Move focus with mainMod + vim arrow keys
-    -- Swap windows with mainMod + vim arrow keys
-    --cycle focus with tab and super/alt
-    --bind = SUPER,Tab,cyclenext,
-    --bind = SUPER,Tab,bringactivetotop,
-    --groups
-    -- Switch workspaces with mainMod + [0-9] bind = $mainMod, 1, workspace, 1
-    -- Move active window to a workspace with mainMod + SHIFT + [0-9]
-    --swap WORKSPACES
-    -- Move/resize windows with mainMod + LMB/RMB and dragging
-    -- binde= $mainMod CTRLSHIFT, L, exec, wlogout --show-binds
-    -- ## Shell keybinds
-    -- Launcher
-    -- Volume
-    -- Misc
-    -- dms ipc call keybinds open hyprland
-    -- Lock
-    -- Utilities
-    --# region ss
-    --# screnshot all displays
-    --# screnshot current display
-    -- Colour picker
-    -- TODO DANK SHELL KEYBINDS MIGRATION
-    -- Clipboard and emoji picker
-    --float rules
-    --float rules
-    --noanim rule
-    --svp
-    --xdg-desktop-pratal-gtk
-    -- Androoid emulator
-    --open things
-    --select things
-    --Save 
-    -- Vesktop initial start
-    -- # set this to your leftmost monitor id, otherwise you have to move your cursor to the leftmost monitor
-    -- # before executing flameshot
-    --blueman-manager
-    -- no $ as nix has it with -wrapped postfix, \.? is because it has dot prefix
-    --nm applet conection manager
-    -- float Picture-in-Picture
-    -- float keepassxc
+  },
+  animations = {
+    enabled = true,
+    -- Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+  },
+  dwindle = {
+    -- See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+    -- pseudotile is no longer a config option (removed). Toggle per-window with the `pseudo` dispatcher (bound to mainMod + P below).
+    preserve_split = true, -- you probably want this
+  },
+  master = {
+    -- See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+    --new_is_master = true
+  },
+  render = {
+    direct_scanout = 0,
+    -- cm_fs_passthrough was removed; replaced by cm_auto_hdr (0=disable, 1=hdr, 2=hdredid). Default is 1.
+    cm_auto_hdr = 1,
+  },
+  binds = {
+    hide_special_on_workspace_change = true,
+  },
+  -- Example per-device config
+  -- See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
+  --device:epic-mouse-v1 {
+  --    sensitivity = -0.5
+  --}
+  -- Workspace rules (workspaces not app to workspace assigments)
+  -- Example windowrule v1
+  -- windowrule = float, ^(kitty)$
+  -- Example windowrule v2
+  -- windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+  -- See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+  -- See https://wiki.hyprland.org/Configuring/Keywords/ for more
+  -- Move focus with mainMod + vim arrow keys
+  -- Swap windows with mainMod + vim arrow keys
+  --cycle focus with tab and super/alt
+  --bind = SUPER,Tab,cyclenext,
+  --bind = SUPER,Tab,bringactivetotop,
+  --groups
+  -- Switch workspaces with mainMod + [0-9] bind = $mainMod, 1, workspace, 1
+  -- Move active window to a workspace with mainMod + SHIFT + [0-9]
+  --swap WORKSPACES
+  -- Move/resize windows with mainMod + LMB/RMB and dragging
+  -- binde= $mainMod CTRLSHIFT, L, exec, wlogout --show-binds
+  -- ## Shell keybinds
+  -- Launcher
+  -- Volume
+  -- Misc
+  -- dms ipc call keybinds open hyprland
+  -- Lock
+  -- Utilities
+  --# region ss
+  --# screnshot all displays
+  --# screnshot current display
+  -- Colour picker
+  -- TODO DANK SHELL KEYBINDS MIGRATION
+  -- Clipboard and emoji picker
+  --float rules
+  --float rules
+  --noanim rule
+  --svp
+  --xdg-desktop-pratal-gtk
+  -- Androoid emulator
+  --open things
+  --select things
+  --Save
+  -- Vesktop initial start
+  -- # set this to your leftmost monitor id, otherwise you have to move your cursor to the leftmost monitor
+  -- # before executing flameshot
+  --blueman-manager
+  -- no $ as nix has it with -wrapped postfix, \.? is because it has dot prefix
+  --nm applet conection manager
+  -- float Picture-in-Picture
+  -- float keepassxc
 })
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("hyprctl setcursor catppuccin-mocha-pink-cursors 32")
-    hl.exec_cmd("wl-paste --watch cliphist store")
+  hl.exec_cmd("hyprctl setcursor catppuccin-mocha-pink-cursors 32")
+  hl.exec_cmd("wl-paste --watch cliphist store")
 end)
-
