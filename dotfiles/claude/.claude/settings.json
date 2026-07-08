@@ -22,13 +22,20 @@
   },
   "enabledPlugins": {
     "caveman@caveman": false,
-    "code-simplifier@claude-plugins-official": true
+    "code-simplifier@claude-plugins-official": true,
+    "gitops-skills@fluxcd": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "fluxcd": {
+      "source": {
+        "source": "github",
+        "repo": "fluxcd/agent-skills"
       }
     }
   },
