@@ -33,7 +33,7 @@
     dict
     dig
     docker-compose
-    ffmpeg
+    ffmpeg-full
     fluxcd-operator-mcp
     gammastep
     gcc
