@@ -23,9 +23,7 @@
           };
         };
 
-        mpv-unwrapped =
-          inputs.nixpkgs.legacyPackages.${super.stdenv.hostPlatform.system}.mpv-unwrapped.override
-            { vapoursynthSupport = true; };
+        mpv-unwrapped = super.mpv-unwrapped.override { vapoursynthSupport = true; };
 
         nix-output-monitor =
           let

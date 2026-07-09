@@ -160,7 +160,7 @@
     kdePackages.qt6ct
     libsForQt5.qt5ct
     nerd-fonts.jetbrains-mono
-    (flakePkgs.nixpkgs-stable.mpv.override {
+    (pkgs.mpv.override {
       scripts = with mpvScripts; [
         mpris
         mpv-cheatsheet-ng
