@@ -22,8 +22,8 @@ local options = {
 
     -- Maximum thumbnail generation size in pixels (scaled down to fit)
     -- Values are scaled when hidpi is enabled
-    max_height = 400,
-    max_width = 400,
+    max_height = 900,
+    max_width = 900,
 
     -- Scale factor for thumbnail display size (requires mpv 0.38+)
     -- Note that this is lower quality than increasing max_height and max_width
