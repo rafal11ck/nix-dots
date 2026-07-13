@@ -173,4 +173,9 @@
     NIX_REMOTE = "daemon";
   };
 
+  environment.sessionVariables = {
+    RUSTICL_ENABLE = "radeonsi";
+    OCL_ICD_VENDORS = "${pkgs.mesa.opencl}/etc/OpenCL/vendors";
+  };
+
 }
