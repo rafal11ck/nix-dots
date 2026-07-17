@@ -393,7 +393,16 @@
   "notificationHistorySaveLow": true,
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
-  "notificationRules": [],
+  "notificationRules": [
+    {
+      "enabled": true,
+      "field": "appName",
+      "pattern": "notify-send",
+      "matchType": "exact",
+      "action": "default",
+      "urgency": "default"
+    }
+  ],
   "osdAlwaysShowValue": false,
   "osdPosition": 4,
   "osdVolumeEnabled": false,
