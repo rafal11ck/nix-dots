@@ -37,10 +37,7 @@ hl.monitor({
   scale = "1",
 })
 
---nwg-displays generated file, it's in .gitignore so that multiple devices configs do not clash
---use nwg-dispalys to setup monitors
--- Source: ~/.config/hypr/monitors.conf — convert this file to Lua and ensure it is on Lua's package.path.
-require("monitors")
+
 
 -- See https://wiki.hyprland.org/Configuring/Keywords/ for more
 

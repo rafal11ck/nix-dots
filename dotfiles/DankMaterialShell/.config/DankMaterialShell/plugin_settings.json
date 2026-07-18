@@ -1,6 +1,7 @@
 {
   "dankKDEConnect": {
-    "enabled": true
+    "enabled": true,
+    "selectedDeviceId": "5ae7b42a58c744f2a4f2d1977c5d7d69"
   },
   "dankBatteryAlerts": {
     "enabled": true

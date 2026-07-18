@@ -99,7 +99,7 @@
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
-      "deviceName": "ddc:i2c-7"
+      "deviceName": "ddc:i2c-3"
     },
     {
       "id": "wifi",
@@ -143,7 +143,7 @@
   "workspaceScrolling": false,
   "showWorkspaceApps": true,
   "workspaceDragReorder": true,
-  "maxWorkspaceIcons": 3,
+  "maxWorkspaceIcons": 10,
   "workspaceAppIconSizeOffset": 0,
   "groupWorkspaceApps": true,
   "workspaceFollowFocus": false,
@@ -222,7 +222,7 @@
   "appPickerViewMode": "grid",
   "filePickerUsageHistory": {},
   "sortAppsAlphabetically": false,
-  "appLauncherGridColumns": 4,
+  "appLauncherGridColumns": 5,
   "spotlightCloseNiriOverview": true,
   "spotlightSectionViewModes": {},
   "appDrawerSectionViewModes": {},
@@ -492,6 +492,10 @@
         {
           "id": "dankPomodoroTimer",
           "enabled": true
+        },
+        {
+          "id": "dankKDEConnect",
+          "enabled": true
         }
       ],
       "rightWidgets": [
@@ -538,7 +542,7 @@
           "showAudioIcon": true,
           "showAudioPercent": true,
           "showVpnIcon": true,
-          "showBrightnessIcon": false,
+          "showBrightnessIcon": true,
           "showBrightnessPercent": false,
           "showMicIcon": true,
           "showMicPercent": false,

@@ -17,6 +17,12 @@
       listenPort = 9123;
     };
 
+    hardware.openrgb = {
+      enable = true;
+      motherboard = "amd";
+      package = pkgs.openrgb-with-all-plugins;
+    };
+
     udisks2.enable = true;
     dictd.enable = true;
     davfs2.enable = true;
@@ -38,6 +44,11 @@
     };
 
   };
+
+  # OpenRGB effects (audio visualizer) run in the GUI, autostarted per-user
+  # (see home-modules/hyprland/openrgb.nix). Disable the headless server so two
+  # instances don't fight over the same controller.
+  systemd.services.openrgb.enable = false;
 
   imports = [
     ./libvirtd.nix

@@ -37,7 +37,9 @@
     };
 
     kernelModules = [ "kvm-amd" ];
-    kernelPackages = pkgs.pkgs.linuxPackages_latest;
+    # pinned: 6.18/7.1 have amdgpu NULL deref in amdgpu_hmm_invalidate_gfx
+    # (crashes mpv/userptr); unpin when stable ships mainline fix 52f650963d88
+    kernelPackages = pkgs.linuxPackages_6_12;
     extraModulePackages = [ ];
   };
 
