@@ -22,6 +22,7 @@
       ]
     ))
 
+    # vesktop
     android-tools
     aria2
     asciinema
@@ -32,6 +33,7 @@
     ddcutil
     dict
     dig
+    discord
     docker-compose
     ffmpeg-full
     fluxcd-operator-mcp
@@ -49,12 +51,11 @@
     inkscape
     iosevka
     jaq
-    opencode
     jdk25
     jellyfin-mpv-shim
+    jetbrains.goland
     jetbrains.idea
     jetbrains.rider
-    jetbrains.goland
     jq
     kdePackages.okular
     keepassxc
@@ -79,6 +80,7 @@
     nsxiv
     nvtopPackages.full
     nwg-displays
+    opencode
     openssh-askpass
     OVMF
     p7zip-rar
@@ -90,8 +92,8 @@
     pwvucontrol
     pydf
     qbittorrent
-    discord
     qpdf
+    rustnet
     scrcpy
     shellcheck
     shfmt
@@ -111,7 +113,6 @@
     tree
     unzip
     uv
-    # vesktop
     virt-manager
     virt-viewer
     wayvnc
