@@ -649,7 +649,7 @@
         {
           "id": "music",
           "enabled": true,
-          "mediaSize": 2
+          "mediaSize": 1
         },
         {
           "id": "clock",
@@ -657,15 +657,11 @@
           "clockCompactMode": false
         },
         {
-          "id": "weather",
+          "id": "dankKDEConnect",
           "enabled": true
         },
         {
           "id": "dankPomodoroTimer",
-          "enabled": true
-        },
-        {
-          "id": "dankKDEConnect",
           "enabled": true
         }
       ],
@@ -684,18 +680,17 @@
           "minimumWidth": true
         },
         {
-          "id": "memUsage",
-          "enabled": true,
-          "minimumWidth": true,
-          "showSwap": false
-        },
-        {
           "id": "notificationButton",
           "enabled": true
         },
         {
           "id": "battery",
-          "enabled": true
+          "enabled": true,
+          "showBatteryPercentOnlyOnBattery": false,
+          "showBatteryTime": false,
+          "showBatteryTimeOnlyOnBattery": false,
+          "batteryPillStyle": false,
+          "batteryPillPercentSign": false
         },
         {
           "id": "idleInhibitor",
@@ -713,13 +708,14 @@
           "showAudioIcon": true,
           "showAudioPercent": true,
           "showVpnIcon": true,
-          "showBrightnessIcon": true,
+          "showBrightnessIcon": false,
           "showBrightnessPercent": false,
           "showMicIcon": true,
-          "showMicPercent": false,
-          "showBatteryIcon": true,
+          "showMicPercent": true,
+          "showBatteryIcon": false,
           "showPrinterIcon": false,
-          "showScreenSharingIcon": true
+          "showScreenSharingIcon": false,
+          "showDoNotDisturbIcon": false
         }
       ],
       "spacing": 4,
