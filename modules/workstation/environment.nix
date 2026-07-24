@@ -41,6 +41,7 @@
     gcc
     gimp3
     gnuplot
+    gh
     go-task
     grim
     hicolor-icon-theme
