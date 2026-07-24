@@ -338,7 +338,7 @@
       "enabled": true
     }
   ],
-  "networkPreference": "ethernet",
+  "networkPreference": "wifi",
   "iconThemeDark": "System Default",
   "iconThemeLight": "System Default",
   "iconThemePerMode": false,
