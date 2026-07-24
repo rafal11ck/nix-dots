@@ -201,10 +201,10 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind(mainMod .. " + return", hl.dsp.workspace.toggle_special("terminal"), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + return", hl.dsp.window.move({ workspace = "special:terminal" }), { repeating = true })
 
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("firefox"), { repeating = true })
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("app2unit -- firefox"), { repeating = true })
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nautilus"), { repeating = true })
 
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("[workspace unset] firefox -P"), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("[workspace unset] app2unit -- firefox -P"), { repeating = true })
 hl.bind(mainMod .. " + D",
   hl.dsp.exec_cmd("[workspace unset;float;size 40% 85%;minsize 820, 800;center;pin] " .. cmddictionary),
   { repeating = true })
