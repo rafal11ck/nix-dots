@@ -18,6 +18,6 @@
       dates = "weekly";
     };
     daemonIOSchedClass = "idle";
-    daemonCPUSchedPolicy = "batch";
+    daemonCPUSchedPolicy = "idle";
   };
 }
