@@ -22,7 +22,6 @@
       ]
     ))
 
-    # vesktop
     android-tools
     aria2
     asciinema
@@ -114,6 +113,7 @@
     tree
     unzip
     uv
+    vesktop
     virt-manager
     virt-viewer
     wayvnc
