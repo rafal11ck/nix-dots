@@ -421,15 +421,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {
-    "preferredOutput": [
-      "combined_sink"
-    ]
-  },
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -615,6 +606,9 @@
   "niriOutputSettings": {},
   "hyprlandOutputSettings": {
     "desc:LG Electronics LG HDR WFHD 0x000962FE": {
+      "bitdepth": 10
+    },
+    "LG Electronics LG HDR WFHD": {
       "bitdepth": 10
     }
   },
@@ -866,5 +860,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }
