@@ -2,6 +2,7 @@
   config,
   inputs,
   flakePkgs,
+  pkgs,
   ...
 }:
 {
@@ -21,6 +22,44 @@
 
     nix-ld = {
       enable = true;
+      libraries = with pkgs; [
+        glib
+        gtk3
+        pango
+        cairo
+        gdk-pixbuf
+        atk
+        at-spi2-atk
+        at-spi2-core
+        nss
+        nspr
+        dbus
+        cups
+        expat
+        fontconfig
+        freetype
+        alsa-lib
+        libdrm
+        libxkbcommon
+        libGL
+        libglvnd
+        mesa
+        libnotify
+        libpulseaudio
+        libx11
+        libxcomposite
+        libxcursor
+        libxdamage
+        libxext
+        libxfixes
+        libxi
+        libxrandr
+        libxrender
+        libxtst
+        libxscrnsaver
+        libxcb
+        libxshmfence
+      ];
     };
     nh = {
       enable = true;
