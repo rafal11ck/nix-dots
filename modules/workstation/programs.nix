@@ -30,21 +30,14 @@
         gdk-pixbuf
         atk
         at-spi2-atk
-        at-spi2-core
         nss
         nspr
         dbus
         cups
         expat
         fontconfig
-        freetype
         alsa-lib
-        libdrm
-        libxkbcommon
-        libGL
         libglvnd
-        mesa
-        libnotify
         libpulseaudio
         libx11
         libxcomposite
@@ -58,7 +51,6 @@
         libxtst
         libxscrnsaver
         libxcb
-        libxshmfence
       ];
     };
     nh = {
