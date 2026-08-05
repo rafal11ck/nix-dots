@@ -19,6 +19,16 @@
     };
     wireplumber = {
       enable = true;
+      extraConfig."51-clock-drift" = {
+        "monitor.alsa.rules" = [
+          {
+            matches = [ { "node.name" = "~alsa_output.usb-.*"; } ];
+            actions.update-props = {
+              "api.alsa.headroom" = 1024;
+            };
+          }
+        ];
+      };
     };
 
     extraConfig.pipewire."99-input-denoising" = {
