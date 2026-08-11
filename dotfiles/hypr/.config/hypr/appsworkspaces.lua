@@ -80,9 +80,16 @@ hl.window_rule({
     name = "windowrule-11",
     match = {
         class = "^((org\\.jellyfin\\.jellyfinmediaplayer)|(Jellyfin Media Player)|(com.github.iwalton3.jellyfin-media-player))$",
-        class = "^(steam)$",
     },
     workspace = "7",
+})
+
+hl.window_rule({
+    name = "windowrule-11-steam",
+    match = {
+        class = "^(steam)$",
+    },
+    workspace = "7 silent",
 })
 
 hl.window_rule({

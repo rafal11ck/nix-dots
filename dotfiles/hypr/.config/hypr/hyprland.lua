@@ -358,8 +358,8 @@ hl.window_rule({
     title = "^()$",
     class = "^(steam)$",
   },
-  stay_focused = true,
   min_size = "1 1",
+  no_initial_focus = true,
 })
 
 hl.window_rule({
