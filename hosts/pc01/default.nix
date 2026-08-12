@@ -45,6 +45,11 @@
       "amdgpu"
     ];
 
+    udev.extraHwdb = ''
+      evdev:input:b0003v0C45p8513*
+        KEYBOARD_KEY_c0401=reserved
+    '';
+
   };
 
   hardware = {
