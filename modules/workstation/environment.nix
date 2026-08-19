@@ -58,7 +58,6 @@
     jetbrains.rider
     jq
     kdePackages.okular
-    keepassxc
     krew
     kubectl
     kubectl-explore
