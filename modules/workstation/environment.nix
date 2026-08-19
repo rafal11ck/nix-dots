@@ -82,6 +82,7 @@
     nwg-displays
     opencode
     openssh-askpass
+    openssl
     OVMF
     p7zip-rar
     pandoc
