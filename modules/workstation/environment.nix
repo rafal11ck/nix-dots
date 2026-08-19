@@ -63,6 +63,7 @@
     kubectl-explore
     kubectx
     kubernetes-helm
+    ksnip
     less
     libnotify
     libreoffice
