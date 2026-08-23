@@ -310,7 +310,7 @@
   "dankLauncherV2UnloadOnClose": false,
   "dankLauncherV2IncludeFilesInAll": false,
   "dankLauncherV2IncludeFoldersInAll": false,
-  "launcherUseOverlayLayer": false,
+  "launcherUseOverlayLayer": true,
   "launcherStyle": "full",
   "spotlightBarShowModeChips": false,
   "keybindsFloatingWindow": false,
@@ -587,7 +587,7 @@
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
-  "updaterIntervalSeconds": 1800,
+  "updaterIntervalSeconds": 86400,
   "updaterIncludeFlatpak": true,
   "updaterAllowAUR": true,
   "updaterIgnoredPackages": [],
@@ -643,7 +643,7 @@
         {
           "id": "music",
           "enabled": true,
-          "mediaSize": 1
+          "mediaSize": 0
         },
         {
           "id": "clock",
@@ -660,6 +660,10 @@
         }
       ],
       "rightWidgets": [
+        {
+          "id": "volumeMixer",
+          "enabled": true
+        },
         {
           "id": "systemTray",
           "enabled": true
@@ -700,12 +704,12 @@
           "showNetworkIcon": true,
           "showBluetoothIcon": true,
           "showAudioIcon": true,
-          "showAudioPercent": true,
+          "showAudioPercent": false,
           "showVpnIcon": true,
           "showBrightnessIcon": false,
           "showBrightnessPercent": false,
-          "showMicIcon": true,
-          "showMicPercent": true,
+          "showMicIcon": false,
+          "showMicPercent": false,
           "showBatteryIcon": false,
           "showPrinterIcon": false,
           "showScreenSharingIcon": false,
@@ -828,6 +832,9 @@
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
     }
   },
   "clipboardClickToPaste": false,
@@ -839,7 +846,11 @@
     "edit",
     "delete"
   ],
-  "launcherPluginVisibility": {},
+  "launcherPluginVisibility": {
+    "dms_clipboard_search": {
+      "allowWithoutTrigger": true
+    }
+  },
   "launcherPluginOrder": [],
   "frameEnabled": false,
   "frameThickness": 16,

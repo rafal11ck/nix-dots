@@ -15,6 +15,18 @@ local function get_temp_path()
     return example_temp_file_path:sub(1, temp_path_length)
 end
 
+local function ipc_server_given_on_cmdline()
+    local f = io.open("/proc/self/cmdline", "rb")
+    if not f then return false end
+    local cmdline = f:read("*a")
+    f:close()
+    return cmdline:find("--input%-ipc%-server") ~= nil
+end
+
+if ipc_server_given_on_cmdline() then
+    return
+end
+
 tempDir = get_temp_path()
 
 function join_paths(...)

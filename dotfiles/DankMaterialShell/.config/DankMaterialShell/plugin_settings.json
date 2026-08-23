@@ -1,7 +1,7 @@
 {
   "dankKDEConnect": {
     "enabled": true,
-    "selectedDeviceId": "73f0c414_43e8_4c8e_93dc_9da8ead3f0a7"
+    "selectedDeviceId": "5ae7b42a58c744f2a4f2d1977c5d7d69"
   },
   "dankBatteryAlerts": {
     "enabled": true
@@ -20,5 +20,15 @@
   },
   "dankClight": {
     "enabled": false
+  },
+  "volumeMixer": {
+    "enabled": true,
+    "pillIcon": "mixer",
+    "showDeviceSelector": true,
+    "pillDisplay": "both"
+  },
+  "quickCapture": {
+    "enabled": true,
+    "screenshotBackend": "dms"
   }
 }
