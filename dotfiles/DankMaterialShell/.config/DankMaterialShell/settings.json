@@ -661,10 +661,6 @@
       ],
       "rightWidgets": [
         {
-          "id": "volumeMixer",
-          "enabled": true
-        },
-        {
           "id": "systemTray",
           "enabled": true
         },
@@ -696,6 +692,10 @@
         },
         {
           "id": "dankLidSleepToggle",
+          "enabled": true
+        },
+        {
+          "id": "volumeMixer",
           "enabled": true
         },
         {
