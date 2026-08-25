@@ -181,4 +181,12 @@
     OCL_ICD_VENDORS = "${pkgs.mesa.opencl}/etc/OpenCL/vendors";
   };
 
+  security.wrappers.rustnet = {
+    owner = "root";
+    group = "wheel";
+    permissions = "u+rx,g+x,o-rwx";
+    capabilities = "cap_net_raw,cap_net_admin+ep";
+    source = "${pkgs.rustnet}/bin/rustnet";
+  };
+
 }
