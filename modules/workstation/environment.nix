@@ -39,6 +39,7 @@
     gammastep
     gcc
     gimp3
+    go
     gnuplot
     gh
     go-task
