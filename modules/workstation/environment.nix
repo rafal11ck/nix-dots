@@ -76,6 +76,7 @@
     neovim
     nix-output-monitor
     nixd
+    nixfmt-rfc-style
     nmap
     nsxiv
     nvtopPackages.full
@@ -171,7 +172,7 @@
     })
 
   ];
-
+  
   environment.variables = {
     NIX_REMOTE = "daemon";
   };
