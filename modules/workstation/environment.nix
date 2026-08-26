@@ -185,7 +185,7 @@
     owner = "root";
     group = "wheel";
     permissions = "u+rx,g+x,o-rwx";
-    capabilities = "cap_net_raw,cap_net_admin+ep";
+    capabilities = "cap_net_raw,cap_net_admin,cap_bpf,cap_perfmon+ep";
     source = "${pkgs.rustnet}/bin/rustnet";
   };
 
