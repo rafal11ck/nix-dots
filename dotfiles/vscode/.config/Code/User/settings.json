@@ -276,4 +276,5 @@
   "claudeCode.preferredLocation": "panel",
   "chat.mcp.gallery.enabled": true,
   "explorer.confirmPasteNative": false,
+  "git.confirmSync": false,
 }
