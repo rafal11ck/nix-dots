@@ -19,14 +19,16 @@
       inherit username;
       homeDirectory = lib.mkDefault "/home/${username}";
 
+      sessionPath = [
+        "$HOME/.config/scripts/path"
+        "\${KREW_ROOT-$HOME/.krew}/bin"
+        "$HOME/go/bin"
+      ];
+
       sessionVariables = {
-        PATH = "$HOME/.config/scripts/path:\${KREW_ROOT-$HOME/.krew}/bin:$PATH";
         VISUAL = "code";
         GIT_EDITOR = "nvim";
         EDITOR = "nvim";
-        # extraInit = ''
-        # source ~/.profile
-        # '';
       };
 
       stateVersion = lib.mkDefault "26.05"; # Please read the comment before changing.
