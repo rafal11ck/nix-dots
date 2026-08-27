@@ -2,7 +2,6 @@
   pkgs,
   config,
   lib,
-  flakePkgs,
   ...
 }:
 {
@@ -173,7 +172,7 @@
     })
 
   ];
-  
+
   environment.variables = {
     NIX_REMOTE = "daemon";
   };
