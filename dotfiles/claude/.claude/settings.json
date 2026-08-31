@@ -41,5 +41,9 @@
     }
   },
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "agentPushNotifEnabled": false,
+  "disableRemoteControl": true,
+  "remoteControlAtStartup": false,
+  "crossSessionInbound": "refuse"
 }
