@@ -76,7 +76,7 @@
     neovim
     nix-output-monitor
     nixd
-    nixfmt-rfc-style
+    nixfmt
     nmap
     nsxiv
     nvtopPackages.full
