@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -13,6 +12,7 @@
   networking = {
     hostName = "pc01";
     firewall.allowedTCPPorts = [ 5900 ];
+    networkmanager.wifi.powersave = false;
   };
 
   fileSystems."/media/storage" = {
