@@ -92,6 +92,7 @@
     pulsemixer
     pwvucontrol
     pydf
+    r2modman
     qbittorrent
     qpdf
     rustnet
