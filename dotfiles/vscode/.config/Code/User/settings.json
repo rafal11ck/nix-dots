@@ -277,4 +277,8 @@
   "chat.mcp.gallery.enabled": true,
   "explorer.confirmPasteNative": false,
   "git.confirmSync": false,
+  "terminal.integrated.initialHint": false,
+  "protobuf.externalLinter.enabled": true,
+  "protobuf.externalLinter.linter": "buf",
+  "protobuf.externalLinter.bufPath": "/home/rafal/go/bin/buf",
 }
