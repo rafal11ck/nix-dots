@@ -80,7 +80,6 @@
     nmap
     nsxiv
     nvtopPackages.full
-    nwg-displays
     opencode
     openssh-askpass
     openssl
