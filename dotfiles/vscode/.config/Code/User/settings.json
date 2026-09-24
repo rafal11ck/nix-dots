@@ -281,4 +281,8 @@
   "protobuf.externalLinter.enabled": true,
   "protobuf.externalLinter.linter": "buf",
   "protobuf.externalLinter.bufPath": "/home/rafal/go/bin/buf",
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "protobuf.buf.path": "/home/rafal/.config/Code/User/globalStorage/drblury.protobuf-vsc/bin/buf",
 }
