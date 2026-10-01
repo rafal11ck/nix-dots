@@ -113,6 +113,9 @@
     texliveFull
     thunderbird
     tree
+    typst
+    typst-live
+    typstyle
     unzip
     uv
     vesktop
