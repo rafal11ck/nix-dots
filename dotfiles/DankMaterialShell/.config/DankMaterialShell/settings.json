@@ -29,7 +29,7 @@
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
-      "deviceName": "ddc:i2c-4"
+      "deviceName": "ddc:i2c-3"
     },
     {
       "id": "wifi",

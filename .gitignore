@@ -9,3 +9,6 @@ dotfiles/DankMaterialShell/.config/DankMaterialShell/.firstlaunch
 dotfiles/hypr/.config/hypr/.luarc.json
 dotfiles/hypr/.config/hypr/dms/outputs.lua
 dotfiles/DankMaterialShell/.config/DankMaterialShell/monitors.json
+dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/instance.lock.guard
+dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/offline
+dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/users.json
