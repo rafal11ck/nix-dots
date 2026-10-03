@@ -171,6 +171,7 @@
       scripts = with mpvScripts; [
         mpris
         mpv-cheatsheet-ng
+        videoclip
       ];
     })
 

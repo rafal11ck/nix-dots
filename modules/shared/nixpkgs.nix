@@ -14,15 +14,6 @@
       inputs.nix-alien.overlays.default
       (self: super: {
 
-        # TODO: remove after nixpkgs/nixpkgs#538764 lands in stable
-        python3Packages = super.python3Packages.override {
-          overrides = _: pprev: {
-            mpv = pprev.mpv.overridePythonAttrs (old: {
-              nativeCheckInputs = (old.nativeCheckInputs or [ ]) ++ [ self.writableTmpDirAsHomeHook ];
-            });
-          };
-        };
-
         mpv-unwrapped = super.mpv-unwrapped.override { vapoursynthSupport = true; };
 
         nix-output-monitor =
