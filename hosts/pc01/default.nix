@@ -30,12 +30,11 @@
     ollama = {
       enable = true;
       loadModels = [
-        "lfm2"
-        "qwen3.5"
-        "nemotron-cascade-2"
+        "qwen3.8"
       ];
       environmentVariables = {
         HSA_OVERRIDE_GFX_VERSION = "11.0.2";
+        OLLAMA_CONTEXT_LENGTH = "64000";
       };
       host = "0.0.0.0";
       # openFirewall = true;
