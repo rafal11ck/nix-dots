@@ -44,8 +44,12 @@
   },
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
+  "editorMode": "normal",
+  "preferredNotifChannel": "auto",
+  "teammateMode": "in-process",
   "remoteControlAtStartup": false,
   "crossSessionInbound": "refuse",
+  "inputNeededNotifEnabled": false,
   "agentPushNotifEnabled": false,
   "skipAutoPermissionPrompt": true
 }

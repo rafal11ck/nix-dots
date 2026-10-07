@@ -12,3 +12,4 @@ dotfiles/DankMaterialShell/.config/DankMaterialShell/monitors.json
 dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/instance.lock.guard
 dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/offline
 dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/users.json
+dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/instance.lock

@@ -46,7 +46,7 @@
     "force_audio_codec": null,
     "force_set_played": false,
     "force_video_codec": null,
-    "fullscreen": false,
+    "fullscreen": true,
     "gamepad_swap_confirm": false,
     "grid_fill": "justify",
     "headless": false,

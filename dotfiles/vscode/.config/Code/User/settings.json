@@ -286,4 +286,5 @@
   },
   "protobuf.buf.path": "/home/rafal/.config/Code/User/globalStorage/drblury.protobuf-vsc/bin/buf",
   "tinymist.lint.enabled": true,
+  "claudeCode.hideOnboarding": true,
 }
