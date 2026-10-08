@@ -15,4 +15,9 @@
     };
 
   };
+
+  systemd.user.services.xdg-desktop-portal-hyprland = {
+    after = [ "pipewire.service" ];
+    partOf = [ "pipewire.service" ];
+  };
 }
