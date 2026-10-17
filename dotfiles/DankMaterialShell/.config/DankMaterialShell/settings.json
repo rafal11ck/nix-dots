@@ -79,7 +79,7 @@
   "dankLauncherV2Size": "large",
   "launcherUseOverlayLayer": true,
   "useAutoLocation": true,
-  "networkPreference": "wifi",
+  "networkPreference": "ethernet",
   "cursorSettings": {
     "theme": "catppuccin-mocha-pink-cursors",
     "size": 32,

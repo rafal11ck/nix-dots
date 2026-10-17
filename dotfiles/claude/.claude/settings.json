@@ -8,7 +8,6 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -48,8 +47,9 @@
   "preferredNotifChannel": "auto",
   "teammateMode": "in-process",
   "remoteControlAtStartup": false,
-  "crossSessionInbound": "refuse",
   "inputNeededNotifEnabled": false,
   "agentPushNotifEnabled": false,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "crossSessionInbound": "refuse",
+  "model": "sonnet"
 }
