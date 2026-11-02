@@ -39,6 +39,7 @@
     gcc
     gimp3
     go
+    gopls
     gnuplot
     gh
     go-task
@@ -90,6 +91,7 @@
     plantuml
     playerctl
     pulsemixer
+    pulseaudio
     pwvucontrol
     pydf
     r2modman

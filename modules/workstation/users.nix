@@ -26,6 +26,7 @@ in
         "storage"
         "video"
         "wheel"
+        "gamemode"
       ];
     };
   };

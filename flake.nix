@@ -12,10 +12,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.55.2";
-    };
-
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
@@ -49,7 +45,6 @@
       nixpkgs,
       nixpkgs-stable,
       home-manager,
-      hyprland,
       catppuccin,
       ...
     }@inputs:
@@ -78,13 +73,10 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://hyprland.cachix.org"
       "https://guibou.cachix.org/"
     ];
 
     extra-trusted-public-keys = [
-      #hyprland
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       "guibou.cachix.org-1:GcGQvWEyTx8t0KfQac05E1mrlPNHqs5fGMExiN9/pbM="
     ];
   };

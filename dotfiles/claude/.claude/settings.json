@@ -8,6 +8,7 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5",
   "hooks": {
     "Notification": [
       {
@@ -47,9 +48,8 @@
   "preferredNotifChannel": "auto",
   "teammateMode": "in-process",
   "remoteControlAtStartup": false,
+  "crossSessionInbound": "refuse",
   "inputNeededNotifEnabled": false,
   "agentPushNotifEnabled": false,
-  "skipAutoPermissionPrompt": true,
-  "crossSessionInbound": "refuse",
-  "model": "sonnet"
+  "skipAutoPermissionPrompt": true
 }

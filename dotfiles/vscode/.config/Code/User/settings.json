@@ -287,4 +287,8 @@
   "protobuf.buf.path": "/home/rafal/.config/Code/User/globalStorage/drblury.protobuf-vsc/bin/buf",
   "tinymist.lint.enabled": true,
   "claudeCode.hideOnboarding": true,
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.constantValues": true,
+  "todo-tree.ripgrep.ripgrep": "rg",
 }
