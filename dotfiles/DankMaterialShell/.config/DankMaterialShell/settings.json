@@ -428,5 +428,6 @@
     "hyprland"
   ],
   "bluetoothMprisEnabled": true,
-  "lockPamExternallyManaged": false
+  "lockPamExternallyManaged": false,
+  "osdWorkspaceEnabled": false
 }
