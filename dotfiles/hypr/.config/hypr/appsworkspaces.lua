@@ -69,7 +69,21 @@ hl.window_rule({
     name = "windowrule-8",
     match = {
         class = "^((P|p)cmanfm)$",
-        class = "^(org.gnome.Nautilus)$",
+    },
+    workspace = "5",
+})
+
+hl.window_rule({
+    name = "windowrule-8-nautilus",
+    match = {
+        class = "^(org\\.gnome\\.Nautilus)$",
+    },
+    workspace = "5",
+})
+
+hl.window_rule({
+    name = "windowrule-8-picard",
+    match = {
         class = "^(org\\.musicbrainz\\.Picard)$",
     },
     workspace = "5",
@@ -105,7 +119,31 @@ hl.window_rule({
     name = "windowrule-14",
     match = {
         class = "^(steam_app_)(.*)$",
+    },
+    workspace = "8",
+    fullscreen = true,
+    immediate = true,
+    no_anim = true,
+    border_size = 0,
+    rounding = false,
+})
+
+hl.window_rule({
+    name = "windowrule-14-cs2",
+    match = {
         class = "^(cs2)$",
+    },
+    workspace = "8",
+    fullscreen = true,
+    immediate = true,
+    no_anim = true,
+    border_size = 0,
+    rounding = false,
+})
+
+hl.window_rule({
+    name = "windowrule-14-x4",
+    match = {
         title = "^(X4)$",
     },
     workspace = "8",
