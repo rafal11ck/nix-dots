@@ -12,6 +12,7 @@ x-scheme-handler/discord=vesktop.desktop
 inode/directory=org.gnome.Nautilus.desktop
 text/markdown=code.desktop
 x-scheme-handler/mailto=thunderbird.desktop
+x-scheme-handler/net.thunderbird=thunderbird.desktop
 image/gif=org.gnome.Loupe.desktop
 image/webp=firefox.desktop
 image/tiff=org.gnome.Loupe.desktop

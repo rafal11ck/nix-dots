@@ -14,6 +14,12 @@
       compositor.name = "hyprland";
     };
 
+    displayManager.autoLogin = {
+      enable = true;
+      user = config.values.mainUser;
+    };
+    displayManager.defaultSession = "hyprland-uwsm";
+
   };
 
   systemd.user.services.xdg-desktop-portal-hyprland = {

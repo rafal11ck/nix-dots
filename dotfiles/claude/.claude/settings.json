@@ -42,6 +42,11 @@
       }
     }
   },
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "normal",

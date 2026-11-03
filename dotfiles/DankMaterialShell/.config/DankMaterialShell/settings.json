@@ -144,10 +144,13 @@
   "notepadShowLineNumbers": true,
   "acLockTimeout": 1800,
   "acPostLockMonitorTimeout": 900,
+  "batteryLowThreshold": 25,
+  "batteryNotifyLow": true,
   "lockBeforeSuspend": true,
   "muxType": "zellij",
   "matugenTemplateNeovim": true,
   "notificationOverlayEnabled": true,
+  "lockAtStartup": true,
   "enableFprint": true,
   "notificationPopupPosition": -1,
   "notificationRules": [
@@ -215,26 +218,24 @@
         {
           "id": "music",
           "enabled": true,
-          "mediaSize": 0
+          "mediaSize": 1
         },
         {
           "id": "clock",
           "enabled": true,
-          "clockCompactMode": false
+          "clockCompactMode": false,
+          "clockDateOrder": "timeFirst"
         },
         {
           "id": "dankKDEConnect",
-          "enabled": true
-        },
-        {
-          "id": "dankPomodoroTimer",
           "enabled": true
         }
       ],
       "rightWidgets": [
         {
           "id": "systemTray",
-          "enabled": true
+          "enabled": true,
+          "trayUseInlineExpansion": false
         },
         {
           "id": "clipboard",
@@ -253,9 +254,12 @@
           "id": "battery",
           "enabled": true,
           "showBatteryPercentOnlyOnBattery": false,
-          "showBatteryTime": false,
+          "showBatteryTime": true,
           "showBatteryTimeOnlyOnBattery": false,
-          "batteryPillPercentSign": false
+          "batteryPillPercentSign": false,
+          "showBatteryPowerCharging": true,
+          "showBatteryPowerDischarging": true,
+          "batteryStyle": "solid"
         },
         {
           "id": "idleInhibitor",
@@ -263,10 +267,6 @@
         },
         {
           "id": "dankLidSleepToggle",
-          "enabled": true
-        },
-        {
-          "id": "volumeMixer",
           "enabled": true
         },
         {
