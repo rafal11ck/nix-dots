@@ -259,7 +259,8 @@
           "batteryPillPercentSign": false,
           "showBatteryPowerCharging": true,
           "showBatteryPowerDischarging": true,
-          "batteryStyle": "solid"
+          "batteryStyle": "icon",
+          "showBatteryPercent": true
         },
         {
           "id": "idleInhibitor",
@@ -429,5 +430,13 @@
   ],
   "bluetoothMprisEnabled": true,
   "lockPamExternallyManaged": false,
-  "osdWorkspaceEnabled": false
+  "osdWorkspaceEnabled": false,
+  "batteryCriticalNotificationType": 1,
+  "popupTransparency": 1,
+  "foregroundLayerTransparency": 1,
+  "blurLayerOutlineOpacity": 0,
+  "blurBorderEnabled": false,
+  "blurEnabled": false,
+  "blurBorderSeeded": true,
+  "m3ElevationEnabled": true
 }
