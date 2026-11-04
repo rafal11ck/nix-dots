@@ -1,40 +1,23 @@
 {
-  inputs,
   pkgs,
   ...
 }:
 {
-  home.packages = with pkgs; [
-    #for screenshots
-    swappy
-    grim
-    slurp
+  imports = [
+    ./tofi.nix
+    ./services.nix
+  ];
 
+  home.packages = with pkgs; [
     killall
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "lua";
     systemd = {
       # false as it conflucts with uwsm
       enable = false;
     };
   };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-gtk
-    ];
-    config.common.default = [
-      "hyprland"
-      "gtk"
-    ];
-  };
-
-  imports = [
-    ./tofi.nix
-    ./services.nix
-  ];
 }

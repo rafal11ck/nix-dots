@@ -7,13 +7,10 @@
     ./hardware.nix
     ./home-manager.nix
     ./programs.nix
-    ./secuirty.nix
+    ./security.nix
     ./services
     ./systemd.nix
     ./users.nix
-    ./virtualzation.nix
-    ./xdg.nix
+    ./virtualization.nix
   ];
-
-  system.stateVersion = "24.05"; # Did you read the comment?
 }
