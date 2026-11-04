@@ -5,11 +5,6 @@
 }:
 {
   home.packages = with pkgs; [
-    #for screenshots
-    swappy
-    grim
-    slurp
-
     killall
   ];
 

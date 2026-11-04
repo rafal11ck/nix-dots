@@ -147,7 +147,6 @@
 
     #caelstia dots need those
     hyprpicker
-    hypridle
     wl-clipboard
     cliphist
     bluez
@@ -156,10 +155,8 @@
     app2unit
     wireplumber
     trash-cli
-    foot
     fish
     fastfetch
-    starship
     btop
     jq
     socat
