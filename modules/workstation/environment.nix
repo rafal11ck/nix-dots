@@ -147,7 +147,6 @@
 
     #caelstia dots need those
     hyprpicker
-    wl-clipboard
     cliphist
     bluez
     bluez-tools
@@ -158,7 +157,6 @@
     fish
     fastfetch
     btop
-    jq
     socat
     imagemagick
     curl

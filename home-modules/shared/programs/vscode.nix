@@ -50,7 +50,6 @@ in
       ms-python.isort
       ms-python.pylint
       ms-python.python
-      ms-python.python
       ms-vscode.cmake-tools
       ms-vscode.cpptools-extension-pack
       naumovs.color-highlight
