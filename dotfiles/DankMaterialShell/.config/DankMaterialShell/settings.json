@@ -52,7 +52,7 @@
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "deviceName": "ddc:i2c-3",
+      "deviceName": "",
       "w": 4,
       "h": 1
     },
@@ -236,6 +236,10 @@
           "id": "systemTray",
           "enabled": true,
           "trayUseInlineExpansion": false
+        },
+        {
+          "id": "quickCapture",
+          "enabled": true
         },
         {
           "id": "clipboard",
