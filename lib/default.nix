@@ -1,6 +1,5 @@
 {
   inputs,
-  lib',
 }:
 let
   inherit (inputs.nixpkgs) lib;
@@ -26,13 +25,8 @@ let
       modules = [
         {
           _module.args = {
-            inherit system lib';
-            flakePkgs = builtins.mapAttrs (_: value: getPkgs value system) inputs;
-          };
-
-          nixpkgs = {
             inherit system;
-            config.allowUnfree = true;
+            flakePkgs = builtins.mapAttrs (_: value: getPkgs value system) inputs;
           };
         }
       ] ++ args.modules or [ ];

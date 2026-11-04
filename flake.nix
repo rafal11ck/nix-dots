@@ -41,29 +41,16 @@
 
   outputs =
     {
-      self,
       nixpkgs,
-      nixpkgs-stable,
-      home-manager,
-      catppuccin,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      pkgs-stable = import nixpkgs-stable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      modulesPath = ./modules;
 
-      lib' = import ./lib { inherit inputs lib'; };
+      lib' = import ./lib { inherit inputs; };
     in
     {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
 
       nixosConfigurations = import ./hosts {
         inherit lib';
