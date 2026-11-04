@@ -13,6 +13,16 @@ In [NixOs Live CD](https://nixos.org/download/)
 1. `sudo nixos-install --flake './#local-hardware-config' --impure`
 1. reboot
 
+# Rebuilding
+
+Hosts defined in this flake: `pc01`, `gram17rg`.
+
+```
+nh os switch
+```
+
+`nix flake check` evaluates and builds both of them.
+
 ## Resources Links
 
 <https://search.nixos.org/packages?channel=unstable>
@@ -29,7 +39,7 @@ In [NixOs Live CD](https://nixos.org/download/)
 
 To apply using [go-task](https://taskfile.dev/) run `task setup-dotfiles`.
 
-Files can be applied manually too using stow, that's what aftermentioned task does.
+Files can be applied manually too using stow, that's what the aforementioned task does.
 
 # Structure
 
