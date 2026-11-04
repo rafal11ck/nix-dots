@@ -24,10 +24,6 @@
 
     nix-alien.url = "github:thiagokokada/nix-alien";
 
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-    };
-
     dms-plugin-registry = {
       url = "github:AvengeMedia/dms-plugin-registry";
     };
