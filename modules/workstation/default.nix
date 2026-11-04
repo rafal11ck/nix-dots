@@ -7,11 +7,11 @@
     ./hardware.nix
     ./home-manager.nix
     ./programs.nix
-    ./secuirty.nix
+    ./security.nix
     ./services
     ./systemd.nix
     ./users.nix
-    ./virtualzation.nix
+    ./virtualization.nix
     ./xdg.nix
   ];
 
