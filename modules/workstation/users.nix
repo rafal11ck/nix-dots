@@ -9,6 +9,8 @@ in
   users = {
     groups.${mainUser} = { };
 
+    groups.adbusers = { };
+
     users.${mainUser} = {
       group = mainUser;
       isNormalUser = true;
@@ -22,8 +24,6 @@ in
         "input"
         "libvirtd"
         "networkmanager"
-        "power"
-        "storage"
         "video"
         "wheel"
         "gamemode"
