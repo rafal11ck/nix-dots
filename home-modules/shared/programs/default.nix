@@ -94,9 +94,6 @@ in
         enable = true;
       };
     };
-    obs-studio = {
-      enable = true;
-    };
 
   };
 }
