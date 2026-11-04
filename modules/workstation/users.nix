@@ -14,7 +14,6 @@ in
       isNormalUser = true;
       extraGroups = [
         mainUser
-        "adbusers"
         "audio"
         "davfs2"
         "docker"
@@ -22,8 +21,6 @@ in
         "input"
         "libvirtd"
         "networkmanager"
-        "power"
-        "storage"
         "video"
         "wheel"
         "gamemode"
@@ -31,7 +28,5 @@ in
     };
   };
 
-  # Make hosts mutable but cleaned on switch
-  # https://discourse.nixos.org/t/a-fast-way-for-modifying-etc-hosts-using-networking-extrahosts/4190
   environment.etc.hosts.mode = "0644";
 }
