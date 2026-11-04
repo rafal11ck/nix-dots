@@ -12,10 +12,10 @@ in
 
     modules = [
       /etc/nixos/hardware-configuration.nix
-      (map mkModulePath [
-        "shared"
-        "workstation"
-      ])
+    ]
+    ++ map mkModulePath [
+      "shared"
+      "workstation"
     ];
   };
 
@@ -28,7 +28,6 @@ in
       (mkModulePath "shared")
       (mkModulePath "workstation")
       (mkModulePath "style")
-      # (mkModulePath "gnome")
       (mkModulePath "hyprland")
       (mkModulePath "whisper")
     ];
