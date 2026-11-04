@@ -42,6 +42,7 @@
     gopls
     gnuplot
     gh
+    gitleaks
     go-task
     grim
     hicolor-icon-theme

@@ -25,6 +25,10 @@ tasks:
     cmds:
       - stow --target ~ --verbose * --adopt
     prompt: This might overwrite files in repo with already exsisting ones... Do you want to continue?
+  setup-hooks:
+    desc: enable the repository git hooks (secret scanning)
+    cmds:
+      - git config core.hooksPath .githooks
   setup-git-filters:
     desc: configure local git filters required by .gitattributes
     cmds:
