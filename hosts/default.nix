@@ -12,10 +12,10 @@ in
 
     modules = [
       /etc/nixos/hardware-configuration.nix
-      (map mkModulePath [
-        "shared"
-        "workstation"
-      ])
+    ]
+    ++ map mkModulePath [
+      "shared"
+      "workstation"
     ];
   };
 
