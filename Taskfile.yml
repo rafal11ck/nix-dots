@@ -24,9 +24,8 @@ tasks:
     dir: '{{.DOTFILES_DIRECTORY}}'
     cmds:
       - stow --target ~ --verbose * --adopt
-    prompt: This might overwrite files in repo with already exsisting ones... Do you want to continue?
-  setup-git-filters:
-    desc: configure local git filters required by .gitattributes
+    prompt: This might overwrite files in repo with already existing ones... Do you want to continue?
+  setup-hooks:
+    desc: enable repository git hooks (secret scanning)
     cmds:
-      - git config filter.dms-settings.clean 'jq -j "(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\""'
-      - git config filter.dms-settings.smudge cat
+      - git config core.hooksPath .githooks
