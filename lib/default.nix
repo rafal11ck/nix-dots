@@ -1,6 +1,5 @@
 {
   inputs,
-  lib',
 }:
 let
   inherit (inputs.nixpkgs) lib;
@@ -8,11 +7,10 @@ let
   getPkgs =
     input: system:
     if (input.legacyPackages.${system} or { }) == { } then
-      input.packages.${system}
+      input.packages.${system} or { }
     else
       input.legacyPackages.${system};
 
-  # Builders
   mkNixosSystem =
     args@{ system, ... }:
     lib.nixosSystem {
@@ -26,16 +24,12 @@ let
       modules = [
         {
           _module.args = {
-            inherit system lib';
+            inherit system;
             flakePkgs = builtins.mapAttrs (_: value: getPkgs value system) inputs;
           };
-
-          nixpkgs = {
-            inherit system;
-            config.allowUnfree = true;
-          };
         }
-      ] ++ args.modules or [ ];
+      ]
+      ++ args.modules or [ ];
     };
 
 in
