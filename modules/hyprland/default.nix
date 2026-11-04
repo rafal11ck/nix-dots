@@ -5,6 +5,7 @@
     ./environment.nix
     ./programs.nix
     ./home-manager.nix
+    ./xdg.nix
   ];
 
 }
