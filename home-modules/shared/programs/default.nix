@@ -56,6 +56,13 @@ in
     git = {
       enable = true;
 
+      includes = [
+        {
+          condition = "gitdir:~/nix-dots/";
+          contents.core.hooksPath = ".githooks";
+        }
+      ];
+
       settings = {
         user = {
           name = "${values.mainUser}";
