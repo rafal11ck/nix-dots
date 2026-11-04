@@ -1,10 +1,10 @@
 {
   nix = {
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
     settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       build-dir = "/nix/var/nix/builds";
       auto-optimise-store = true;
       trusted-users = [
