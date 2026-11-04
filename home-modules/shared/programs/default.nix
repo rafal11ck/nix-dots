@@ -59,7 +59,13 @@ in
       includes = [
         {
           condition = "gitdir:~/nix-dots/";
-          contents.core.hooksPath = ".githooks";
+          contents = {
+            core.hooksPath = ".githooks";
+            filter.dms-settings = {
+              clean = "jq -j '(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\"'";
+              smudge = "cat";
+            };
+          };
         }
       ];
 
