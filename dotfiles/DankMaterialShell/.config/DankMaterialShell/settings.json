@@ -15,111 +15,8 @@
   "clockFormat": "24h",
   "barElevationEnabled": false,
   "wallpaperFillMode": "Fit",
-  "controlCenterWidgets": [
-    {
-      "id": "user",
-      "enabled": true,
-      "w": 5,
-      "h": 1
-    },
-    {
-      "id": "settings",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "small": true
-    },
-    {
-      "id": "lock",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "small": true
-    },
-    {
-      "id": "power",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "small": true
-    },
-    {
-      "id": "volumeSlider",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "brightnessSlider",
-      "enabled": true,
-      "deviceName": "ddc:i2c-3",
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "wifi",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "bluetooth",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "audioOutput",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "audioInput",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "nightMode",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "darkMode",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "builtin_vpn",
-      "enabled": true,
-      "w": 4,
-      "h": 1
-    },
-    {
-      "id": "edit",
-      "enabled": true,
-      "w": 1,
-      "h": 1,
-      "small": true
-    },
-    {
-      "id": "runningApps",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
-      "small": true,
-      "col": 0,
-      "row": 6
-    }
-  ],
   "greeterPamExternallyManaged": false,
   "appLauncherGridColumns": 5,
-  "spotlightSectionViewModes": {
-    "plugin_dankHyprlandWindows": "tile"
-  },
   "dankLauncherV2Size": "compact",
   "launcherUseOverlayLayer": true,
   "useAutoLocation": true,
@@ -236,6 +133,10 @@
           "id": "systemTray",
           "enabled": true,
           "trayUseInlineExpansion": false
+        },
+        {
+          "id": "quickCapture",
+          "enabled": true
         },
         {
           "id": "clipboard",
