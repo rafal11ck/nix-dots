@@ -29,7 +29,8 @@ let
             flakePkgs = builtins.mapAttrs (_: value: getPkgs value system) inputs;
           };
         }
-      ] ++ args.modules or [ ];
+      ]
+      ++ args.modules or [ ];
     };
 
 in

@@ -53,7 +53,7 @@
       lib' = import ./lib { inherit inputs; };
     in
     {
-      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-tree;
 
       nixosConfigurations = import ./hosts {
         inherit lib';
