@@ -31,9 +31,6 @@ in
       '';
     };
     bat.enable = true;
-    btop = {
-      enable = true;
-    };
     direnv = {
       enable = true;
     };
@@ -93,9 +90,6 @@ in
       server = {
         enable = true;
       };
-    };
-    obs-studio = {
-      enable = true;
     };
 
   };
