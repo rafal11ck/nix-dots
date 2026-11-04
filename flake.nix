@@ -51,14 +51,19 @@
       system = "x86_64-linux";
 
       lib' = import ./lib { inherit inputs; };
+
+      hosts = import ./hosts {
+        inherit lib';
+      };
     in
     {
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-tree;
 
-      nixosConfigurations = import ./hosts {
-        inherit lib';
-      };
+      nixosConfigurations = hosts;
 
+      checks.${system} = builtins.mapAttrs (_: host: host.config.system.build.toplevel) (
+        nixpkgs.lib.filterAttrs (name: _: name != "local-hardware-config") hosts
+      );
     };
 
   nixConfig = {
