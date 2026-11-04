@@ -1,9 +1,7 @@
 {
   pkgs,
-  inputs,
   ...
 }:
-
 {
   # https://github.com/nix-community/home-manager/issues/1011#issuecomment-1762468457
   environment.extraInit =

@@ -1,10 +1,7 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
-
 {
 
   networking = {

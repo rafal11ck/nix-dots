@@ -1,10 +1,6 @@
 {
-  config,
-  lib,
-  pkgs,
   ...
 }:
-
 {
   #NOTE to enable network bridge run: virsh net-autostart default
 

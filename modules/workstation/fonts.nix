@@ -12,7 +12,6 @@
       font-awesome
       nerd-fonts.droid-sans-mono
       nerd-fonts.fira-code
-      nerd-fonts.fira-code
       nerd-fonts.iosevka
       nerd-fonts.iosevka-term
       nerd-fonts.roboto-mono

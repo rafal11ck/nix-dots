@@ -25,7 +25,6 @@
     rocmSupport = true;
   };
 
-  boot.initrd.kernelModules = [ "amdgpu" ];
   services = {
     ollama = {
       enable = true;
@@ -37,12 +36,7 @@
         OLLAMA_CONTEXT_LENGTH = "64000";
       };
       host = "0.0.0.0";
-      # openFirewall = true;
     };
-
-    xserver.videoDrivers = [
-      "amdgpu"
-    ];
 
     udev.extraHwdb = ''
       evdev:input:b0003v0C45p8513*
@@ -64,9 +58,7 @@
 
       extraPackages = with pkgs; [
         rocmPackages.rocm-runtime
-        rocmPackages.clr.icd # following for GPU AI acceleration
         rocmPackages.rocm-smi
-        rocmPackages.clr
         rocmPackages.hipblas
         rocmPackages.rocblas
         rocmPackages.rocsolver
@@ -79,4 +71,5 @@
     };
   };
 
+  system.stateVersion = "24.05";
 }
