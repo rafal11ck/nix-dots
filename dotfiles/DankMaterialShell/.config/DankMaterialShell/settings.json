@@ -635,5 +635,10 @@
         "syncPositionAcrossScreens": true
       }
     }
-  ]
+  ],
+  "dashOptions": {
+    "wellbeing": {
+      "panelRows": 6
+    }
+  }
 }
