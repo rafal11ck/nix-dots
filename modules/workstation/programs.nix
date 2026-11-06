@@ -10,7 +10,12 @@
 
   programs = {
     kokoro-tts.enable = true;
-    
+
+    obs-studio = {
+      enable = true;
+      enableVirtualCamera = true;
+    };
+
     nautilus-open-any-terminal = {
       enable = true;
       terminal = "foot";

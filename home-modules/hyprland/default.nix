@@ -5,11 +5,6 @@
 }:
 {
   home.packages = with pkgs; [
-    #for screenshots
-    swappy
-    grim
-    slurp
-
     killall
   ];
 
@@ -19,18 +14,6 @@
       # false as it conflucts with uwsm
       enable = false;
     };
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-gtk
-    ];
-    config.common.default = [
-      "hyprland"
-      "gtk"
-    ];
   };
 
   imports = [

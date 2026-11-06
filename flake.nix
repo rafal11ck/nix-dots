@@ -20,16 +20,19 @@
       url = "github:nixos/nixpkgs/nixos-25.11";
     };
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nix-alien.url = "github:thiagokokada/nix-alien";
-
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
+    nix-alien = {
+      url = "github:thiagokokada/nix-alien";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     dms-plugin-registry = {
       url = "github:AvengeMedia/dms-plugin-registry";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     kokoro-tts = {
@@ -41,34 +44,26 @@
 
   outputs =
     {
-      self,
       nixpkgs,
-      nixpkgs-stable,
-      home-manager,
-      catppuccin,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      pkgs-stable = import nixpkgs-stable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      modulesPath = ./modules;
 
-      lib' = import ./lib { inherit inputs lib'; };
-    in
-    {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
+      lib' = import ./lib { inherit inputs; };
 
-      nixosConfigurations = import ./hosts {
+      hosts = import ./hosts {
         inherit lib';
       };
+    in
+    {
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-tree;
 
+      nixosConfigurations = hosts;
+
+      checks.${system} = builtins.mapAttrs (_: host: host.config.system.build.toplevel) (
+        nixpkgs.lib.filterAttrs (name: _: name != "local-hardware-config") hosts
+      );
     };
 
   nixConfig = {

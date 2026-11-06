@@ -31,9 +31,6 @@ in
       '';
     };
     bat.enable = true;
-    btop = {
-      enable = true;
-    };
     direnv = {
       enable = true;
     };
@@ -58,6 +55,19 @@ in
     };
     git = {
       enable = true;
+
+      includes = [
+        {
+          condition = "gitdir:~/nix-dots/";
+          contents = {
+            core.hooksPath = ".githooks";
+            filter.dms-settings = {
+              clean = "jq -j '(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\"'";
+              smudge = "cat";
+            };
+          };
+        }
+      ];
 
       settings = {
         user = {
@@ -93,9 +103,6 @@ in
       server = {
         enable = true;
       };
-    };
-    obs-studio = {
-      enable = true;
     };
 
   };

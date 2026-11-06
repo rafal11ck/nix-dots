@@ -4,6 +4,11 @@
     "calculator": {
       "repo": "https://github.com/rochacbruno/DankCalculator",
       "commit": "a27b80ad8c3dd42da11af83461674fb362817515"
+    },
+    "quickCapture": {
+      "repo": "https://github.com/hthienloc/dms-plugins",
+      "path": "quickCapture",
+      "commit": "b8ec2719ad2fc4d09075882e957d16ca9387f398"
     }
   }
 }
