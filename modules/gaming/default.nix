@@ -8,8 +8,11 @@
     steam = {
       enable = true;
       extraCompatPackages = [ pkgs.proton-ge-bin ];
+      protontricks.enable = true;
+
     };
     gamemode.enable = true;
+
   };
 
   environment.systemPackages = with pkgs; [
