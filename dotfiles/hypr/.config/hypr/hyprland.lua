@@ -6,7 +6,6 @@
 -- Please note not all available settings / options are set here.
 -- For a full list, see the wiki
 --
-require("scheme.current")
 
 local HOME = os.getenv("HOME")
 local scriptsDir = HOME .. "/.config/scripts"
@@ -279,28 +278,28 @@ hl.window_rule({
   match = {
     title = "^(File Upload)$",
   },
-  workspace = "unset:^(firefox)$",
+  workspace = "unset",
 })
 
 hl.window_rule({
   match = {
     title = "^(Enter name of file to save to…)$",
   },
-  workspace = "unset:^(firefox)$",
+  workspace = "unset$",
 })
 
 hl.window_rule({
   match = {
     title = "^()$",
   },
-  workspace = "unset:^(firefox)$",
+  workspace = "unset",
 })
 
 hl.window_rule({
   match = {
     title = "^(Firefox)$",
   },
-  workspace = "unset:^(firefox)$",
+  workspace = "unset",
 })
 
 hl.window_rule({
