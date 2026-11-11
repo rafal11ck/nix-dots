@@ -149,6 +149,7 @@
   "lockBeforeSuspend": true,
   "muxType": "zellij",
   "matugenTemplateNeovim": true,
+  "notificationDndWhileScreenSharing": false,
   "notificationOverlayEnabled": true,
   "lockAtStartup": true,
   "enableFprint": true,
