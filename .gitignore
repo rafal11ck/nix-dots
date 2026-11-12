@@ -18,3 +18,4 @@ result
 result-*
 *.db
 .direnv/
+dotfiles/DankMaterialShell/.config/DankMaterialShell/config.d/50-local.json
