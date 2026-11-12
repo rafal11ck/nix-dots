@@ -30,6 +30,7 @@ hl.monitor({
   mode = "preferred",
   position = "auto-up",
   scale = "1",
+  bitdepth = 10,
 })
 
 
@@ -285,7 +286,7 @@ hl.window_rule({
   match = {
     title = "^(Enter name of file to save to…)$",
   },
-  workspace = "unset$",
+  workspace = "unset",
 })
 
 hl.window_rule({
@@ -520,7 +521,7 @@ hl.config({
     },
   },
   misc = {
-    vrr = 1,
+    vrr = 0,
     key_press_enables_dpms = true,
     mouse_move_enables_dpms = true,
   },
@@ -553,6 +554,7 @@ hl.config({
   render = {
     direct_scanout = 0,
     cm_auto_hdr = 1,
+    send_content_type = false,
   },
   binds = {
     hide_special_on_workspace_change = true,
@@ -618,3 +620,4 @@ hl.on("hyprland.start", function()
 end)
 require("dms.binds")
 require("dms.binds-user")
+require("dms.input")

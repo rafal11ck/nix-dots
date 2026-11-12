@@ -333,7 +333,8 @@
       "maximizeWidgetText": true,
       "maximizeWidgetIcons": true,
       "followInterfaceStyle": true,
-      "widgetFollowInterfaceStyle": true
+      "widgetFollowInterfaceStyle": true,
+      "dot": false
     }
   ],
   "builtInPluginSettings": {
@@ -641,5 +642,7 @@
     "wellbeing": {
       "panelRows": 6
     }
-  }
+  },
+  "connectedFrameBarStyleBackups": {},
+  "frameEnabled": false
 }
