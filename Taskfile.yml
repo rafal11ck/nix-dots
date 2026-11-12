@@ -34,3 +34,7 @@ tasks:
     cmds:
       - git config filter.dms-settings.clean 'jq -j "(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\""'
       - git config filter.dms-settings.smudge cat
+      - git config filter.mpv-shim-conf.clean "jq -j --indent 4 'del(.fullscreen)'"
+      - git config filter.mpv-shim-conf.smudge cat
+      - git config filter.dms-plugin-settings.clean 'jq -j ".dankKDEConnect.selectedDeviceId? |= \"\""'
+      - git config filter.dms-plugin-settings.smudge cat

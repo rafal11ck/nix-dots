@@ -1,1 +1,3 @@
 dotfiles/DankMaterialShell/.config/DankMaterialShell/settings.json filter=dms-settings
+dotfiles/jellyfin-mpv-shim/.config/jellyfin-mpv-shim/conf.json filter=mpv-shim-conf
+dotfiles/DankMaterialShell/.config/DankMaterialShell/plugin_settings.json filter=dms-plugin-settings

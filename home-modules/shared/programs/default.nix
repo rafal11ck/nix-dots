@@ -65,6 +65,14 @@ in
               clean = "jq -j '(.. | objects | select(.id? == \"brightnessSlider\") | .deviceName?) |= \"\"'";
               smudge = "cat";
             };
+            filter.mpv-shim-conf = {
+              clean = "jq -j --indent 4 'del(.fullscreen)'";
+              smudge = "cat";
+            };
+            filter.dms-plugin-settings = {
+              clean = "jq -j '.dankKDEConnect.selectedDeviceId? |= \"\"'";
+              smudge = "cat";
+            };
           };
         }
       ];
