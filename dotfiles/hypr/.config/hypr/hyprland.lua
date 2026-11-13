@@ -95,15 +95,17 @@ hl.animation({
   style = "fade",
 })
 
-hl.workspace_rule({
-  workspace = "special:terminal",
-  on_created_empty = cmdmainterminal,
-})
+local onCreatedEmpty = {
+  ["special:terminal"] = cmdmainterminal,
+  ["special:sysmon"] = "foot btop",
+}
 
-hl.workspace_rule({
-  workspace = "special:sysmon",
-  on_created_empty = "foot btop",
-})
+hl.on("workspace.created", function(ws)
+  local cmd = onCreatedEmpty[ws.name]
+  if cmd and ws.is_empty then
+    hl.exec_cmd(cmd)
+  end
+end)
 
 hl.bind("CTRL + SHIFT + Escape", hl.dsp.workspace.toggle_special("sysmon"))
 
