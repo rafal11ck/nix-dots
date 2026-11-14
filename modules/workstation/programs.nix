@@ -63,6 +63,7 @@
       flake = "/home/${config.values.mainUser}/nix-dots";
     };
     kdeconnect.enable = true;
+    gpu-screen-recorder.enable = true;
     openvpn3 = {
       enable = true;
       package = flakePkgs.nixpkgs-stable.openvpn3;
