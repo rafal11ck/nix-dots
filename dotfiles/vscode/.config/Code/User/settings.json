@@ -291,4 +291,5 @@
   "go.inlayHints.compositeLiteralFields": true,
   "go.inlayHints.constantValues": true,
   "todo-tree.ripgrep.ripgrep": "/etc/profiles/per-user/rafal/bin/rg",
+  "git.blame.statusBarItem.enabled": true,
 }
