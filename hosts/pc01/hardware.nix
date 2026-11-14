@@ -42,6 +42,8 @@
     };
 
     kernelModules = [ "kvm-amd" ];
+    # HACK: https://github.com/omacom/omarchy/issues/11330
+    kernelParams = [ "amdgpu.hdmi_hpd_debounce_delay_ms=1500" ];
     extraModulePackages = [ ];
   };
 
