@@ -7,9 +7,12 @@ services:
     container_name: comfyui
     image: yanwk/comfyui-boot:rocm
     pull_policy: always
-    restart: unless-stopped
+    # Started on demand and stopped when idle by systemd (see default.nix),
+    # so Docker must not bring it back by itself.
+    restart: "no"
     ports:
-      - "8188:8188"
+      # Port 8188 belongs to systemd's socket; it forwards here.
+      - "127.0.0.1:18188:8188"
     volumes:
       # The ComfyUI install, custom nodes and settings.
       - storage:/root
@@ -40,19 +43,6 @@ services:
     security_opt:
       - seccomp:unconfined
       - label:disable
-
-  # Unloads models from VRAM after ComfyUI has been idle, so Ollama can have the GPU.
-  vram-free:
-    container_name: comfyui-vram-free
-    image: curlimages/curl
-    pull_policy: always
-    restart: unless-stopped
-    network_mode: host
-    volumes:
-      - ./vram-free.sh:/vram-free.sh:ro
-    entrypoint: ["sh", "/vram-free.sh"]
-    depends_on:
-      - comfyui
 
 volumes:
   storage:
