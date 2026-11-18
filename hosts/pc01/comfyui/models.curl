@@ -1,0 +1,10 @@
+# Models to download: curl config, read by `curl --config` in pre-start.sh.
+# Each url is saved as the output that follows it, relative to ComfyUI/models.
+# The file names are the ones wayward-imagegen asks ComfyUI for.
+
+url = "https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_8step_lora.safetensors"
+output = "loras/sdxl_lightning_8step_lora.safetensors"
+
+# WAI-illustrious-SDXL v17.0, https://civitai.com/models/827184
+url = "https://civitai.com/api/download/models/2883731"
+output = "checkpoints/waiIllustriousSDXL_v170.safetensors"

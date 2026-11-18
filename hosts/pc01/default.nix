@@ -7,6 +7,7 @@
 
   imports = [
     ./hardware.nix
+    ./comfyui
   ];
 
   networking = {
