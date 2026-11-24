@@ -9,14 +9,6 @@ let
   docker = "${config.virtualisation.docker.package}/bin/docker";
 in
 {
-  # ComfyUI runs only while something uses it:
-  #   - systemd listens on :8188 (comfyui-proxy.socket),
-  #   - the first connection starts comfyui-proxy, which starts comfyui-compose
-  #     and forwards traffic to the container on 127.0.0.1:18188,
-  #   - after 30 min without connections the proxy exits, and comfyui-compose
-  #     (StopWhenUnneeded) stops the container.
-  # The compose file is read from the checkout, so editing it needs no rebuild.
-
   networking.firewall.allowedTCPPorts = [ 8188 ];
 
   systemd.sockets.comfyui-proxy = {
@@ -27,7 +19,7 @@ in
 
   systemd.services.comfyui-proxy = {
     description = "ComfyUI on-demand proxy";
-    requires = [ "comfyui-compose.service" ];
+    bindsTo = [ "comfyui-compose.service" ];
     after = [ "comfyui-compose.service" ];
     serviceConfig.ExecStart = "${config.systemd.package}/lib/systemd/systemd-socket-proxyd --exit-idle-time=30min 127.0.0.1:18188";
   };
@@ -42,16 +34,12 @@ in
     wants = [ "network-online.target" ];
     unitConfig.StopWhenUnneeded = true;
     serviceConfig = {
-      Type = "oneshot";
-      RemainAfterExit = true;
+      Type = "exec";
       WorkingDirectory = dir;
-      # --pull missing: only download images that are not there yet, so a start
-      # without network still works and starting never upgrades anything.
-      ExecStart = "${docker} compose up -d --pull missing";
-      # Hold the first connection until ComfyUI answers, instead of letting it fail.
+      ExecStart = "${docker} compose up --pull missing --exit-code-from comfyui";
       ExecStartPost = "${pkgs.curl}/bin/curl --silent --fail --output /dev/null --retry-all-errors --retry 3600 --retry-delay 1 --retry-max-time 3600 http://127.0.0.1:18188/system_stats";
       ExecStop = "${docker} compose stop";
-      # A fresh system pulls a ~20 GB image and downloads models on first start.
+      SuccessExitStatus = "130 137 143";
       TimeoutStartSec = "1h";
     };
   };

@@ -1,5 +1,3 @@
-# Based on https://github.com/YanWenKun/ComfyUI-Docker/blob/main/rocm/docker-compose.yml
-
 name: comfyui
 services:
   comfyui:
@@ -7,31 +5,21 @@ services:
     container_name: comfyui
     image: yanwk/comfyui-boot:rocm
     pull_policy: always
-    # Started on demand and stopped when idle by systemd (see default.nix),
-    # so Docker must not bring it back by itself.
     restart: "no"
     ports:
-      # Port 8188 belongs to systemd's socket; it forwards here.
       - "127.0.0.1:18188:8188"
     volumes:
-      # The ComfyUI install, custom nodes and settings.
       - storage:/root
-      # Kept apart so wiping the install does not delete 7 GB of models.
-      - models:/root/ComfyUI/models
-      # pre-start.sh runs before every ComfyUI start and installs what nodes.json
-      # and models.curl list. 
+      - /media/storage/comfyui/models:/root/ComfyUI/models
       - ./pre-start.sh:/root/user-scripts/pre-start.sh
       - ./nodes.json:/root/user-scripts/nodes.json:ro
       - ./models.curl:/root/user-scripts/models.curl:ro
-      # Extra model lists kept out of git (local/ is gitignored).
       - ./local:/root/user-scripts/local:ro
     environment:
-      # HACK: on ROCm, copying mmap-backed safetensors to the GPU runs at ~2 MB/s
-      # (measured), so make ComfyUI load models into normal RAM first.
+      # HACK: on ROCm, loading mmap-backed models to the GPU runs at ~2 MB/s.
       # https://github.com/Comfy-Org/ComfyUI/issues/15001
       # Remove once ROCm fixes it: https://github.com/ROCm/rocm-systems/pull/15545
       - CLI_ARGS=--disable-mmap
-    # The rest is as the image's author recommends for ROCm.
     devices:
       - /dev/kfd
       - /dev/dri
@@ -47,5 +35,3 @@ services:
 volumes:
   storage:
     name: comfyui-storage
-  models:
-    name: comfyui-models
