@@ -95,7 +95,7 @@
     pulseaudio
     pwvucontrol
     pydf
-    r2modman
+    (r2modman.override { electron = electron_44; })
     qbittorrent
     qpdf
     rustnet
