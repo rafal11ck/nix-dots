@@ -14,7 +14,11 @@
       inputs.nix-alien.overlays.default
       (self: super: {
 
-        mpv-unwrapped = super.mpv-unwrapped.override { vapoursynthSupport = true; };
+        mpv-unwrapped = (super.mpv-unwrapped.override { vapoursynthSupport = true; }).overrideAttrs (old: {
+          postFixup = (old.postFixup or "") + ''
+            patchelf --add-rpath ${lib.getLib super.vapoursynth}/lib $out/bin/mpv
+          '';
+        });
 
         nix-output-monitor =
           let
