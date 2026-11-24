@@ -52,7 +52,7 @@
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "deviceName": "",
+      "deviceName": "ddc:i2c-3",
       "w": 4,
       "h": 1
     },
@@ -370,11 +370,12 @@
       "showOnLastDisplay": true,
       "position": 1,
       "mode": "compact",
+      "middleClickAction": "close",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
       "iconSize": 48,
-      "spacing": 4,
-      "itemSpacing": 4,
+      "spacing": 8,
+      "itemSpacing": 8,
       "margin": 0,
       "bottomGap": 0,
       "transparency": 1,
@@ -644,5 +645,11 @@
     }
   },
   "connectedFrameBarStyleBackups": {},
-  "frameEnabled": false
+  "frameEnabled": false,
+  "density": "comfortable",
+  "interfaceStyle": "expressive",
+  "radiusMode": "scale",
+  "floatingWindowSyncGlobal": true,
+  "floatingWindowTitleBars": true,
+  "osdAlwaysShowValue": false
 }
