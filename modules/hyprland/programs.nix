@@ -17,6 +17,7 @@
 
       plugins = {
         dankKDEConnect.enable = true;
+        dmsfilemanager.enable = true;
       };
     };
   };
