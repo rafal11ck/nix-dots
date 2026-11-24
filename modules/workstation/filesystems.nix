@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   ...
 }:
 let
@@ -21,5 +22,15 @@ in
   fileSystems = {
     "/media/cephfs/ext" = cephfsMountGen "/ext";
     "/media/cephfs/volumes" = cephfsMountGen "/volumes";
+  };
+
+  # Unmount CephFS before NetworkManager takes the network down on suspend,
+  # otherwise the kernel's sync hangs waiting on the unreachable Ceph cluster.
+  environment.etc."NetworkManager/dispatcher.d/pre-down.d/10-cephfs" = {
+    mode = "0755";
+    text = ''
+      #!/bin/sh
+      ${pkgs.util-linux}/bin/umount -a -t ceph || sync
+    '';
   };
 }
