@@ -252,6 +252,14 @@
           "minimumWidth": true
         },
         {
+          "id": "memUsage",
+          "enabled": true
+        },
+        {
+          "id": "volumeMixer",
+          "enabled": true
+        },
+        {
           "id": "notificationButton",
           "enabled": true
         },
