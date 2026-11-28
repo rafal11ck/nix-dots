@@ -107,7 +107,15 @@
     snitch
     sox
     stow
-    svp
+    (svp.override {
+      libx11 = symlinkJoin {
+        name = "libx11-with-ocl-icd";
+        paths = [
+          libx11
+          ocl-icd
+        ];
+      };
+    })
     swappy
     syncplay
     talosctl
