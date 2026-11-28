@@ -620,6 +620,20 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("hyprctl setcursor catppuccin-mocha-pink-cursors 32")
   hl.exec_cmd("wl-paste --watch cliphist store")
 end)
+
+SoberUnfocused = 0
+SoberAntiAfk = hl.timer(function()
+  local w = hl.get_active_window()
+  if (w and w.class == "org.vinegarhq.Sober") or #hl.get_windows({ class = "org.vinegarhq.Sober" }) == 0 then
+    SoberUnfocused = 0
+    return
+  end
+  SoberUnfocused = SoberUnfocused + 1
+  if SoberUnfocused >= 10 then
+    hl.dispatch(hl.dsp.send_shortcut({ mods = "", key = "SPACE", window = "class:org.vinegarhq.Sober" }))
+    SoberUnfocused = 0
+  end
+end, { timeout = 60 * 1000, type = "repeat" })
 require("dms.binds")
 require("dms.binds-user")
 require("dms.input")
